@@ -1,5 +1,5 @@
 # Navigating your computer: basic UNIX.
-<br><br><br>
+<br><br>
 
 ## Directories and Paths
 
