@@ -19,8 +19,18 @@
      - If you are calling this file from Desktop, the relative path would be `my_directory/my_favorite_file.txt`
      - If you are in `/Users/myname/`, the relative path becomes `Desktop/my_directory/my_favorite_file.txt`.
     
-   Remember! Whenever you call the full path, you can reach the file from anywhere on your computer. Relative paths will change based on your current location.
+   Remember - Whenever you call the full path, you can reach the file from anywhere on your computer. Relative paths will change based on your current location.
 
-**3. Path shortcuts**
-  - `~` stands for your **home** directory.
+**3. Roaming around**
+
+Command | Translation | Examples
+--------|-------------|---------
+`cd` | **c**hange **d**irectory | `cd /absolute/path/of/the/directory/` <br> Go to the home directory by typing simply  `cd` or `cd ~` <br> Go up (back) a directory by typing `cd ..`
+`pwd` | **p**rint **w**orking **d**irectory | `pwd`
+`mkdir` | **m**ake **dir**ectory | `mkdir newDirectory` creates newDirectory in your current directory <br> Make a directory one level up with `mkdir ../newDirectory`
+`cp` | **c**o**p**y | `cp file.txt newfile.txt`
+
+
+
+- `~` stands for your **home** directory.
   - `..` means "go up one directory."
