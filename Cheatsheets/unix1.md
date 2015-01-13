@@ -16,8 +16,8 @@
     Let's say you have a file "my\_favorite\_file.txt" located in the directory `/Users/myname/Desktop/my_directory`.
     - The **full path** to this file  is `/Users/myname/Desktop/my_directory/my_favorite_file.txt`.  
     - The **relative path** to this file depends on where you are on the computer. 
-    <br>If you are calling this file from Desktop, the relative path would be `my_directory/my_favorite_file.txt`
-    <br>If you are in `/Users/myname/`, the relative path becomes `Desktop/my_directory/my_favorite_file.txt`.
+     - If you are calling this file from Desktop, the relative path would be `my_directory/my_favorite_file.txt`
+     - If you are in `/Users/myname/`, the relative path becomes `Desktop/my_directory/my_favorite_file.txt`.
     
    Remember! Whenever you call the full path, you can reach the file from anywhere on your computer. Relative paths will change based on your current location.
 
