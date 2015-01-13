@@ -4,8 +4,9 @@
 ## Directories and Paths
 
 **1. Directory**
-  - A *folder* on your computer which contains files. UNIX filesystems are organized as hierarchical directories.
-  - The directory at the top of this hierarchy is called the **root** directory and is denoted `/`. 
+  - A *folder* on your computer which contains files. UNIX filesystems are organized as hierarchical directories. 
+  - Forward slashes divide levels in the nested hierarchy of directories, e.g. `/top_level_directory/second_level_directory`
+  - The directory at the top of this hierarchy is called the **root** directory and is denoted simply as `/`. 
 
 **2. Path**
   - The *address* to a directory or file on your computer. There are, generally, two types of paths:
