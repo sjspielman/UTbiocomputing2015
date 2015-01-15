@@ -33,6 +33,3 @@ Command | Translation | Examples
 
 
 
-
-- `~` stands for your **home** directory.
-  - `..` means "go up one directory."
