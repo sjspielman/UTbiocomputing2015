@@ -28,7 +28,9 @@ Command | Translation | Examples
 `cd` | **c**hange **d**irectory | `cd /absolute/path/of/the/directory/` <br> Go to the home directory by typing simply  `cd` or `cd ~` <br> Go up (back) a directory by typing `cd ..`
 `pwd` | **p**rint **w**orking **d**irectory | `pwd`
 `mkdir` | **m**ake **dir**ectory | `mkdir newDirectory` creates newDirectory in your current directory <br> Make a directory one level up with `mkdir ../newDirectory`
-`cp` | **c**o**p**y | `cp file.txt newfile.txt`
+`cp` | **c**o**p**y | `cp file.txt newfile.txt` (and file.txt will still exist!)
+`mv` | **m**o**v**e | `mv file.txt newfile.txt` (but file.txt will *no longer* exist!)
+
 
 
 
