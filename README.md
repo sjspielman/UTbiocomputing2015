@@ -2,10 +2,14 @@
 Peer-led working group in Biological Computing at UT Austin, Spring 2015
 
 Rebecca Tarvin (PAT 123) rdtarvin@utexas.edu
-Stephanie Spielman (MBB 3.232) stephanie.spielman@gmail.com
+<br>Stephanie Spielman (MBB 3.232) stephanie.spielman@gmail.com
 
 Open Coding Hour: Tuesdays 5-6pm in CCBB conference room (GDC 7.514)
-Class: 4-5pm on Wednesdays in FNT 1.104
+<br>Class: 4-5pm on Wednesdays in FNT 1.104
+
+Class website: https://github.com/sjspielman/UTbiocomputing2015
+<br>Resources: https://github.com/sjspielman/UTbiocomputing2015/blob/master/resources.md
+
 
 The goal of this class is to take away your fear of programming so that it can become an advantage rather than a barrier to your research. On Wednesdays we will provide lessons suitable for beginners in programming. Each week you should post at least one question and answer on the google group (UTbiocomputing, http://goo.gl/PLnSpP) and complete the homework. On Tuesdays we will help you with homework or if you had no problems, come anyways to meet other people that are computing at UT, and get some handy tips from GSAF's Scott Hunicke-Smith.
 
