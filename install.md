@@ -46,15 +46,12 @@ As long as you don't see the following error:
 You should be good to go!
 
 
-If any of these steps give you trouble, please contact me via e-mail.
 
 ##Windows
 
-Both of your instructors use Ubuntu, and we highly recommend switching to a UNIX or Linux system. Installing a Linux partition on your computer is completely free, and we'd be happy to help, and we included instructions in the e-mail. If you're not prepared for that investment, see the below instructions.
+Windows users need a plain text editor for reading and editing code. We recommend using Notepad++: http://notepad-plus-plus.org/download/v6.4.3.html
 
-Windows users also need a plain text editor for reading and editing code. I'd use Notepad++: http://notepad-plus-plus.org/download/v6.4.3.html
-
-Windows doesn't natively have the same terminal functionality of Mac or Linux, so we'll have to install it. Download and install git-bash from this site:
+Windows doesn't natively have the same terminal functionality of Mac or Linux, so you'll have to install it. Download and install git-bash from this site:
 
 https://openhatch.org/missions/windows-setup/install-git-bash
 
@@ -62,9 +59,7 @@ Open the program by following the instructions here:
 
 https://openhatch.org/missions/windows-setup/open-git-bash-prompt
 
-If you have trouble with any of these install steps, please e-mail me and let me know.
-
-When you open the program, type
+When you open the program, call python by typing,
 
 ```Python
 
@@ -80,13 +75,14 @@ This should display the following, probably with some text:
 
 Ctrl + D will exit from Python.
 
-Also, type:
+Once you have exited Python, type:
 
 ```UNIX
 git
 ```
 
 If you do not receive any error messages, you should be set!
+
 
 ##Ubuntu
 
@@ -141,9 +137,8 @@ Typing Ctrl+D will exit from python.
 
 ##Helpful Hints for all Operating Systems
 
-If you do a new install of Python or git, it is helpful to close down your terminal program and restart it. This allows the terminal to update and use teh new installs.
+If you do a new install of Python or git, it is helpful to close down your terminal program and restart it. This allows the terminal to update and use the new installs.
 
 ##Installing R
 
-Later in the semester we will spend a few days with the R language. You can download [R] (http://cran.rstudio.com/) as well as a popular [IDE] (http://www.rstudio.com/ide/download/). If you don't want to download R right away, you can try it out with this [web based interpreter] (http://www.r-fiddle.org/#/). This will allow you to try out R, but you might not be able to use external packages and libraries, which might be required for the topics that are covered. 
-
+Later in the semester we will spend a few days with the R language. You can download [R] (http://cran.rstudio.com/) as well as a popular [IDE] (http://www.rstudio.com/ide/download/).
