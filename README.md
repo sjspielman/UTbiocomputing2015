@@ -11,7 +11,7 @@ Class website: https://github.com/sjspielman/UTbiocomputing2015
 <br>Resources: https://github.com/sjspielman/UTbiocomputing2015/blob/master/resources.md
 
 
-The goal of this class is to take away your fear of programming so that it can become an advantage rather than a barrier to your research. On Wednesdays we will provide lessons suitable for beginners in programming. Each week you should post at least one question and answer on the google group (UTbiocomputing, http://goo.gl/PLnSpP) and complete the homework. On Tuesdays we will help you with homework or if you had no problems, come anyways to meet other people that are computing at UT, and get some handy tips from GSAF's Scott Hunicke-Smith.
+The goal of this class is to take away any fear of programming that you may have so that it can become an advantage rather than a barrier to your research. On Wednesdays we will provide lessons suitable for beginners in programming. Each week you should post at least one question and answer on the google group (UTbiocomputing, http://goo.gl/PLnSpP) and complete the homework. On Tuesdays we will help you with homework or if you had no problems, come anyways to meet other people that are computing at UT, and get some handy tips from GSAF's Scott Hunicke-Smith.
 
 Please [install the required software](https://github.com/sjspielman/UTbiocomputing2015/blob/master/install.md) *no later* than the second day of class. 
 [Here](https://github.com/sjspielman/UTbiocomputing2015/blob/master/resources.md) are some recommended resources for all your computing needs. The resources are not required reading, but they are tremendously useful!
