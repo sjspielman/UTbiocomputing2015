@@ -141,4 +141,4 @@ If you do a new install of Python or git, it is helpful to close down your termi
 
 ##Installing R
 
-Later in the semester we will spend a few days with the R language. You can download [R] (http://cran.rstudio.com/) as well as a popular [IDE] (http://www.rstudio.com/ide/download/).
+Later in the semester we will spend a few days with the R language. You can download [R](http://cran.rstudio.com/) as well as a popular IDE, [RStudio](http://www.rstudio.com/ide/download/).
