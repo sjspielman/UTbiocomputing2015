@@ -1,5 +1,5 @@
 # UTbiocomputing2015
-Peer-led working group in Biological Computing at UT Austin, Spring 2015
+**Peer-led working group in Biological Computing at UT Austin, Spring 2015**
 
 Rebecca Tarvin (PAT 123) rdtarvin@utexas.edu
 <br>Stephanie Spielman (MBB 3.232) stephanie.spielman@gmail.com
