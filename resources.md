@@ -7,4 +7,4 @@
 
 3. Don't forget your most valuable resource: google! If you encounter an issue, chances are somebody else has also encountered it and has asked about it. Googling your error messages is one of the best debugging strategies there is. In particular, try to find links to the website [**stackoverflow.com**](http://www.stackoverflow.com). This forum-based website has all the answers, possibly literally.
 
-
+4. ppts, exercises, and cheatsheets from last year's course. [**Wiki**](https://wikis.utexas.edu/display/CCBB/Introduction+to+Biological+Computing+Course) [**github**](https://github.com/wrightaprilm/BioComputing2014/tree/master)
