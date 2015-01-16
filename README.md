@@ -18,7 +18,7 @@ Please [install the required software](https://github.com/sjspielman/UTbiocomput
 
 ## Course Schedule
 
-Week    |  Calendar Date        | Topic        | Description | Teacher
+Week    |  Date        | Topic        | Description | Teacher
 --------|---------------|--------------|-------------|--------
 WEEK 00 | Jan 21 | Introduction | Welcome! | Becca
 WEEK 01 | Jan 28 | Unix/Bash    |  Basic commands | Becca
