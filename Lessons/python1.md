@@ -50,7 +50,7 @@ We assign values to a variable using the equals sign, `=`.
 5
 ```
 
-All variables have a certain **type**. Some basic types include, 
+All variables have a certain **type**. The variable type deterines what can be done with the variable itself. Some basic types include, 
 
 Variable Type   | Description | Casting
 ---------|--------------|---------
@@ -93,15 +93,55 @@ Integers are whole numbers only, but floats include decimal places. Whether a va
 >>> y = 6
 >>> x/y
 0
->>> # Circumvent this either by casting either or both x or y as a float, or by casting the result as a float
->>> float(x / y)  # Note that this operation does NOT change the casting of either x or y - it just recasts the division result
+>>> # One way to circumvent this issue is by casting the result as a float
+>>> float(x / y)  
 0.8333333333333334
+>>> # Note that the above division will NOT change the casting of either x or y themselves
 >>> x / y
 0
+>>> # Another solution would be to define either/both x or y as a float from the beginning
 >>> x = 5.
 >>> y = 6
 >>> x / y
 0.8333333333333334
+```
+
+### Strings
+In python, a string is an **immutable** container of **characters**. By "immutable", we mean that it can't be changed - that is, once you create a string, you can't rewrite certain parts of it. It's an all-or-nothing thing. By characters, we basically mean "not numbers" - consequently, no mathematical operations can be done on strings.
+
+```python
+>>> # Assign strings using quotation marks
+>>> name = "Stephanie"
+>>> type(name)
+<type 'str'>
+
+>>> # Numbers can also be strings!
+>>> age = "26"
+>>> type(age)
+<type 'str'>
+
+>>> # Even though 26 is a number, we set up the variable age as a string, so no math can be performed with this variable
+>>> age - 7
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+
+>>> # But!! Since the value 26 is, in fact, a number we can recast age as an integer or float and then do maths with it!
+>>> int(age) - 7
+19
+>>> # Again, age is still a string. We'd have to redefine the variable itself to make it an integer (or float) for good
+>>> type(age)
+<type 'str'>
+>>> age = int(age)
+>>> type(age)
+<type 'int'>
+
+>>> # We can't recast the variable name though, since letters just aren't numbers.
+>>> name = float(name)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: could not convert string to float: Stephanie
+```
 
 
 
