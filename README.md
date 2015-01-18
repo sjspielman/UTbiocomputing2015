@@ -23,7 +23,7 @@ Week    |  Calendar Date        | Topic        | Description | Teacher
 WEEK 00 | Jan 21 | Introduction | Welcome! | Becca
 WEEK 01 | Jan 28 | Unix/Bash    |  Basic commands | Becca
 WEEK 02 | Feb 04 | Python 1     | When to use & basic structure | Stephanie
-WEEK 03 | Feb 11 | Python 2     | If, for, while | Becca
+WEEK 03 | Feb 11 | Python 2     | Control flow and loops If, for, while | Becca
 WEEK 04 | Feb 18 | Python 3     | Functions | Stephanie
 WEEK 05 | Feb 25 | Python 4     | File Input & Output | Stephanie
 WEEK 06 | Mar 04 | Python 5     | Testing             | Becca
