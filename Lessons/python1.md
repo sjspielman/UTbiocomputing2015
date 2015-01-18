@@ -143,6 +143,75 @@ Traceback (most recent call last):
 ValueError: could not convert string to float: Stephanie
 ```
 
+### Lists
+Lists are defined using brackets (`[]`), and each list item can be any variable type. 
+
+``` python
+>>> # This list contains only integers
+>>> numbers = [1,2,3,4,5]
+
+>>> # This list contains integers and floats and strings, oh my!
+>>> crazy_list = [5, 77.2, -9, "word", -1.32, "more words"]
+```
+
+Python lists are incredibly flexible, and they have some important properties:
+
+1. Lists are **ordered** - python remembers the orders of values used in the list. This means we can **index** items in a list, again using brackets `[]`. SUPER IMPORTANTLY, python indexes **starting at 0**, meaning the first item in a given collection is the 0th entry.
+2. Lists are **mutable** - they can be changed! List items can be removed, changed, and new list items can even be added after they are defined. In other words, lists can be changed *in place without (re-)assigning anything*. Some useful methods include...
+    1. `.append()`
+    2. `.remove()`
+    3. `.index()`
+
+``` python
+
+>>> simple = [1,4,9,2,5,11]
+>>> simple[4] # grab the 4th entry in this list
+2
+>>> simple[15] # what happens when the entry doesn't exist? you get an error message!
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+
+>>> # Rewrite the list in place! You don't need to redefine simple - just modify an element using indexing.
+>>> simple[2] = 888
+simple
+[1,4,888,2,5,11]
+
+>>> # Some useful functions you can use on a list. These will NOT modify the list in any way.
+>>> len(simple) # How many elements in a list?
+6
+>>> sorted(simple) # sort the items in ascending order
+[1, 2, 4, 5, 11, 888]
+>>> max(simple) # but probably only use this when the list has only numbers. (note that min() is also around!)
+888
+
+>>> # Add items to the end of a list using the method "append"
+>>> simple.append(100.33)
+simple
+[1,4,888,2,5,11,100.33]
+>>> len(simple)
+7
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
