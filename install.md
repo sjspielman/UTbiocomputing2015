@@ -10,7 +10,7 @@ For Mac and PC, an installer will pop up, and guide you through the process. See
 
 Download [R](http://cran.rstudio.com/) and the popular IDE [RStudio](http://www.rstudio.com/ide/download/).
 
-##Mac
+##Mac: TextWrangler and git
 
 If you are using a Mac, you need a plain-text editor. This is used for editing code and scripts. We recommend TextWrangler:
 http://www.barebones.com/products/textwrangler/
@@ -49,7 +49,7 @@ You should be good to go!
 
 
 
-##Windows
+##Windows: Notepad++ and git-bash
 
 Windows users need a plain text editor for reading and editing code. We recommend using Notepad++: http://notepad-plus-plus.org/download/v6.4.3.html
 
@@ -86,7 +86,7 @@ git
 If you do not receive any error messages, you should be set!
 
 
-##Ubuntu
+##Ubuntu: Anaconda and git
 
 
 
