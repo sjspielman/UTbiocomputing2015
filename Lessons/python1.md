@@ -1,5 +1,26 @@
 # Python I
 
+
+## Object-oriented programming
+Python is an object-oriented programming (OOP) language. Simply put, this means that data structures (e.g. variables) have certain properties, in particular **attributes** and **methods**. Attributes are usually descriptive features of the object, and methods are certain actions (functions) you can perform on the object itself. For example, consider a book. Books are physical objects with certain **attributes**, such as number of pages, number of words, dimensions (width, height, depth), cover art, etc. Similarly, there are several actions (**methods**) that we can do with books like reading, writing, throwing at people we hate, and sharing with people we love. A given realization of an object is called an **instance**. To continue with the book metaphor, "The Count of Monte Christo" and "Harry Potter" are each instances of book objects.
+
+While these concepts might seem abstract, python syntax and behavior will make much more sense in light of the OOP paradigm upon which the language is based. In particular, attributes and methods are accessed in systematic ways, as follows:
+```python
+>>> # Assume mybook is a book instance
+
+>>> # Call an attribute
+>>> mybook.number_of_pages
+>>> mybook.height
+>>> mybook.width
+
+>>> # Call a method
+>>> mybook.read()
+>>> mybook.write()
+>>> mybook.throw_at_bad_people("Bob") # methods might take particular arguments, in this case who we're launching books at
+```
+As you see, attributes and methods are called after a . at the end of the instance name. Unlike attributes, however, end with parentheses. Sometimes, methods can take particular **arguments** which relate to their function, for instance when we threw the book at Bob.
+
+
 ## Operators
 
 #### Mathematical operators
@@ -40,7 +61,6 @@ True
 True
 ```
 
-
 ## Variables
 We assign values to a variable using the equals sign, `=`.
 ``` python
@@ -50,7 +70,7 @@ We assign values to a variable using the equals sign, `=`.
 5
 ```
 
-All variables have a certain **type**. The variable type deterines what can be done with the variable itself. Some basic types include, 
+All variables have a certain **type**. The variable type deterines what can be done with the variable itself. Standard python types include the following,
 
 Variable Type   | Description | Casting
 ---------|--------------|---------
@@ -58,10 +78,9 @@ integer | whole number  | int()
 float   | decimal number | float()
 string  | ordered, immutable character container | str()
 list    | ordered, mutable container | list()
-tuple   | ordered, immutable container | tuple()
 dictionary | unordered, mutable container | dict()
 
-Now, let's go into each variable type in depth.
+Remember, every time you create a variable, you are essentially creating an **instance** of that particular variable type. As a consequence, there are certain properties (attributes and methods!) associated with each type of variable.
 
 ### Integers and floats
 Integers and floats are python's primary types for dealing with numbers. 
@@ -107,7 +126,8 @@ Integers are whole numbers only, but floats include decimal places. Whether a va
 ```
 
 ### Strings
-In python, a string is an **immutable** container of **characters**. By "immutable", we mean that it can't be changed - that is, once you create a string, you can't rewrite certain parts of it. It's an all-or-nothing thing. By characters, we basically mean "not numbers" - consequently, no mathematical operations can be done on strings.
+In python, a string is an **immutable** container of **characters**. By "immutable", we mean that it can't be changed - that is, once you create a string, you can't rewrite certain parts of it. It's an all-or-nothing thing. By characters, we basically mean "not numbers" - consequently, no mathematical operations can be done on strings. 
+Strings are also **ordered** - python remembers the orders of values used in the list. This means we can **index** items in a list, again using brackets `[]`. **Importantly**, python indexes **starting at 0**, meaning the first item in a given string is the 0th entry.
 
 ```python
 >>> # Assign strings using quotation marks
@@ -141,7 +161,49 @@ TypeError: unsupported operand type(s) for -: 'str' and 'int'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: could not convert string to float: Stephanie
+
+>>> # Strings are ordered, so we can index them
+>>> name[5]
+a
+>>> # But strings are also immutable, so we can't edit strings in place.
+>>> name[5] = "A"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+
+>>> # Index a range with x:y, where index x is included but index y is not.
+>>> name[1:5]
+'teph'
+
+>>> # You can also index a range like x:y:z , where z is the step.
+>>> name[1:8:2] # s TePhAnI e
+'tpai'
 ```
+
+Some useful string methods:
+
+``` python
+>>> my_string = "This is a really nice string for showing examples."
+
+>>> # .upper() converts your string to upper-case
+>>> my_string.upper()
+'THIS IS A REALLY NICE STRING FOR SHOWING EXAMPLES.'
+
+>>> # .lower() converts your string to lower-case
+>>> my_string.lower()
+'this is a really nice string for showing examples.'
+
+>>> # .split() takes an *argument* to split the list on and creates a list containing each chunk
+>>> my_string.split('i')
+['Th', 's ', 's a really n', 'ce str', 'ng for show', 'ng examples.']
+
+>>> # .strip() removes both leading/trailing whitespace, .rstrip() removes only trailing whitespace, and .lstrip() removes only leading whitespace
+>>> # Instead of whitespace, you could also provide an argument to one of these functions to remove instead
+>>> dna_string = "AAAAAGTCGAGGTAGCGAAAA"
+>>> dna_string.strip("A")
+'GTCGAGGTAGCG'
+```
+
 
 ### Lists
 Lists are defined using brackets (`[]`), and each list item can be any variable type. 
@@ -154,13 +216,7 @@ Lists are defined using brackets (`[]`), and each list item can be any variable 
 >>> crazy_list = [5, 77.2, -9, "word", -1.32, "more words"]
 ```
 
-Python lists are incredibly flexible, and they have some important properties:
-
-1. Lists are **ordered** - python remembers the orders of values used in the list. This means we can **index** items in a list, again using brackets `[]`. SUPER IMPORTANTLY, python indexes **starting at 0**, meaning the first item in a given collection is the 0th entry.
-2. Lists are **mutable** - they can be changed! List items can be removed, changed, and new list items can even be added after they are defined. In other words, lists can be changed *in place without (re-)assigning anything*. Some useful methods include...
-    1. `.append()`
-    2. `.remove()`
-    3. `.index()`
+Python lists are incredibly flexible. Like strings, they are ordered, so they support indexing. However, unlike strings, lists are **mutable**, meaning they can be changed! List items can be removed, changed, and new list items can even be added after they are defined. In other words, lists can be changed *in place without (re-)assigning anything*. 
 
 ``` python
 
@@ -184,19 +240,55 @@ simple
 [1, 2, 4, 5, 11, 888]
 >>> max(simple) # but probably only use this when the list has only numbers. (note that min() is also around!)
 888
+```
 
->>> # Add items to the end of a list using the method "append"
+Some useful list methods include,
+
+``` python
+>>> # .append(value) adds value to the end of a list, ultimately modifying the list in place!
 >>> simple.append(100.33)
 simple
 [1,4,888,2,5,11,100.33]
 >>> len(simple)
 7
 
+>>> # .remove(value) removes all entries in a list corresponding to the provided argument, value
+>>> simple.remove(11)
+[1,4,888,2,5,100.33]
+
+>>> # .insert(index, value) inserts the provided value into the specified index of the list
+>>> simple.insert(0, 500)
+[500,1,4,888,2,5,100.33]
 ```
 
 
+### Dictionary
+Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs. Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
+
+```python
+>>> taxonomy = {'gecko':'vertebrate', 'human':'vertebrate', 'squid':'mollusk', 'butterfly':'insect', 'oak tree': 'plant'}
+```
+
+Dictionaries are indexed using keys. As ductionaries are unordered, the particular order (e.g. gecko, vertebrate, squid..) is not preserved, but the key:value pairs are fixed.
+```python
+>>> taxonomy["gecko"]
+'vertebrate'
+>>> # Add a new key:value pair
+>>> taxonomy["e. coli"] = "bactera"
+>>> taxonomy
+{'butterfly': 'insect', 'oak tree': 'plant', 'squid': 'mollusk', 'e. coli': 'bactera', 'human': 'vertebrate', 'gecko': 'vertebrate'}
+
+>>> # the method .keys() pulls up all dictionary keys as a list
+taxonomy.keys()
+['butterfly', 'oak tree', 'squid', 'e. coli', 'human', 'gecko']
+
+>>> # the method .values() pulls up all dictionary values as a list
+['insect', 'plant', 'mollusk', 'bactera', 'vertebrate', 'vertebrate']
 
 
+>>> # Values can be all kinds of things, even lists!
+>>> meals = {"breakfast": ["coffee", "cereal", "banana"], "lunch": ["salad", "lemonade", "chicken fingers"], "dinner": ["steak", "asparagus", "beer", "more beer"], "dessert": ["ice cream", "chocolate sauce", "sprinkles"] }
+```
 
 
 
