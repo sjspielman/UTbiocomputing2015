@@ -2,11 +2,13 @@
 
 There are a few things we need you to install prior to the course. Below, find your operating system and follow the instructions.
 
-#All operating systems
+#All operating systems: Anaconda and R
 
 We will use the anaconda distribution of Python. This version has some very nice support for mathematical and statistical programming. You can choose the version for your operating system here:  http://continuum.io/downloads
 
 For Mac and PC, an installer will pop up, and guide you through the process. See below for Linux instructions.
+
+Download [R](http://cran.rstudio.com/) and the popular IDE [RStudio](http://www.rstudio.com/ide/download/).
 
 ##Mac
 
@@ -139,6 +141,4 @@ Typing Ctrl+D will exit from python.
 
 If you do a new install of Python or git, it is helpful to close down your terminal program and restart it. This allows the terminal to update and use the new installs.
 
-##Installing R
 
-Later in the semester we will spend a few days with the R language. You can download [R](http://cran.rstudio.com/) as well as a popular IDE, [RStudio](http://www.rstudio.com/ide/download/).
