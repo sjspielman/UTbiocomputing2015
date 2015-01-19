@@ -263,7 +263,7 @@ simple
 ```
 
 
-### Dictionary
+### Dictionaries
 Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
 
 ```python
