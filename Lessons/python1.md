@@ -171,14 +171,6 @@ a
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'str' object does not support item assignment
-
->>> # Index a range with x:y, where index x is included but index y is not.
->>> name[1:5]
-'teph'
-
->>> # You can also index a range like x:y:z , where z is the step.
->>> name[1:8:2] # s TePhAnI e
-'tpai'
 ```
 
 Some useful string methods:
@@ -262,6 +254,37 @@ simple
 [500,1,4,888,2,5,100.33]
 ```
 
+Let's delve a bit more into indexing now. In general, indexing follows the paradigm `container[x:y:z]`, where x is the starting index, y is the ending index, and z is the step. However, you do not need to provide all of these value to index. In fact, 
+
+```python
+>>> fib_list = [0,1,1,2,3,5,8,13,21,34,55,89]
+
+>>> # Select the 3rd item
+fib_list[3]
+1
+
+>>> # Select the 3rd from last item with a negative index
+fib_list[-3]
+34
+
+>>> # Select multiple items with the syntax [x:y], where x is the starting index and y is the ending index. Note that y is *not* included!
+>>> # Select items indexed 1-4
+>>> fib_list[1:5]
+[1, 1, 2, 3]
+
+
+>>> # If you don't provide x or y, python defaults to either the first or last index
+>>> fib_list[:5] # same as writing fib_list[0:5]
+[0, 1, 1, 2, 3]
+>>> fib_list[5:] # same as writing fib_list[5:12]
+[5, 8, 13, 21, 34, 55, 89]
+
+>>> # Change the step of indexing with the format x:y:z (before, z was defaulted to 1!)
+>>> fib_list[2:10:3]
+[1, 5, 21]
+```
+
+
 
 ### Dictionaries
 Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
@@ -300,6 +323,15 @@ Tuples are basically immutable lists, created with parentheses `()`. We won't us
 Some fun things we can do with these variables!
 
 ```python
+
+>>> # the range() function creates an arithmetic list, by default starting from zero and with a step of 1
+>>> simple_range = range(20)
+>>> simple_range
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+>>> complex_range = range(5, 20) # start from 5
+[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+>>> complexer_range = range(5, 20, 3) # start from 5 with a step of 3. look familiar??
+[5, 8, 11, 14, 17]
 
 >>> # "sep".join(list) will join items in list as a string together, with items separated by "sep"
 >>> my_list = ["look", "this", "is", "a", "list"]
