@@ -79,6 +79,7 @@ float   | decimal number | float()
 string  | ordered, immutable character container | str()
 list    | ordered, mutable container | list()
 dictionary | unordered, mutable container | dict()
+tuple | ordered, immutable container | tuple()
 
 Remember, every time you create a variable, you are essentially creating an **instance** of that particular variable type. As a consequence, there are certain properties (attributes and methods!) associated with each type of variable.
 
@@ -263,13 +264,13 @@ simple
 
 
 ### Dictionary
-Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs. Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
+Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
 
 ```python
 >>> taxonomy = {'gecko':'vertebrate', 'human':'vertebrate', 'squid':'mollusk', 'butterfly':'insect', 'oak tree': 'plant'}
 ```
 
-Dictionaries are indexed using keys. As ductionaries are unordered, the particular order (e.g. gecko, vertebrate, squid..) is not preserved, but the key:value pairs are fixed.
+Dictionaries are indexed using keys. As dictionaries are unordered, the particular order (e.g. gecko, vertebrate, squid..) is not preserved, but the key:value pairs are fixed.
 ```python
 >>> taxonomy["gecko"]
 'vertebrate'
@@ -290,9 +291,31 @@ taxonomy.keys()
 >>> meals = {"breakfast": ["coffee", "cereal", "banana"], "lunch": ["salad", "lemonade", "chicken fingers"], "dinner": ["steak", "asparagus", "beer", "more beer"], "dessert": ["ice cream", "chocolate sauce", "sprinkles"] }
 ```
 
+### Tuples
 
+Tuples are basically immutable lists, created with parentheses `()`. We won't use them much, but they're nice to be aware of! Aaand that's all we'll say for now.
 
+### Useful functions
 
+Some fun things we can do with these variables!
+
+```python
+
+>>> # "sep".join(list) will join items in list as a string together, with items separated by "sep"
+>>> my_list = ["look", "this", "is", "a", "list"]
+>>> " ".join(my_list)
+'look this is a list'
+
+>>> # Merge two lists together into a single list of paired tuples with the function zip()
+>>> loci = ["locus1", "locus2", "locus3", "locus4"]
+>>> snps = ["A/C", "T/G", "G/C", "A/G"]
+>>> zip(loci, snps)
+[('locus1', 'A/C'), ('locus2', 'T/G'), ('locus3', 'G/C'), ('locus4', 'A/G')]
+>>> # Turn these zipped lists into a dictionary!
+>>> dict(zip(loci, snps))
+{'locus1': 'A/C', 'locus2': 'T/G', 'locus3': 'G/C', 'locus4': 'A/G'}
+
+```
 
 
 
