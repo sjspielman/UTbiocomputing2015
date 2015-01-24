@@ -41,7 +41,7 @@ Command | Translation | Examples
 
 **4. Getting Comfortable**
   - tab completion
-  - using * as a wildcard
+  - using `*` as a wildcard
   - up arrow can be used to call the last command
   - Ctrl + C kills current process
   - Ctrl + L (or `clear`) clears screen
