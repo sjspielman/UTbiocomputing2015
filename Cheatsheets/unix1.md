@@ -1,14 +1,12 @@
 # Navigating your computer: basic UNIX.
 <br><br>
 
-## Directories and Paths
-
-**1. Directory**
+**Directory**
   - A *folder* on your computer which contains files. UNIX filesystems are organized as hierarchical directories. 
   - Forward slashes divide levels in the nested hierarchy of directories, e.g. `/top_level_directory/second_level_directory`
   - The directory at the top of this hierarchy is called the **root** directory and is denoted simply as `/`. 
 
-**2. Path**
+**Path**
   - The *address* to a directory or file on your computer. There are, generally, two types of paths:
     1. **Absolute/full path** represents the path of a given directory/file beginning at the root directory.
     2. **Relative path** represents the path of a given directory/file relative to the working/current directory.
@@ -21,7 +19,7 @@
     
    Remember - Whenever you call the full path, you can reach the file from anywhere on your computer. Relative paths will change based on your current location.
 
-**3. Roaming around**
+**Roaming around**
 
 Command | Translation | Examples
 --------|-------------|---------
@@ -39,7 +37,7 @@ Command | Translation | Examples
 `tail` | **tail** | `tail seqs.fasta` prints the last 10 lines of the file <br> `tail -n 3 seqs.fasta` prints last 3 lines
 `wc` | **w**ord **c**ount | `wc filename.txt` shows the number of new lines, number of words, and number of characters <br> `wc -l filename.txt` shows only the number of new lines <br> `wc -c filename.txt` shows only the number of characters
 
-**4. Getting Comfortable**
+**Getting Comfortable**
   - tab completion
   - using `*` as a wildcard
   - up arrow can be used to call the last command
