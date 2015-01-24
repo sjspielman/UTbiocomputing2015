@@ -40,6 +40,7 @@ Command | Translation | Examples
 **Getting Comfortable**
   - tab completion
   - using `*` as a wildcard
+  - hold down option key to jump words
   - up arrow can be used to call the last command
   - Ctrl + C kills current process
   - Ctrl + L (or `clear`) clears screen
@@ -52,6 +53,7 @@ Command | Translation | Examples
   - `>` redirects stdout to a file, *overwriting* file if it already exists
   - `>>` redirects stdout to a file, *appending* to the end of file if it already exists
   - `|` redirects stdout to become stdin for next command
+  - 
 
 
 
