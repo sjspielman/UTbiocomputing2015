@@ -46,12 +46,12 @@ Command | Translation | Examples
   - Ctrl + C kills current process
   - Ctrl + L (or `clear`) clears screen
   - relative paths:
-    1. `.` = here
-    2. `..` = one level up 
+    - `.` = here
+    - `..` = one level up 
   - absolute paths:
-   `~` = home
-   `/` = root
-   `/usr/bin` = program file location
+    - `~` = home
+    - `/` = root
+    - `/usr/bin` = program file location
   - `>` redirects stdout to a file, *overwriting* file if it already exists
   - `>>` redirects stdout to a file, *appending* to the end of file if it already exists
   - `|` redirects stdout to become stdin for next command
