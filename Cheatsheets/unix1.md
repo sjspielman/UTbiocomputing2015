@@ -49,7 +49,6 @@ Command | Translation | Examples
   - absolute paths:
     - `~` = home
     - `/` = root
-    - `/usr/bin` = program file location
   - `>` redirects stdout to a file, *overwriting* file if it already exists
   - `>>` redirects stdout to a file, *appending* to the end of file if it already exists
   - `|` redirects stdout to become stdin for next command
