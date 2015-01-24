@@ -36,28 +36,23 @@ Command | Translation | Examples
 `head` | **head** | `head seqs.fasta` prints the first 10 lines of the file <br> `head -n 3 seqs.fasta` prints first 3 lines
 `tail` | **tail** | `tail seqs.fasta` prints the last 10 lines of the file <br> `tail -n 3 seqs.fasta` prints last 3 lines
 `wc` | **w**ord **c**ount | `wc filename.txt` shows the number of new lines, number of words, and number of characters <br> `wc -l filename.txt` shows only the number of new lines <br> `wc -c filename.txt` shows only the number of characters
+`sort` | **sort** | `sort filename.txt` sorts file and prints output
+`uniq` | **uniq**ue | shows only unique elements of a list
 
-**Getting Comfortable**
-  - tab completion
-  - using `*` as a wildcard
-  - hold down option key to jump words
-  - up arrow can be used to call the last command
-  - Ctrl + C kills current process
-  - Ctrl + L (or `clear`) clears screen
-  - relative paths:
-    - `.` = here
-    - `..` = one level up 
-  - absolute paths:
-    - `~` = home
-    - `/` = root
-  - `>` redirects stdout to a file, *overwriting* file if it already exists
-  - `>>` redirects stdout to a file, *appending* to the end of file if it already exists
-  - `|` redirects stdout to become stdin for next command
-  - 
-
-
-
-
-
-
-
+Shortcuts | Use
+----------|-----
+Ctrl + C | kills current process
+Ctrl + L <br> (or `clear`) | clears screen
+Ctrl + A | Go to the beginning of the line
+Ctrl + E | Go to the end of the line
+Ctrl + U | Clears the line before the cursor position
+Ctrl + K | Clear the line after the cursor
+`*` | wildcard character
+tab | completes word
+Up Arrow | call last command
+`.` | current directory
+`..` | one level up 
+`~` | home
+`>` | redirects stdout to a file, *overwriting* file if it already exists
+`>>` | redirects stdout to a file, *appending* to the end of file if it already exists
+`|` | redirects stdout to become stdin for next command
