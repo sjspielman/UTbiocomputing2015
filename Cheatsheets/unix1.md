@@ -8,10 +8,10 @@
 
 **Path**
   - The *address* to a directory or file on your computer. There are, generally, two types of paths:
-    1. **Absolute/full path** represents the path of a given directory/file beginning at the root directory.
-    2. **Relative path** represents the path of a given directory/file relative to the working/current directory.
+    - **Absolute/full path** represents the path of a given directory/file beginning at the root directory.
+    - **Relative path** represents the path of a given directory/file relative to the working/current directory.
 
-    For example, say you have a file "my\_favorite\_file.txt" located in the directory `/Users/myname/Desktop/my_directory`.
+  - For example, say you have a file "my\_favorite\_file.txt" located in the directory `/Users/myname/Desktop/my_directory`.
     - The **full path** to this file  is `/Users/myname/Desktop/my_directory/my_favorite_file.txt`.  
     - The **relative path** to this file depends on where you are on the computer. 
      - If you are calling this file from Desktop, the relative path would be `my_directory/my_favorite_file.txt`
