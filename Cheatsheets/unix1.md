@@ -38,7 +38,7 @@ Command | Translation | Examples
 `tail` | **tail** | `tail seqs.fasta` prints the last 10 lines of the file <br> `tail -n 3 seqs.fasta` prints last 3 lines
 `wc` | **w**ord **c**ount | `wc filename.txt` shows the number of new lines, number of words, and number of characters <br> `wc -l filename.txt` shows only the number of new lines <br> `wc -c filename.txt` shows only the number of characters
 `sort` | **sort** | `sort filename.txt` sorts file and prints output
-`uniq` | **uniq**ue | shows only unique elements of a list
+`uniq` | **uniq**ue | `uniq -u filename.txt` shows only unique elements of a list <br> (must use sort command first to cluster repeats)
 
 Shortcuts | Use
 ----------|-----
