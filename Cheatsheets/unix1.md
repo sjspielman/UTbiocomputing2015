@@ -18,8 +18,9 @@
      - If you are in `/Users/myname/`, the relative path becomes `Desktop/my_directory/my_favorite_file.txt`.
     
    Remember - Whenever you call the full path, you can reach the file from anywhere on your computer. Relative paths will change based on your current location.
-
-**Roaming around** <br>
+<br><br>
+**Roaming around** 
+<br>
 
 Command | Translation | Examples
 --------|-------------|---------
