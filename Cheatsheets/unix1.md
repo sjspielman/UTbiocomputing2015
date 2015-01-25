@@ -19,7 +19,7 @@
     
    Remember - Whenever you call the full path, you can reach the file from anywhere on your computer. Relative paths will change based on your current location.
 
-**Roaming around**
+**Roaming around** <br>
 
 Command | Translation | Examples
 --------|-------------|---------
