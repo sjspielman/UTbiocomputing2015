@@ -40,7 +40,7 @@ Command | Translation | Examples
 `sort` | **sort** | `sort filename.txt` sorts file and prints output
 `uniq` | **uniq**ue | `uniq -u filename.txt` shows only unique elements of a list <br> (must use sort command first to cluster repeats)
 
-Shortcuts | Use
+Shortcut | Use
 ----------|-----
 Ctrl + C | kills current process
 Ctrl + L <br> (or `clear`) | clears screen
