@@ -2,7 +2,7 @@ WEEK 01 - UNIX HOMEWORK
 
 1. using commands and arguments
 
-Find a pair to do the assignment. Spend 15 minutes using the commands on the cheat sheet 
+Find a partner to do the assignment. Spend 15 minutes using the commands on the cheat sheet 
 with a directory on your computer. Be sure to try different arguments and use both files 
 and directories. Look up at least one command and read about all of its options. 
 Share with your partner.
