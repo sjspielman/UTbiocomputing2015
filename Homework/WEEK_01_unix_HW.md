@@ -14,7 +14,7 @@ Create a directory called “My Directory”. What happened?
 
 Create a new file containing your bash history.
 How many times did you use the command ls?
-Be sure to use these three symbols: |, >, >>
+Be sure to use these three symbols: `|`, `>`, `>>`
 
 
 3. google groups!
