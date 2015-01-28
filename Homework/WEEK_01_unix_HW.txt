@@ -10,11 +10,11 @@ Share with your partner.
 Create a directory called “My Directory”. What happened?
 
 
-2. redirecting output
+2. redirecting output and stringing commands: use |, >, >> and the commands we covered this week
 
 Create a new file containing your bash history.
-How many times did you use the command ls?
-Be sure to use these three symbols: |, >, >>
+How many times did you use the command ls? grep?
+Bonus: How many words are contained in the first 30 lines of your history?
 
 
 3. google groups!
