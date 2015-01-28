@@ -10,7 +10,7 @@ Share with your partner.
 Create a directory called “My Directory”. What happened?
 
 
-2. redirecting output and stringing commands: use |, >, >> and the commands we covered this week
+2. redirecting output and stringing commands together: use |, >, >> and the commands we covered this week
 
 Create a new file containing your bash history.
 How many times did you use the command ls? grep?
