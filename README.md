@@ -31,8 +31,8 @@ WEEK 07 | Mar 11 | Python 6     | Merging Python and Unix/Bash | Becca and Steph
 SPRING BREAK | Mar 18 | Spring break | WOOO! | Everybody!
 WEEK 08 | Mar 25 | Numpy & Biopython | Numbers & DNA in Python | Stephanie
 WEEK 09 | Apr 01 | git | Collaboration and version control | Cheng Lee
-WEEK 10 | Apr 08 | TACC | Using high-performance computing systems | Benni Goetz
+WEEK 10 | Apr 08 | R  | Statistical analyses | Nathan Pope
 WEEK 11 | Apr 15 | SQL  | Relational databases    | Ben Liebeskind
-WEEK 12 | Apr 22 | R  | Statistical analyses | Nathan Pope
-WEEK 13 | Apr 29 | RNAseq 1 | | TBD 
-WEEK 14 | May 06 | RNAseq 2  | | TBD
+WEEK 12 | Apr 22 | TACC | Using high-performance computing systems | Benni Goetz
+WEEK 13 | Apr 29 | RNAseq 1 | Computational platforms and pipeline| Dariya Sydykova
+WEEK 14 | May 06 | RNAseq 2  | Extracting useful information from processed data | TBD
