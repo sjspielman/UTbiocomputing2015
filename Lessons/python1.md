@@ -16,7 +16,7 @@ While these concepts might seem abstract, python syntax and behavior will make m
 >>> # Call a method
 >>> mybook.read()
 >>> mybook.write()
->>> mybook.throw_at_bad_people("Bob") # methods might take particular arguments, in this case who we're launching books at
+>>> mybook.throw_at_bad_people("Voldemort") # methods might take particular arguments, in this case who we're launching books at
 ```
 As you see, attributes and methods are called after a . at the end of the instance name. Unlike attributes, however, end with parentheses. Sometimes, methods can take particular **arguments** which relate to their function, for instance when we threw the book at Bob.
 
