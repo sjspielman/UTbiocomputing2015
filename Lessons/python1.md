@@ -195,6 +195,18 @@ Some useful string methods:
 >>> dna_string = "AAAAAGTCGAGGTAGCGAAAA"
 >>> dna_string.strip("A")
 'GTCGAGGTAGCG'
+>>> dna_string # but remember, since strings are immutable, calling .strip() will not change the dna_string contents!
+'AAAAAGTCGAGGTAGCGAAAA'
+
+>>> # .count(arg) returns the number of times "arg" appears in the string
+>>> dna_string.count("A")
+11
+
+>>> # .replace(old, new, count) replaces all instances of old with new. Last optional argument, count, indicates that the only the first count occurences of old should be replaced (default - all)
+>>> dna_string.replace("T", "U")
+'AAAAAGUCGAGGUAGCGAAAA'
+>>> dna_string.replace("T", "U", 1)
+'AAAAAGUCGAGGTAGCGAAAA'
 ```
 
 
@@ -235,7 +247,7 @@ simple
 888
 ```
 
-Some useful list methods include,
+Some useful list methods:
 
 ``` python
 >>> # .append(value) adds value to the end of a list, ultimately modifying the list in place!
