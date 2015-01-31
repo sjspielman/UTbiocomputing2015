@@ -312,18 +312,23 @@ Dictionaries are indexed using keys. As dictionaries are unordered, the particul
 >>> # Add a new key:value pair
 >>> taxonomy["e. coli"] = "bactera"
 >>> taxonomy
-{'butterfly': 'insect', 'oak tree': 'plant', 'squid': 'mollusk', 'e. coli': 'bactera', 'human': 'vertebrate', 'gecko': 'vertebrate'}
+t
 
 >>> # the method .keys() pulls up all dictionary keys as a list
 taxonomy.keys()
 ['butterfly', 'oak tree', 'squid', 'e. coli', 'human', 'gecko']
 
 >>> # the method .values() pulls up all dictionary values as a list
+taxonomy.values()
 ['insect', 'plant', 'mollusk', 'bactera', 'vertebrate', 'vertebrate']
 
+>>> # the methods .items() pulls up all key:value pairs as tuples
+>>> taxonomy.items()
+[('butterfly', 'insect'), ('oak tree', 'plant'), ('squid', 'mollusk'), ('e. coli', 'bactera'), ('human', 'vertebrate'), ('gecko', 'vertebrate')]
 
 >>> # Values can be all kinds of things, even lists!
 >>> meals = {"breakfast": ["coffee", "cereal", "banana"], "lunch": ["salad", "lemonade", "chicken fingers"], "dinner": ["steak", "asparagus", "beer", "more beer"], "dessert": ["ice cream", "chocolate sauce", "sprinkles"] }
+
 ```
 
 ### Tuples
