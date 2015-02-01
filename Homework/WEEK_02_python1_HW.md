@@ -1,23 +1,49 @@
 ### Python 1 Homework Exercises
 
-1. **From the command line**, create a new directory for this homework called "python1-hw", enter this directory, and create a new file called "hw1.py". Open this file with your favorite text editor.
+*From the command line*, create a new directory for this homework called "python1-hw", enter this directory, and create a new file called "hw1.py". Open this file with your favorite text editor.
+Complete the homework and all other exercises in this file. Be sure to use lots of comments! Every time you run a command, be sure to print it to stdout to make sure it works as you expect.
 
-2. Define the following variables:
-   - A variable called "i" containing the value 5
-   - A variable called "d" containing the value -9.41
-   - A variable called "s" containing the phrase "I love homework!"
-   - A list called "numlist" containing 6 random numbers of your choosing
-   - A list called "strlist" containing 6 random strings/phrases/etc. of your choosing
-   - A dictionary called "bookdict" with 5 key:value pairs. Each key:value pair should be ...
 
-3. For each variable, create a print statement following this paradigm, "My new variable <variable> is <type> and contains <values>.
-Example - the print statement for "strlist" might look like this: "My variable strlist is <type 'list'> and contains ['hi', 'hello', 'hey', 'goodday', 'sup g', 'yo', 'goodday']."
-Run the your script to verify that each print statement is correct.
+1. Define a variable called `mystring`, which contains a lengthy string of some kind (a random sentence, your address, song lyrics, a haiku, random letters, whatever).
 
-4. Create an additional print statement for each list variable to obtain a printed result like, "My variable strlist contains the values hi, hello, hey, goodday, sup g, yo, goodday."
-Run the your script to verify that each print statement is correct.
+   - Without redefining `mystring`, replace the first 4 occurrences of the letter "a" with the number 6. Use a single string method for this task.
+   - Redefine `mystring` such that all occurrences of some other letter are replaced with again a different letter (up to you!). Use a single string method for this task.
+   - Use indexing to replace the letter in the 5th position of `mystring` with the letter "X". How did that go?
 
-5. Use the dictionary method, .items(), to print the 3rd (key, value) pair in bookdict.
+2. Define a list variable called `fruits` which contains the following 4 entries: banana, apple, grape, and plum.
 
-6.  
+   - Use the list method `.append()` to add "kiwi" to the end of the list.
+   - Use the list method `.insert()` to add "pear" to the end of the list.
+   - Use the list method `.insert()` to add "orange" to the **middle** of the list. Try to incorporate the `len()` function as part of your statement.
+   - Use indexing to change the 2nd fruit in the list to "peach".
+
+3. Create a variable called `rna` which contains some random RNA (A,C,G,and U) string of a good-sized length (like 20?)
+
+   - Define a dictionary variable called `rna_dict`. Fill this dictionary with key:value pairs indicating how many A, C, G, and U are in the `rna` string. Try to use `.count()` method in your code!
+   - Print a statement that says, "There are (some #) A nucleotides in this sequence." Do *not* use the letter "A" or the actual number as part of your print statement - use the dictionary itself in your printing.
+   - Create another variable called `rna2` which contains the same sequence as `rna`, but with a few missing nucleotides ("N") tacked on. For this, do *not* type out (or copy/paste!) the `rna` contents, but rather use the `rna` variable itself and the `+` symbol to create `rna2`
+   - Create a new dictionary for the `rna2` nucleotide counts. Can you do this *without* retyping the same things as you typed to make the first dictionary?
+   - BONUS! Use indexing to print the first key:value pair as a tuple. Did that work? No? Then hint! you'll need to use a dictionary method for this!
+   
+4. Python has many modules, or libraries, which can be imported into a script. Modules are basically pieces of code with lots of convenient functions that aren't normally available to you. For this exercise, we'll use the module "string", which contains lots of useful functions for dealing with string variables. In particular, we'll use the function `maketrans`.
+   At the top of your script, add the line: `from string import maketrans`. The `maketrans` function is very useful for "re-mapping" individual elements in strings. We'll use `maketrans` to determine the genetic complement of `rna`.
+   
+   ```python
+    >>> # Create a translator variable with the function `maketrans`. The function takes two string arguments, which should map 1:1.
+    >>> rna = "AACCUCUCAAGCGCAUCGAUCGA"
+    >>> translate_to_complement = maketrans("ACGU", "UGCA") 
+    
+    >>> # Use the .translate() function to determine the complement
+    >>> complement = rna.translate( translate_to_complement )
+    >>> print complement
+    UUGGAGAGUUCGCGUAGCUAGCU
+    >>> print rna
+    AACCUCUCAAGCGCAUCGAUCGA
+
+   ```
+   
+   - Now that you've seen an example, create a new translator with `maketrans` and play around with a new string to translate things!
+
+
+
 
