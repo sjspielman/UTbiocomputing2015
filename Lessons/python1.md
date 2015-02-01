@@ -24,7 +24,7 @@ As you see, attributes and methods are called after a . at the end of the instan
 ## Operators
 
 #### Mathematical operators
-First, we have the standard operators for addition (+), subtraction (-), multiplication (*), and division (/). Additional mathematical operators include, 
+First, we have the standard operators for addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`). Additional mathematical operators include, 
 
 1. Modulus operator `%`, which gives the remainder, e.g. `12 % 5` will result in 2.
 2. Exponent operator, `**`, e.g. `5**2` will result in 25.
@@ -135,6 +135,9 @@ Strings are also **ordered** - python remembers the orders of values used in the
 >>> name = "Stephanie"
 >>> type(name)
 <type 'str'>
+>>> # Find length with function len() [note that this function works for most variable types!!]
+>>> len(name)
+9
 
 >>> # Numbers can also be strings!
 >>> age = "26"
@@ -254,7 +257,7 @@ Some useful list methods:
 >>> simple.append(100.33)
 simple
 [1,4,888,2,5,11,100.33]
->>> len(simple)
+>>> len(simple) # Look, the list length changed!
 7
 
 >>> # .remove(value) removes all entries in a list corresponding to the provided argument, value
