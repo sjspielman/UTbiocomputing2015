@@ -369,6 +369,63 @@ Some fun things we can do with these variables!
 
 ```
 
+### Print statements
+Printing information from a script to "stdout" is a critically important compontent of scripting and programming. Using print statements, you can determine if your code is actually doing what you think it is. Most of the time, your code will have some issues and will need to be "debugged." Printing to screen is one of the best and easiest strategies for ensuring that your code is working as intended.
+```python
+
+>>> # Define a variable and print
+>>> a = 6
+>>> print a
+6
+
+```
+
+You can more or less print anything to screen, and importantly you can print multiple things in the same statement!
+```python
+
+>>> # Define a variable and print
+>>> mystring = "I am writing a full sentence here as a string variable, which I will save!"
+>>> print mystring
+I am writing a full sentence here as a string variable, which I will save!
+
+>>> # print two strings together with + 
+>>> print "Here is my string: " + mystring
+
+>>> + can only be used to join strings when printing!
+>>> print mystring  + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> print mystring  + "2"
+I am writing a full sentence here as a string variable, which I will save!2
+
+>>> # Use , to print multiple variables, values of different types. Spaces will automatically be inserted.
+>>> print "My variable contains", mystring, " Yay! here's a number!", 888
+My variable contains I am writing a full sentence here as a string variable, which I will save!  Yay! here's a number! 888
+
+
+# woah all the printing!
+>>> a = 55
+>>> b = 44.6
+>>> mylist = [1,2,3]
+>>> print "oh man, I got some numbers:", a, "," b, ",", and even a list:", mylist, ", and even a string!: ", mystring
+oh man, I got some numbers: 55 , 44.6 , and even a list: [1, 2, 3] , and even a string!:  I am writing a full sentence here as a string variable, which I will save!
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
