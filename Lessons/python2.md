@@ -1,3 +1,3 @@
-##Python 2: Loops!!
+#Python 2: Loops!!
 
-#What is a loop?
+##What is a loop?
