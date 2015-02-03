@@ -29,9 +29,12 @@ Complete the homework and all other exercises in this file. Be sure to use lots 
    At the top of your script, add the line: `from string import maketrans`. The `maketrans` function is very useful for "re-mapping" individual elements in strings. We'll use `maketrans` to determine the genetic complement of `rna`.
    
    ```python
-    >>> # Create a translator variable with the function `maketrans`. The function takes two string arguments, which should map 1:1.
+    >>> # Import the python module "string"
+    >>> import string
+    >>> # Create a translator variable with the function maketrans. The function takes two string arguments, which should map 1:1.
+    >>> # Note that, since this function is in the package string, we have to call it as "string.maketrans" (more on this notation in a few weeks!)
     >>> rna = "AACCUCUCAAGCGCAUCGAUCGA"
-    >>> translate_to_complement = maketrans("ACGU", "UGCA") 
+    >>> translate_to_complement = string.maketrans("ACGU", "UGCA") 
     
     >>> # Use the .translate() function to determine the complement
     >>> complement = rna.translate( translate_to_complement )
