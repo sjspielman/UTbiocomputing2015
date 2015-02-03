@@ -16,6 +16,8 @@ The goal of this class is to take away any fear of programming that you may have
 Please [install the required software](https://github.com/sjspielman/UTbiocomputing2015/blob/master/install.md) *no later* than the second day of class. 
 [Here](https://github.com/sjspielman/UTbiocomputing2015/blob/master/resources.md) are some recommended resources for all your computing needs. The resources are not required reading, but they are tremendously useful!
 
+A new and awesome resource: [Rosetta Code](https://rosettacode.org/wiki) !!!!!
+
 ## Course Schedule
 
 Week    |  Calendar Date        | Topic        | Description | Teacher
