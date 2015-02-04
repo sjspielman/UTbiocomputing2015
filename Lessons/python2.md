@@ -2,7 +2,7 @@
 
 
 
-##First, more useful functions
+First, more useful functions
 
 - `dir()` shows all methods you can use with a variable
 
@@ -28,6 +28,13 @@
 ```python
 >>> print "My name is %s." % (name)
 My name is Rebecca.
+
+>>> print "Two divided by 5 is %f" %(2.0/5)
+Two divided by 5 is 0.400000
+>>> print "Two divided by 5 is %0.1f" %(2.0/5)
+Two divided by 5 is 0.4
+>>> print "Two divided by 5 is %d" %(2.0/5)
+Two divided by 5 is 0
 ```
 
 - `random` module is useful for generating fake data
@@ -44,10 +51,10 @@ My name is Rebecca.
 >>> 
 ```
 
-##Decisions and conditions: For, If, While
+#Decisions and conditions: For, If, While
 
 
-###For loops
+##For loops
 
 A for loop is a way to iterate through a list, range, dictionary, string, etc. Use it for whenever you are repeating something.
 
@@ -143,7 +150,7 @@ for i in *.fasta; cat i >> newseqs.fasta; done
 And in many many other languages: http://rosettacode.org/wiki/Foreach
 
 
-###if statements
+##if statements
 
 - IF
 
@@ -331,7 +338,7 @@ AGTAAGA
 
 
 
-###While
+##While
 
 While loops repeat until some condition is True. Be careful as they are prone to infinite loops. If you get caught in one, hit Ctrl+C.
 
@@ -391,7 +398,7 @@ Here we manipulate the conditional (x) within the loop. Could you do this with a
 ```
 
 
-###Comprehensions
+##Comprehensions
 
 Comprehensions are faster ways to execute loops. Your typical loop structure is shown below followed by the comprehension structure.
 
