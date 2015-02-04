@@ -25,8 +25,8 @@ Complete the homework and all other exercises in this file. Be sure to use lots 
    - Create a new dictionary for the `rna2` nucleotide counts. Can you do this **without** retyping the same things as you typed to make the first dictionary?
    - BONUS! Use indexing to print the first key:value pair as a tuple. Did that work? No? Then hint! you'll need to use a dictionary method for this!
    
-4. Python has many modules, or libraries, which can be imported into a script. Modules are basically pieces of code with lots of convenient functions that aren't normally available to you. For this exercise, we'll use the module "string", which contains lots of useful functions for dealing with string variables. In particular, we'll use the function `maketrans`.
-   At the top of your script, add the line: `from string import maketrans`. The `maketrans` function is very useful for "re-mapping" individual elements in strings. We'll use `maketrans` to determine the genetic complement of `rna`.
+4. Python has many modules, or libraries, which can be imported into a script. Modules are basically pieces of code with lots of convenient functions that aren't normally available to you. For this exercise, we'll use the module "string", which contains lots of useful functions for dealing with string variables. In particular, we'll use the function `maketrans` and the string method `.translate()`.
+   At the top of your script, add the line: `import string`. The `maketrans` function is very useful for "re-mapping" individual elements in strings. We'll use `maketrans` to create a translator map to determine the genetic complement of `rna`.
    
    ```python
     >>> # Import the python module "string"
@@ -36,7 +36,7 @@ Complete the homework and all other exercises in this file. Be sure to use lots 
     >>> rna = "AACCUCUCAAGCGCAUCGAUCGA"
     >>> translate_to_complement = string.maketrans("ACGU", "UGCA") 
     
-    >>> # Use the .translate() function to determine the complement
+    >>> # Use the .translate() function in conjuction with the translator created with maketrans to determine the complement
     >>> complement = rna.translate( translate_to_complement )
     >>> print complement
     UUGGAGAGUUCGCGUAGCUAGCU
