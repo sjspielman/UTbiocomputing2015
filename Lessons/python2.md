@@ -4,7 +4,7 @@
 
 ##First, more useful functions
 
-- `dir()`
+- `dir()` shows all methods you can use with a variable
 
 ```python
 >>> name="Rebecca"
@@ -19,7 +19,7 @@
 
 ```
 
-- using `%` notation in print statements
+- using `%` notation in print statements makes for better output
 
 	%d: insert number here <br>
 	%f: insert float here <br>
@@ -30,7 +30,7 @@
 My name is Rebecca.
 ```
 
-- `random` module
+- `random` module is useful for generating fake data
 
 ```python
 >>> import random
