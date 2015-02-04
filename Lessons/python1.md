@@ -267,6 +267,12 @@ simple
 >>> # .insert(index, value) inserts the provided value into the specified index of the list
 >>> simple.insert(0, 500)
 [500,1,4,888,2,5,100.33]
+
+>>> # .index(value) returns the index for a given value
+>>> simple.index(888)
+2
+
+
 ```
 
 Let's delve a bit more into indexing now. In general, indexing follows the paradigm `container[x:y:z]`, where x is the starting index, y is the ending index, and z is the step. However, you do not need to provide all of these value to index. In fact, 
