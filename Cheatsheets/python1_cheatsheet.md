@@ -58,8 +58,8 @@ Method | Description | Example
 Method | Description | Example
 -------|-------------|---------
 `.append()` | Add value to the end of a list | `my_list.append(5)`
-`.insert()` | Add value to a specific index in a list | `my_list.insert(5, "index #5 will be this string")
-`.remove()` | Remove all occurrences of a particular value from a list | `my_list.remove(5)
+`.insert()` | Add value to a specific index in a list | `my_list.insert(5, "index #5 will be this string")`
+`.remove()` | Remove all occurrences of a particular value from a list | `my_list.remove(5)`
 `.index()` | Determine the index of a particular list value | `my_list.index(5)` 
 
 <br><br>
