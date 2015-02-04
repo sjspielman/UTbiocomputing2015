@@ -83,14 +83,14 @@ Let's try something a bit more complicated. Here we can do a repeat of a mathema
 
 ```python
 >>>sequences=['AGTCTA','AGTCAGTCAGTCAGT','ACTAGCTAGCTA','ACGTCAGTATCGTATTTTA','ACAGTCAGTGATCA','AGT','AGCTAGCTAGCTACGATGCTAGCTAGC']
->>> for i in sequences:
-...     length=len(i)
-...     Gcontent=i.count('G')
-...     Ccontent=i.count('C')
-...     Tcontent=i.count('T')
-...     Acontent=i.count('A')
+>>> for seq in sequences:
+...     length=len(seq)
+...     Gcontent=seq.count('G')
+...     Ccontent=seq.count('C')
+...     Tcontent=seq.count('T')
+...     Acontent=seq.count('A')
 ...     GCcontent=(Gcontent+Ccontent)/float(length)
-...     print "GC content of %s is %f" %(i,GCcontent)
+...     print "GC content of %s is %f" %(seq,GCcontent)
 ... 
 GC content of AGTCTA is 0.333333
 GC content of AGTCAGTCAGTCAGT is 0.466667
@@ -101,7 +101,7 @@ GC content of AGT is 0.333333
 GC content of AGCTAGCTAGCTACGATGCTAGCTAGC is 0.518519
 ```
 
-But, if you see in this code, there is a method that is repeated four times for different value, so we should also use a for loop in this case.
+But, if you see in this code, there is a calculation that is repeated four times, so we should also use a for loop in this case too.
 
 ```python
 >>>GCdict={} #create an empty dictionary that we will fill with GCcontent values
