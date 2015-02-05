@@ -285,7 +285,7 @@ But, wait, wasn't that a terribly long way to do something? Yes it was! Here is 
 
 - IF ELIF
 
-The if/elif statement can be used when you would otherwise use multiple nested if/else statements. They are performed *in order*.
+The if/elif statement can be used when you would otherwise use multiple nested if/else statements. They are performed *in order* and will not go through all of the options if one before the end is True.
 
 
 ```
