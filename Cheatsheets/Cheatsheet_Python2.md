@@ -38,7 +38,6 @@ for i in range(20):
 if logical condition == True: #line leading to an indented block ends with a colon
 	do this command  #indenting blocks of code indicates how the program flows
 	do this command
-continue with main commands
 ```
 
 Example: check to see if a certain sequence is within a sequence
@@ -88,14 +87,14 @@ for seq in seqs:
 	elif 'T' in seq:
 		print '%s is DNA' %seq
 	else:
-		print 'there are no Ts or Us in %s' %seq
+		print '%s might be a protein' %seq
+```
 
 - WHILE is useful for checking input types, and when your value in the conditional might change within the loop
 ```
 while condition == True:
 	do this command
 	do that command
-continue with normal commands
 ```
 
 Example: check whether user input fits a certain criterion
@@ -119,15 +118,16 @@ for item in thing:
 list1 = [item for item in thing]
 ```
 
-Example: make a list of the lengths of sequences in seqs list
+Example: make a list of 1 to 1000 cubed
 ```python
-seqs=['AUUGACAUCGAUCGA','AGACTGATCGATCTAG']
-l=[length(seq) for seq in seqs]
+numbers=range(1000)
+l=[x**3 for x in numbers]
 ```
 
 - FOR LOOP IN BASH
 
-```for x in list; do command to variable x; done
+```
+for x in list; do command to variable x; done
 ```
 Example: cat all fasta files in your current directory into a new file
 ```
