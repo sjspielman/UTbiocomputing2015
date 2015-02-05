@@ -251,7 +251,7 @@ else:
 ```
 
 ```python
->>> for item in newseqs: #see below on how to create this variable
+>>> for item in newseqs: 
 ...     if 'TTTTTT' in item:
 ...             print 'TTTTTT is in %s' %item
 ...     else:
@@ -431,13 +431,13 @@ examples:
 >>> mylist
 [6, 15, 12, 19, 14, 3, 27]
 
->>> mylist=[(len(seq),seq) for seq in sequences]
+>>> mylist=[(seq,len(seq)) for seq in sequences]
 >>> mylist
-[(6, 'AGTCTA'), (15, 'AGTCAGTCAGTCAGT'), (12, 'ACTAGCTAGCTA'), (19, 'ACGTCAGTATCGTATTTTA'), (14, 'ACAGTCAGTGATCA'), (3, 'AGT'), (27, 'AGCTAGCTAGCTACGATGCTAGCTAGC')]
+[('AGTCTA', 6), ('AGTCAGTCAGTCAGT', 15), ('ACTAGCTAGCTA', 12), ('ACGTCAGTATCGTATTTTA', 19), ('ACAGTCAGTGATCA', 14), ('AGT', 3), ('AGCTAGCTAGCTACGATGCTAGCTAGC', 27)]
 
 >>> dictionary=dict(mylist)
 >>> dictionary
-{3: 'AGT', 6: 'AGTCTA', 12: 'ACTAGCTAGCTA', 14: 'ACAGTCAGTGATCA', 15: 'AGTCAGTCAGTCAGT', 19: 'ACGTCAGTATCGTATTTTA', 27: 'AGCTAGCTAGCTACGATGCTAGCTAGC'}
+{'ACAGTCAGTGATCA': 14, 'ACGTCAGTATCGTATTTTA': 19, 'ACTAGCTAGCTA': 12, 'AGTCAGTCAGTCAGT': 15, 'AGCTAGCTAGCTACGATGCTAGCTAGC': 27, 'AGTCTA': 6, 'AGT': 3}
 >>> 
 
 ```
