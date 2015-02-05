@@ -144,6 +144,7 @@ A quick note: you can do for loops in bash too!
 ```
 #for file in a list of text files in this directory, print filename
 for i in *.txt; do echo $i; done
+#for file in a list of .fasta files in this directory, cat file to end of newseqs.fasta file
 for i in *.fasta; cat i >> newseqs.fasta; done
 ```
 
