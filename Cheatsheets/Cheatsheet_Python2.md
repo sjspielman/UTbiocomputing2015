@@ -16,10 +16,8 @@ Module  |  Description  | Example
 `random` | generating fake data | `random.random()` picks a value between 0 and 1 <br> `random.randint(0,10)` randomly picks a value between 0 and 10
 `time` | anything to do with timing | `time.asctime( time.localtime(time.time()) )` prints current date and time
 
-
-##Loops and simple examples
-
-- FOR is for iterating over values in a list, string, file, range, etc
+<br><br>
+##FOR is for iterating over values in a list, string, file, range, etc
 ```														
 for item in thing:
 	do this command
@@ -32,8 +30,8 @@ Example: print 20 numbers (actually prints 0 to 19)
 for i in range(20):
 	print i 
 ```
-
-- IF is the basic decision making tool
+<br><br>
+##IF is the basic decision making tool
 ```
 if logical condition == True: #line leading to an indented block ends with a colon
 	do this command  #indenting blocks of code indicates how the program flows
@@ -46,8 +44,8 @@ sequence='AGGGTGTGTCCTGA'
 if 'AGG' in sequence:
 	print 'I found your sequence'
 ```
-
-- IF ELSE is used for decision making in an either or context
+<br><br>
+##IF ELSE is used for decision making in an either or context
 ```
 if logical condition == True: 
 	do this command  
@@ -66,8 +64,8 @@ for seq in seqs:
 		print '%s is DNA' %seq
 ```
 
-
-- IF ELIF is useful when you have more than one condition to check before deciding
+<br><br>
+##IF ELIF is useful when you have more than one condition to check before deciding
 ```
 if logical condition == True: 
 	do this command  
@@ -90,7 +88,8 @@ for seq in seqs:
 		print '%s might be a protein' %seq
 ```
 
-- WHILE is useful for checking input types, and when your value in the conditional might change within the loop
+<br><br>
+##WHILE is useful for checking input types, and when your value in the conditional might change within the loop
 ```
 while condition == True:
 	do this command
@@ -108,7 +107,8 @@ print "Thanks!" #thanks the user for being a nice user
 ```
 
 
-- COMPREHENSIONS are faster than for loops and good to use when you're sifting through a long list or range
+<br><br>
+##COMPREHENSIONS are faster than for loops and good to use when you're sifting through a long list or range
 
 ```
 list1=[] #make empty list
@@ -124,7 +124,8 @@ numbers=range(1000)
 l=[x**3 for x in numbers]
 ```
 
-- FOR LOOP IN BASH
+<br><br>
+##FOR LOOP IN BASH
 
 ```
 for x in list; do command to variable x; done
