@@ -340,7 +340,7 @@ TTTT is in TAGGATATGTGATCGTTGCACGAGCTAGTGTGACTCTCCAAGGTAGTCGAACTGCTGCTTAGGTTGCTT
 
 ##While
 
-While loops repeat until some condition is True. Be careful as they are prone to infinite loops. If you get caught in one, hit Ctrl+C.
+While loops repeat until some condition becomes False. Be careful as they are prone to infinite loops. If you get caught in one, hit Ctrl+C.
 
 ```
 while condition == True:
