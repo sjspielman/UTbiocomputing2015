@@ -132,5 +132,5 @@ for x in list; do command to variable x; done
 ```
 Example: cat all fasta files in your current directory into a new file
 ```
-for i in *.fasta; cat i >> newseqs.fasta; done 
+for i in *.fasta; cat $i >> newseqs.fasta; done 
 ```
