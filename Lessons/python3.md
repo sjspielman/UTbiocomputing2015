@@ -4,7 +4,7 @@
 ## Functions
 Functions are an integral part of programming. They are self-contained pieces of code which provide instructions for a given task. Functions are *called* with certain input, *execute* the code specified, and then *return* specified value(s) from the calculations performed. The presence of a function in a program does not guarantee that it will run - functions must be explicitly called to run. 
 
-Functions should be an integral component of your scripts/program, allowing for modular, repeatable, and readable programs. *If/when you perform a certain calculation multiple times throughout your program, or you find yourself copy/pasting code into many locations in a program, it belongs in a function!* 
+Functions should be an integral component of your scripts/program, allowing for modular, repeatable, and readable programs. Using functions dramatically lowers the chance of bugs occuring in your program and cleans up a lot of clutter.  **If/when you perform a certain calculation multiple times throughout your program, or you find yourself copy/pasting code into many locations in a program, that code belongs in a function!** 
 
 
 #### Syntax
@@ -32,8 +32,8 @@ def addition2(x, y):
     return x + y
 
 >>> # We can now use the function with arbitrary input arguments. 
->>> addition(5, 6)
- 11
+>>> addition(85, 6)
+ 91
 
 >>> a = 5
 >>> b = -6
@@ -41,19 +41,62 @@ def addition2(x, y):
  -1
 
 >>> # The input variables remained unchanged
->>> print a
- 5
-
->>> print b
- 6
+>>> print a, b
+ 5, -6
 
 >>> # Assign the output of a function to a variable
 >>> c = addition(a,b)
 >>> print c
  -1
+ 
+>>> # Be sure to provide all arguments, or you'll get an error message!
+addition(6) # only 1 argument provided
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: addition() takes exactly 2 arguments (1 given)
+
+>>> # Variables defined inside the function only exist inside the function!!
+>>> print x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
 ```
 
+Functions can also return multiple values, stored as a *tuple*. This means that the values returned are separated by commas and constitute an *immutable container*. This is good news - as tuples can't be changed once created, the returned values are safe!
+```python
+# Function to divide two numbers and return the result and remainder
+def divide_remain(x, y):
+    div = x / y
+    rem = x % y
+    return div, rem
 
+>>> # Run the function!
+>>> divide_remain(77, 12)
+(6, 5) # the order div, rem is preserved
+
+>>> # Save the values returned into a single variable, and then use indexing to see the values
+>>> a = divide_remain(77, 12)
+>>> print a
+(6, 5)
+>>> type(a)
+<type 'tuple'>
+>>> print a[0]
+6
+>>> print a[1]
+5
+
+>>> # Save each returned value to its own variable
+>>> a, b = divide_remain(77, 12)
+>>> print a
+6
+>>> print type(a)
+<type 'int'>
+
+>>> print b
+5
+>>> print type(b)
+<type 'int'>
+```
 
 
 #### Scope
@@ -65,7 +108,7 @@ Python more or less goes in order
 #### Modules
 
 #### Docstrings
-
+It is always (read: **always**) a good (read: **absolutely the most important**) idea to incorporate docstrings into your functions. Docstrings are essentially comments placed inside three quotation-mark bounds (""" words """) which explain the purpose, functionality, input arguments, and return values for your function. Docstrings are great because they explain to you and others looking at your code what exactly the function accomplishes, without the reader having to fully read and internalize all the code. Also, as a bonus, if you ever want to document your python code, there are awesome tools out there (like Sphinx) which will automatically create beautiful documentation from your python code using these docstrings. 
 
 
 
