@@ -79,7 +79,7 @@ C
 T
 ```
 
-Let's try something a bit more complicated. Here we can do a repeat of a mathematical operation on items in a list.
+Let's try something a bit more complicated. Here we can do a repeat of a mathematical operation on items in a list. Note that the `x` `in for x in thing` can be whatever you want, you just have to be consistent within the loop.
 
 ```python
 >>>sequences=['AGTCTA','AGTCAGTCAGTCAGT','ACTAGCTAGCTA','ACGTCAGTATCGTATTTTA','ACAGTCAGTGATCA','AGT','AGCTAGCTAGCTACGATGCTAGCTAGC'] #create our list
