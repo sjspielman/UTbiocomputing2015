@@ -13,7 +13,7 @@ Function  |  Description  | Example
 
 Module  |  Description  | Example
 ----------|---------------|--------
-`random` | generating fake data | `random.random()` picks a value between 0 and 1 <br> `random.randint(0,10)` randomly picks a value between 0 and 10
+`random` | random number generator | `random.random()` picks a value between 0 and 1 <br> `random.randint(0,10)` randomly picks a value between 0 and 10
 `time` | anything to do with timing | `time.asctime( time.localtime(time.time()) )` prints current date and time
 
 <br><br>
