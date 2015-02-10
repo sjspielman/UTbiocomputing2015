@@ -296,6 +296,8 @@ elif other logical condition == True:
 	do this command
 elif other logical condition == True:
 	do this command
+else:
+	do this command
 ```
 
 ```python
