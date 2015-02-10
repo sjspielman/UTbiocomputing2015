@@ -100,8 +100,35 @@ def divide_remain(x, y):
 
 #### Positional, keyword, and optional arguments
 
-In the previous examples, all functions took a pre-specified number of arguments in a particular order. It is possible to incorporate flexibility with keyword and optional arguments.
+In the previous examples, all functions took a pre-specified number of arguments in a particular order. These are called *positional* arguments - the order in which you provided the arguments actually matters for how those arguments are used inside the functions. Other types of arguments allowing for more flexibility, however, are possible!
 
+###### Keyword argument
+If used in combo with positional arguments, all keyword arguments come at the *end*.
+Example, 
+```python
+
+# Division function with two positional arguments
+def divide_pos(x, y):
+    return x / y 
+
+>>> divide_pos(2,4)
+2
+>>> divide_pos(2,5) #womp womp! 
+2
+
+# Division with optional keyword argument, as_float. This function takes two positional arguments and one optional keyword argument.
+def divide_key(x, y, as_float = True):
+    if as_float:
+        return float(x) / float(y)
+    else:
+        return x / y 
+
+>>> divide_key(2,5)
+2.5
+>>> # When specifying the non-default value, you must provide the keyword
+>>> divide_key(2,5, as_float = False)
+2
+```
 
 #### Modules
 
