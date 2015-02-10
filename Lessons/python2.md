@@ -205,7 +205,7 @@ GC content lower than 50%
 ```
 - IF and FOR together!
 
-Using conditionals and for loops together makes your code very powerful. Let's take our fake genome we made in the random module example above and randomly select 100 subsequences from it.
+Using conditionals and for loops together makes your code very powerful. Let's take our fake genome we made in the random module example above and randomly select 100 random-length subsequences from it.
 
 ```python
 >>> newseqs=[] #create an empty list
