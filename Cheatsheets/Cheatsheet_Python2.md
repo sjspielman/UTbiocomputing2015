@@ -6,7 +6,7 @@ Function  |  Description  | Example
 ----------|---------------|--------
 `dir()` | shows all methods you can use with a variable | `dir(stringvariablename)` would show string methods
 `range()` | makes a list of a certain range of numbers | `range(0,20)` makes a list from 0 to 19, 20 numbers where the first is inclusive and the last is exclusive <br> `range(0,20,2)` makes the same list but counts by 2
-`input()` | asks the user for input, stores as variable | `input("Enter a phrase: ")` saves what user inputs as variable x
+`input()` | asks the user for input, stores as variable | `x=input("Enter a phrase: ")` saves what user inputs as variable x
 
 
 ##Modules 
