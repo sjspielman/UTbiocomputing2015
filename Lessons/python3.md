@@ -44,6 +44,12 @@ def addition2(x, y):
 >>> print a, b
  5, -6
 
+>>> # Variables defined inside the function only exist inside the function!!
+>>> print x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+
 >>> # Assign the output of a function to a variable
 >>> c = addition(a,b)
 >>> print c
@@ -54,12 +60,6 @@ addition(6) # only 1 argument provided
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: addition() takes exactly 2 arguments (1 given)
-
->>> # Variables defined inside the function only exist inside the function!!
->>> print x
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'x' is not defined
 ```
 
 Functions can also return multiple values, stored as a *tuple*. This means that the values returned are separated by commas and constitute an *immutable container*. This is good news - as tuples can't be changed once created, the returned values are safe!
