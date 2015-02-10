@@ -233,7 +233,7 @@ AATCTAT
 AGTAAGA
 ...
 >>> len(newseqs)
-93 #7 sequences were removed)
+93 #7 sequences were removed
 ```
 
 You can do nested if/else statements.
@@ -374,10 +374,10 @@ While loops can ensure that user input is in the right format. They are also use
 
 Try using this program, which has a test for user input using a while loop:
 ```python
-x=int(raw_input("Give me a number from 1 to 10: ")) #accepts user input, converts to an integer
+x=int(input("Give me a number from 1 to 10: ")) #accepts user input, converts to an integer
 while x not in range(0,11): #if input was not number between 1 and 10
         print "That's not a number between 1 and 10 :(" #prints a complaint
-        x=int(raw_input("Give me a number from 1 to 10: ")) #asks for a new number
+        x=int(input("Give me a number from 1 to 10: ")) #asks for a new number
 print "Thanks!" #thanks the user for being a nice user
 ```
 
