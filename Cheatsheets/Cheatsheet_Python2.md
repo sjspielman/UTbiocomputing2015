@@ -102,7 +102,7 @@ Example: check whether user input fits a certain criterion
 x=int(input("Give me a number from 1 to 10: ")) #accepts user input, converts to an integer
 while x not in range(0,11): #if input was not number between 1 and 10
         print "That's not a number between 1 and 10 :(" #prints a complaint
-        x=int(raw_input("Give me a number from 1 to 10: ")) #asks for a new number
+        x=int(input("Give me a number from 1 to 10: ")) #asks for a new number
 print "Thanks!" #thanks the user for being a nice user
 ```
 
