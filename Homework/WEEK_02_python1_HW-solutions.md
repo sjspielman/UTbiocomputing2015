@@ -31,20 +31,77 @@ Complete the homework and all other exercises in this file. Be sure to use lots 
    *This doesn't work because strings are immutable!*
 
 2. Define a list variable called `fruits` which contains the following 4 entries: banana, apple, grape, and plum.
-
+          ```python
+             fruits = ["banana", "apple", "grape", "plum"]
+         ```      
+      
    - Use the list method `.append()` to add "kiwi" to the end of the list.
+      ```python
+          fruits.append("kiwi")
+      ``` 
+      
    - Use the list method `.insert()` to add "pear" to the end of the list.
+      ```python
+          fruits.insert(5, "pear")
+      ``` 
    - Use the list method `.insert()` to add "orange" to the **middle** of the list. Try to incorporate the `len()` function as part of your statement.
+      ```python
+          fruits.insert(len(fruits)/2, "orange")
+      ``` 
+      
    - Use indexing to change the 2nd fruit in the list to "peach".
-
+      ```python
+          fruits[1] = "peach"
+      ``` 
+      
 3. Create a variable called `rna` which contains some random RNA (A,C,G,and U) string of a good-sized length.
+      ```python
+          rna = "AGCUCGUGCAUGCAUGUUACCGAUAGACCGUAAAGCGCGAUAGUUUAUUUUAGAUUAAAAAAAAA"
+      ``` 
+      
    - Use the `len()` function to determine the length of this variable.
+       ```python
+          len(rna)
+          65
+      ``` 
+      
    - Define a dictionary variable called `rna_dict`. Fill this dictionary with key:value pairs indicating how many A, C, G, and U are in the `rna` string. Try to use `.count()` method in your code!
+       ```python
+          rna_dict = {"A": rna.count("A"), "C": rna.count("C"), "G": rna.count("G"), "U": rna.count("U")}
+      ``` 
+      
    - Print a statement that says, "There are (some #) A nucleotides in this sequence." Do **not** use the letter "A" or the actual number as part of your print statement - use the dictionary itself in your printing.
-   - Create another variable called `rna2` which contains the same sequence as `rna`, but with a few missing nucleotides ("N") tacked on. For this, do **not** type out (or copy/paste!) the `rna` contents, but rather use the `rna` variable itself and the `+` symbol to create `rna2`.
-   - Create a new dictionary for the `rna2` nucleotide counts. Can you do this **without** retyping the same things as you typed to make the first dictionary?
-   - BONUS! Use indexing to print the first key:value pair as a tuple. Did that work? No? Then hint! you'll need to use a dictionary method for this!
+       ```python
+          # PSA! This question was more difficult than I (Stephanie) intended, and this would be better done with a loop anyways.
+          a_index = rna_dict.keys().index("A")
+          print "There are", rna_dict.items()[a_index][1], rna_dict.items()[a_index][0], "nucleotides in this sequence."
+          There are 24 A nucleotides in this sequence.
+      ``` 
    
+   - Create another variable called `rna2` which contains the same sequence as `rna`, but with a few missing nucleotides ("N") tacked on. For this, do **not** type out (or copy/paste!) the `rna` contents, but rather use the `rna` variable itself and the `+` symbol to create `rna2`.
+       ```python
+          rna2 = rna + "NNNNNNN"
+      ```
+
+   - Create a new dictionary for the `rna2` nucleotide counts. Can you do this **without** retyping the same things as you typed to make the first dictionary?
+       ```python
+          rna2_dict = rna_dict
+          rna2_dict["N"] = rna2.count("N")
+      ```
+   
+   - BONUS! Use indexing to print the first key:value pair as a tuple. Did that work? No? Then hint! you'll need to use a dictionary method for this!
+       ```python
+          # Fails
+          rna2_dict[0]
+          Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          KeyError: 0
+          
+          # Works!
+          rna2_dict.items()[0]
+          ('A', 24)
+      ```
+      
 4. Python has many modules, or libraries, which can be imported into a script. Modules are basically pieces of code with lots of convenient functions that aren't normally available to you. For this exercise, we'll use the module "string", which contains lots of useful functions for dealing with string variables. In particular, we'll use the function `maketrans` and the string method `.translate()`.
    At the top of your script, add the line: `import string`. The `maketrans` function is very useful for "re-mapping" individual elements in strings. We'll use `maketrans` to create a translator map to determine the genetic complement of `rna`.
    
