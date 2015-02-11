@@ -7,8 +7,28 @@ Complete the homework and all other exercises in this file. Be sure to use lots 
 1. Define a variable called `mystring`, which contains a lengthy string of some kind (a random sentence, your address, song lyrics, a haiku, random letters, whatever).
 
    - Without redefining `mystring`, replace the first 4 occurrences of the letter "a" with the number 6. Use a single string method for this task.
+       ```python
+          mystring = "Do Koalas Prefer Chocolate Or Fruit, Generally Speaking?" # taxonomy!
+          mystring.replace("a", "6", 4)
+          mystring
+          'Do Ko6l6s Prefer Chocol6te Or Fruit, Gener6lly Speaking?'
+      ```
+      
    - Redefine `mystring` such that all occurrences of some other letter are replaced with again a different letter (up to you!). Use a single string method for this task.
+         ```python
+          mystring.replace("r", "R")
+          mystring
+          'Do Koalas PRefeR Chocolate OR FRuit, GeneRally Speaking?'
+      ```
+      
    - Use indexing to replace the letter in the 5th position of `mystring` with the letter "X". How did that go?
+         ```python
+          mystring[4] = "X"
+          Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+         TypeError: 'str' object does not support item assignment
+      ```       
+   *This doesn't work because strings are immutable!*
 
 2. Define a list variable called `fruits` which contains the following 4 entries: banana, apple, grape, and plum.
 
