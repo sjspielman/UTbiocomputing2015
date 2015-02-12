@@ -1,6 +1,6 @@
 #Python 2 Homework due Feb 18
 
-1. Create your own python script that creates a genome with equal base frequencies of a *user-requested* size. Hint: use `input()`, `random`, and some of the text from the lesson.
+1. Create your own python script that creates a genome with equal base frequencies (but randomly shuffled) of a *user-requested* size. Hint: use `input()`, `random`, and some of the text from the lesson.
 
 2. Now rewrite that code into a for loop that allows you to create 30 sequences of length 100. Save them in a list.
 
