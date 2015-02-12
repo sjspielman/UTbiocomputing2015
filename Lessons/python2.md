@@ -210,8 +210,8 @@ Using conditionals and for loops together makes your code very powerful. Let's t
 ```python
 >>> newseqs=[] #create an empty list
 >>> for i in range(100): #do this 100 times
-...     int1=random.randint(0,250) #choose a random integer
-...     int2=random.randint(0,250) #choose another random integer
+...     int1=random.randint(0,1000) #choose a random integer
+...     int2=random.randint(0,1000) #choose another random integer
 ...     if int1 > int2: #if int1 is greater than int2, then select a sequence from int2 to int1
 ...             newseqs.append(genome[int2:int1])
 ...     else: #otherwise, do the opposite
