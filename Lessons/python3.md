@@ -130,6 +130,31 @@ def divide_key(x, y, as_float = True):
 2
 ```
 
+A function can have as many keyword arguments as you want. When you call the function, you can specify these arguments in any order as long as they all come *after* all positional arguments. If you intend to use the default behavior of such an argument, no need to supply it! That's why the defaults are there.
+```python
+def divide(x, y, as_float = True, digits = 3, print_sentence = False, return_remainder = False):
+    if as_float:
+        div = round(float(x) / float(y), digits)
+    else:
+        div = round( x / y, digits)
+    
+    if print_sentence:
+        if as_float:
+            print "The result of %d / %d is %f." %(x, y, div)
+        else:
+            print "The result of %d / %d is %d." %(x, y, div)
+    
+    if return_remainder:
+        return div, x%y
+    else:
+        return div
+        
+>>> a = divide(6, 767, print_sentence = True, digits = 10, return_remainder = True)
+The result of 6 / 767 is 0.007823.
+>>> print a # think about what type a will be and why! Also, think about why there are a different number of digits in the print statement and the final dividend returned.
+(0.0078226858, 6)
+```
+
 #### Modules
 
 Let's say you have several scripts which all perform similar tasks, and therefore require the same functions. One way to do this is simply to include your functions in every script. An alternative (and dare-I-say, better?) strategy is to create a stand-alone python script which contains only functions - this is a module! You can then import this module into the scripts which use these functions. This strategy will help ensure that you don't accidentally introduce bugs from copy/pasting the function, and more importantly allows you to change the function *only one time* as opposed to individually in each script where it's used (no matter how diligent you are, the latter strategy **will** introduce bugs!). 
