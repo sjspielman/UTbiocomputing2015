@@ -6,20 +6,31 @@ Last week we learned how to implement control flow (if/else/elif, for, while) in
 >>> seqs = ["ATTAGA", "GATGATTA", "NNATAGAAG", "AGGACCNANAA", "ATTTCCATCGACGGA"]
 >>> #Let's say we want to find the lengths for all sequences in seqs, but only for those sequences which have no N's (ambiguous nucs)
 >>> # We can use continue for this purpose
+>>> i = 0
 >>> for seq in seqs:
+...     i += 1
 ...     if "N" in seq:
 ...         continue
 ...     else:
-...         print len(seq)
-6
-8
-15
+...         print "length:", len(seq)
+...         print "loop iteration count:", i
+length 6
+loop iteration count: 1
+length 8
+loop iteration count: 2
+length 15
+loop iteration count: 5
 
 >>> # Alternatively, maybe we want to stop all computation if an N is encountered. We can use break for this purpose.
+>>> i = 0
 >>> for seq in seqs:
-... if "N" in seq:
-...     print "Uh-oh, a sequence has ambigious characters! I don't want to loop anymore!"
-...     break
+...     i += 1
+...     if "N" in seq:
+...         print "Uh-oh, a sequence has ambigious characters! I don't want to loop anymore!"
+...         break
+...     print "loop iteration count:", i
+loop iteration count: 1
+loop iteration count: 2
 Uh-oh, a sequence has ambigious characters! I don't want to loop anymore!
 ```
 
