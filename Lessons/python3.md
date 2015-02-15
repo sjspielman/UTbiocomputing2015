@@ -167,18 +167,37 @@ For examples, see the scripts `my_math_module.py` (contains module functions) an
 It is always (read: **always**) a good (read: **absolutely the most important**) idea to incorporate docstrings into your functions. Docstrings are essentially comments placed inside three quotation-mark bounds (""" words """) which explain the purpose, functionality, input arguments, and return values for your function. Docstrings are great because they explain to you and others looking at your code what exactly the function accomplishes, without the reader having to fully read and internalize all the code. Also, as a bonus, if you ever want to document your python code, there are awesome tools out there (like Sphinx) which will automatically create beautiful documentation from your python code using these docstrings. 
 The docstrings are also shown whenever call `help()` on a given function.
 
-Let's rewrite the `divide_remain()` function with docstrings included.
+Let's rewrite the most recent `divide()` function with docstrings included.
 ```python
-def divide_remain(x, y):
-    """ Function to compute the dividend and remainder between two numbers.
-        Arguments: Two positional arguments, x and y. x is the numerator and y is the denominator.
-        Returns: Dividend and remainder from x / y calculation.
+def divide(x, y, as_float = True, digits = 3, print_sentence = False, return_remainder = False):
+    """ Function to divide two numbers.
+        Usage: divide(x, y, ...)
+        Positional arguments:
+            1. x: the numerator
+            2. y: the denominator
+        Optional keyword arguments:
+            1. as_float: boolean argument to perform calculations and return a float value rather than integer (Default: True)
+            2. digits: the number of significant digits in the final dividend (Default: 3)
+            3. print_sentence: boolean argument for whether a sentence stating the results of the calculation should be printed. (Default: False)
+            4. return_remainder: return the remainder between between x and y in addition to the dividend (Default: False)
     """
-    div = x / y
-    rem = x % y
-    return div, rem
+    if as_float:
+        div = round(float(x) / float(y), digits)
+    else:
+        div = round( x / y, digits)
 
->>> help(divide_remain)
+    if print_sentence:
+        if as_float:
+            print "The result of %d / %d is %f." %(x, y, div)
+        else:
+            print "The result of %d / %d is %d." %(x, y, div)
+
+    if return_remainder:
+        return div, x%y
+    else:
+        return div
+
+>>> help(divide)
 divide_remain(x, y)
     Function to compute the dividend and remainder between two numbers.
     Arguments: Two positional arguments, x and y. x is the numerator and y is the denominator.
