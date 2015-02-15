@@ -1,5 +1,27 @@
 # Python III
 
+## First, recap!
+Last week we learned how to implement control flow (if/else/elif, for, while) in python. Some other important aspects of control flow which are commonly used inside for/while loops are the commands `continue` and `break`. The command `continue` tells python to stop executing the current loop iteration and skip immediately to the next iteration. The command `break` tells python to leave the loop entirely. These commands are typically used in conjuction with an `if` statement. 
+```python
+>>> seqs = ["ATTAGA", "GATGATTA", "NNATAGAAG", "AGGACCNANAA", "ATTTCCATCGACGGA"]
+>>> #Let's say we want to find the lengths for all sequences in seqs, but only for those sequences which have no N's (ambiguous nucs)
+>>> # We can use continue for this purpose
+>>> for seq in seqs:
+...     if "N" in seq:
+...         continue
+...     else:
+...         print len(seq)
+6
+8
+15
+
+>>> # Alternatively, maybe we want to stop all computation if an N is encountered. We can use break for this purpose.
+>>> for seq in seqs:
+... if "N" in seq:
+...     print "Uh-oh, a sequence has ambigious characters! I don't want to loop anymore!"
+...     break
+Uh-oh, a sequence has ambigious characters! I don't want to loop anymore!
+```
 
 ## Functions
 Functions are an integral part of programming. They are self-contained pieces of code which provide instructions for a given task. Functions are *called* with certain input, *execute* the code specified, and then *return* specified value(s) from the calculations performed. The presence of a function in a program does not guarantee that it will run - functions must be explicitly called to run. 
