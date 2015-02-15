@@ -198,10 +198,19 @@ def divide(x, y, as_float = True, digits = 3, print_sentence = False, return_rem
         return div
 
 >>> help(divide)
-divide_remain(x, y)
-    Function to compute the dividend and remainder between two numbers.
-    Arguments: Two positional arguments, x and y. x is the numerator and y is the denominator.
-    Returns: Dividend and remainder from x / y calculation.
+Help on function divide in module __main__:
+
+divide(x, y, as_float=True, digits=3, print_sentence=False, return_remainder=False)
+    Function to divide two numbers.
+    Usage: divide(x, y, ...)
+    Positional arguments:
+        1. x: the numerator
+        2. y: the denominator
+    Optional keyword arguments:
+        1. as_float: boolean argument to perform calculations and return a float value rather than integer (Default: True)
+        2. digits: the number of significant digits in the final dividend (Default: 3)
+        3. print_sentence: boolean argument for whether a sentence stating the results of the calculation should be printed. (Default: False)
+        4. return_remainder: return the remainder between between x and y in addition to the dividend (Default: False)
 ```
 
 
