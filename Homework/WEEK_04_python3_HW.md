@@ -6,7 +6,7 @@ Write a function called `find_text_files()` which takes a single argument (the n
 
 2. The file "lots\_of\_code.py" contains lots of code. Clean up this script such that the script now uses 3 functions, rather than having computations throughout the code.
 
-3. Write a script which accomplishes the following tasks:
+3. Write a script which accomplishes the following tasks (hint - each task should be a function that the main body of code calls):
    + Task 1
    + Task 2
    + Task 3
