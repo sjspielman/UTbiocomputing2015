@@ -6,10 +6,3 @@ Write a function called `find_text_files()` which takes a single argument (the n
 
 2. Open the script ["protein\_code.py"](protein_code.py). Create a new, clean version of this script called "protein\_code\_functions.py" which accomplishes the same exact same tasks as the original, except that the script has been cleanly separated into functions. The main body of the script script, break up the code into a total of **three** functions which the body of the script calls. The resulting script should accomplish the exact same tasks as the original script.
 
-3. Write a script which accomplishes the following tasks
-   + Task 1
-   + Task 2
-   + Task 3
-
-Tasks should be split into functions.
-
