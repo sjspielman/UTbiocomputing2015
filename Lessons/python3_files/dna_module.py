@@ -65,17 +65,6 @@ def compute_gc_content(seq, digits = 5, percent = False):
         return round(gc, digits)
         
 
-
-
-
-if __name__ == "__main__":
-    print "This is a module containing functions for computing DNA statistics. No code will be executed!"
-    
-    
-    
-    
-    
-    
     
     
     
