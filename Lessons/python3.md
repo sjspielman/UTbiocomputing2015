@@ -136,7 +136,7 @@ def divide_remain(x, y):
 
 In the previous examples, all functions took a pre-specified number of arguments in a particular order. These are called *positional* arguments - the order in which you provided the arguments actually matters for how those arguments are used inside the functions. Other types of arguments allowing for more flexibility, however, are possible!
 
-###### Keyword arguments
+##### Keyword arguments
 If used in combination with positional arguments, all keyword arguments come at the *end*.
 Example, 
 ```python
