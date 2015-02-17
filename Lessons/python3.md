@@ -5,7 +5,7 @@ Last week we learned how to implement control flow (if/else/elif, for, while) in
 ```python
 >>> seqs = ["ATTAGA", "GATGATTA", "NNATAGAAG", "AGGACCNANAA", "ATTTCCATCGACGGA"]
 >>> #Let's say we want to find the lengths for all sequences in seqs, but only for those sequences which have no N's (ambiguous nucs)
->>> # We can use continue for this purpose
+>>> # We can use continue for this purpose. The continue command allows you to skip ahead to the next loop iteration
 >>> i = 0
 >>> for seq in seqs:
 ...     i += 1
@@ -22,6 +22,7 @@ length 15
 loop iteration count: 5
 
 >>> # Alternatively, maybe we want to stop all computation if an N is encountered. We can use break for this purpose.
+>>> # the break command allows for "early exit" out of a loop
 >>> i = 0
 >>> for seq in seqs:
 ...     i += 1
