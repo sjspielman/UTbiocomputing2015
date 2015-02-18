@@ -10,10 +10,11 @@ Last week we learned how to implement control flow (if/else/elif, for, while) in
 >>> for seq in seqs:
 ...     i += 1
 ...     if "N" in seq:
-...         continue
-...     else:
-...         print "length:", len(seq)
-...         print "loop iteration count:", i
+...         continue # Go back to beginning of for loop
+
+        # Only print when there is no N
+...     print "length:", len(seq)
+...     print "loop iteration count:", i
 length 6
 loop iteration count: 1
 length 8
@@ -28,7 +29,7 @@ loop iteration count: 5
 ...     i += 1
 ...     if "N" in seq:
 ...         print "Uh-oh, a sequence has ambigious characters! I don't want to loop anymore!"
-...         break
+...         break # Get out of for loop entirely
 ...     print "loop iteration count:", i
 loop iteration count: 1
 loop iteration count: 2
