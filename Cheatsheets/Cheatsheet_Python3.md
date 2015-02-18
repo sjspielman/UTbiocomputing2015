@@ -26,7 +26,7 @@ def divide_key(x, y, as_float = True, show_remainder = False):
 If you know the command for a PC for these short cuts, please let us know and we'll add it to the list!
 
 Command        | computer: program         |  Description          
----------------|-----------------|------------
+---------------|---------------------------|------------
 `open <file_name>` | mac: terminal | opens the given file in the default application for that file's extension 
 `open -t <file_name>` | mac: terminal | force your default text editor to open the file
 `⌘ + /` | mac: TextWrangler | Highlight some text and enter this command to comment out the text; does not work for .txt files
