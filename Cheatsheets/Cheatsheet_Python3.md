@@ -29,10 +29,10 @@ Command        | computer: program         |  Description
 ---------------|---------------------------|------------
 `open <file_name>` | mac: terminal | opens the given file in the default application for that file's extension 
 `open -t <file_name>` | mac: terminal | force your default text editor to open the file
-`⌘ + /` | mac: TextWrangler | Highlight some text and enter this command to comment out the text; does not work for .txt files
-`⌘ + <arrow_key>` | mac: TextWrangler | Navigate to the top/bottom of document with up/down arrows. <br> Navigate to beginning/end of line with left/right arrows
 `option + click` | mac: terminal  | Jump to where you click on the command line
 `option + <arrow key>` | mac: terminal  | Jumps complete words
+`⌘ + /` | mac: TextWrangler | Highlight some text and enter this command to comment out the text; does not work for .txt files
+`⌘ + <arrow_key>` | mac: TextWrangler | Navigate to the top/bottom of document with up/down arrows. <br> Navigate to beginning/end of line with left/right arrows
 `option + click&drag` | mac: TextWrangler  | Highlight a column of text
 `alt + click&drag` | PC: Notepad++ | Highlight a column of text
 
