@@ -25,7 +25,7 @@ def divide_key(x, y, as_float = True, show_remainder = False):
 *You should set TextWrangler as the default application for `.py` files, and you should also set TextWrangler to be your default text editor.* 
 If you know the command for a PC for these short cuts, please let us know and we'll add it to the list!
 
-Command        | OS: program         |  Description          
+Command        | computer: program         |  Description          
 ---------------|-----------------|------------
 `open <file_name>` | mac: terminal | opens the given file in the default application for that file's extension 
 `open -t <file_name>` | mac: terminal | force your default text editor to open the file
