@@ -8,6 +8,15 @@ Command  |  Description
 `break`    | Exit immediately from a loop (for/while)
 
 ##Defining functions
+Use the following syntax:
+```python
+def function_name(input_variable1, input_variable2, optional_argument = True/False):
+  """Doc string to remind you of function use and input. The more detailed the better!"""
+    for loops, if else, other statements
+    more code
+    return new_variable #this is what your function outputs
+```
+
 ```python
 def divide_key(x, y, as_float = True, show_remainder = False):
   """ Divide two numbers, x and y. Takes optional arguments "as_float" (default True) and "show_remainder" (default False). """
