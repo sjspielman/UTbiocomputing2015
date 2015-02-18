@@ -20,13 +20,14 @@ def divide_key(x, y, as_float = True, show_remainder = False):
 ```
 
 
-##Useful TextWrangler Commands
-Note that you can open a files directly from the command line using the command `open <file_name>`. The `open` command opens the given file in the default application for that file's extension. 
-Alternatively, type `open -t <file_name>` to force your default text editor to open the file.
+##Useful Commands
+
 *You should set TextWrangler as the default application for `.py` files, and you should also set TextWrangler to be your default text editor.*
 
-Command  |  Description | program
-----------|-------------|------------
+Command  |  Description           | program
+----------|-----------------------|------------
+`open <file_name>` | opens the given file in the default application for that file's extension | terminal (mac)
+`open -t <file_name>` | force your default text editor to open the file | terminal (mac)
 `⌘ + /` | Highlight some text and enter this command to comment out the text <br> does not work for .txt files | TextWrangler (mac)
 `⌘ + <arrow_key>` | Navigate to the top/bottom of document with up/down arrows. <br> Navigate to beginning/end of line with left/right arrows. | TextWrangler (mac)
 `option + click` | Jump to where you click on the command line | terminal (mac)
