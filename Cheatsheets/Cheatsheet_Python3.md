@@ -25,11 +25,14 @@ Note that you can open a files directly from the command line using the command 
 Alternatively, type `open -t <file_name>` to force your default text editor to open the file.
 *You should set TextWrangler as the default application for `.py` files, and you should also set TextWrangler to be your default text editor.*
 
-Command  |  Description 
-----------|-------------
-`⌘ + /` | Highlight some text and enter this command to comment out the text
-`⌘ + <arrow_key>` | Navigate to the top/bottom of document with up/down arrows. <br> Navigate to beginning/end of line with left/right arrows.
-`⌘ + click` | Highlight a column of text 
+Command  |  Description | program
+----------|-------------|------------
+`⌘ + /` | Highlight some text and enter this command to comment out the text <br> does not work for .txt files | TextWrangler (mac)
+`⌘ + <arrow_key>` | Navigate to the top/bottom of document with up/down arrows. <br> Navigate to beginning/end of line with left/right arrows. | TextWrangler (mac)
+`option + click` | Jump to where you click on the command line | terminal (mac)
+`option + <arrow key>` | Jumps complete words | terminal (mac)
+`option + click&drag` | Highlight a column of text | TextWrangler (mac)
+`alt + click` | Highlight a column of text | Notepad++ (PC)
 
 
 
