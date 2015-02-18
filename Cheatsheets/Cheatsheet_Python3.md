@@ -21,8 +21,8 @@ def divide_key(x, y, as_float = True, show_remainder = False):
 
 
 ##Useful TextWrangler Commands
-Note that you can open a files directly from the command line using the command `open <file_name>`. The `open` command opens the given file in the default application for that file's extension. 
-Alternatively, type `open -t <file_name>` to force your default text editor to open the file.
+Note that you can open a files directly from the command line using the command "`open <file_name>`". The "`open`" command opens the given file in the default application for that file's extension. 
+Alternatively, type "`open -t <file_name>`" to force your default text editor to open the file.
 *You should set TextWrangler as the default application for `.py` files, and you should also set TextWrangler to be your default text editor.*
 
 Command  |  Description 
