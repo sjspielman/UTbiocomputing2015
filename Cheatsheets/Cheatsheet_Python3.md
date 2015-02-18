@@ -8,7 +8,6 @@ Command  |  Description
 `break`    | Exit immediately from a loop (for/while)
 
 ##Defining functions
-Use the following syntax:
 ```python
 def function_name(input_variable1, input_variable2, optional_argument = True/False):
   """Doc string to remind you of function use and input. The more detailed the better!"""
