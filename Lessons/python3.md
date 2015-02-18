@@ -11,8 +11,7 @@ Last week we learned how to implement control flow (if/else/elif, for, while) in
 ...     i += 1
 ...     if "N" in seq:
 ...         continue # Go back to beginning of for loop
-
-        # Only print when there is no N
+...     # Only print when there is no N
 ...     print "length:", len(seq)
 ...     print "loop iteration count:", i
 length 6
