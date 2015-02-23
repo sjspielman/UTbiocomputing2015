@@ -74,12 +74,8 @@ f.close()
 
 ## File parsing
 
-Typically, we want some kind of information from a file. Example, let's get the mean of the 3rd row from this file.
-
-The file ["parsing_example.txt"](python4_files/parsing_example.txt) contains information from 
-...
-coming back to this soooooon!
-
+Parse one csv/tdf file (crabs)
+Parse one hideous file (hyphy output). Introduce the re module.
 
 
 
