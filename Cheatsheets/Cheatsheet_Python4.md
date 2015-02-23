@@ -32,7 +32,7 @@ Symbol | Meaning
 `\s`   | space character
 `\t`   | tab character
 `\n`   | newline character (Mac and Linux! PCs may or may recognize this)
-`\r`   | newline character (PCs! Mac and Linux may or may recnogize this)
+`\r`   | newline character (PCs! Mac and Linux may or may recognize this)
 `.`    | wildcard
 `\d`   | digit (numbers only!)
 `\w`   | letter or number (case insensitive)
