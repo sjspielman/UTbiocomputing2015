@@ -10,7 +10,7 @@ Command  |  Description | Example
 `.seek()` | Place the file iterator at a certain line. *Needed* to loop over a file contents multiple times! | ` my_file.seek(0)`
 `.read()` | Read entire contents of a file into a string | `contents = my_file.read()`
 `.readlines()` | Read file contents line-by-line. Commonly used in loops. | `lines = my_file.readlines()`
-`.write()` | Write to a file | `my_files.write("I'm being written to a file!")`
+`.write()` | Write to a file | `my_file.write("I'm being written to a file!")`
 
 ##csv Module functions and methods
 Command  |  Description | Example
