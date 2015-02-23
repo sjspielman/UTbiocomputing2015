@@ -30,11 +30,12 @@ rw | Read and write (PC)
 
 ## re Module
 All functions shown here take two arguments: `re.<function>(pattern, string)`
+
 Function | Meaning | Example
 ---------|---------|--------
 re.search | Find instances of a regular expression in a string | `re.search(pattern, string)`
 re.split | Split string by occurrences of pattern (similar to .split(), but with regex! | `re.split(pattern, string)`
-re.findall | Return all non-overlapping matches of pattern in string, as a list of strings
+re.findall | Return all non-overlapping matches of pattern in string, as a list of strings | `re.findall(pattern, string)`
 
 
 ##Regular Expressions
