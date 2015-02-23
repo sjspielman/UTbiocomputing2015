@@ -4,15 +4,15 @@
 
 Command  |  Description | Example
 ----------|-------------|----------
-`open()` | Open a file as a python object |`{python} my_file = open("file.txt", "r")` (See below for opening modes)
-`close()`| Close a file | `{python} my_file.close()
-`seek()` | Place the file iterator at a certain line. *Needed* to loop over a file contents multiple times! | `{python} my_file.seek(0)`
+`open()` | Open a file as a python object |`my_file = open("file.txt", "r")` (See below for opening modes)
+`close()`| Close a file | my_file.close()
+`seek()` | Place the file iterator at a certain line. *Needed* to loop over a file contents multiple times! | ` my_file.seek(0)`
 
 ##csv Module functions and methods
 Command  |  Description | Example
 ----------|-------------|----------
-`csv.reader()` | Setup a csv reader on an **opened** file handle. Rows are parsed into **lists**. | `{python} my_file = open("file.csv", "r")`<br>`{python} reader = csv.reader(my_file)`<br> Note that an argument `delimiter=...` may be provided for other separators, like `\t` for tabs.
-`csv.DictReader()` | Setup a csv reader on an opened file handle. Rows are parsed into **dictionaries** |  `{python} my_file = open("file.csv", "r")`<br>`{python} reader = csv.DictReader(my_file)`
+`csv.reader()` | Setup a csv reader on an **opened** file handle. Rows are parsed into **lists**. | `my_file = open("file.csv", "r")`<br>`reader = csv.reader(my_file)`<br> Note that an argument `delimiter=...` may be provided for other separators, like `\t` for tabs.
+`csv.DictReader()` | Setup a csv reader on an opened file handle. Rows are parsed into **dictionaries** |  `my_file = open("file.csv", "r")`<br>`reader = csv.DictReader(my_file)`
 `<file_handle>.writerow()` | Write a row to csv | reader.writerow([a,b,c,d])
 
 ##File modes
