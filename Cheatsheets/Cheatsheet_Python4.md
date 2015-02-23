@@ -1,12 +1,16 @@
 #CHEATSHEET PYTHON 4: File Input/Output
 
 ##Functions and Methods
+Note that all file methods should be performed on **file objects**, as defined using `open()`. 
 
 Command  |  Description | Example
 ----------|-------------|----------
 `open()` | Open a file as a python object |`my_file = open("file.txt", "r")` (See below for opening modes)
-`close()`| Close a file | my_file.close()
-`seek()` | Place the file iterator at a certain line. *Needed* to loop over a file contents multiple times! | ` my_file.seek(0)`
+`.close()`| Close a file | `my_file.close()`
+`.seek()` | Place the file iterator at a certain line. *Needed* to loop over a file contents multiple times! | ` my_file.seek(0)`
+`.read()` | Read entire contents of a file into a string | `contents = my_file.read()`
+`.readlines()` | Read file contents line-by-line. Commonly used in loops. | `lines = my_file.readlines()`
+
 
 ##csv Module functions and methods
 Command  |  Description | Example
