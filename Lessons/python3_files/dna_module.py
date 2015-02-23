@@ -39,7 +39,7 @@ def compute_at_content(seq, digits = 5, percent = False):
     """
     a = seq.lower().count("a")
     t = seq.lower().count("t")
-    at = round( float(a + t) / length(seq), digits)
+    at = round( float(a + t) / len(seq), digits)
     if percent:
         return at*100
     else:
@@ -58,7 +58,7 @@ def compute_gc_content(seq, digits = 5, percent = False):
     """
     g = seq.upper().count("G")
     c = seq.upper().count("C")
-    gc = float(g + c) / length(seq)
+    gc = float(g + c) / len(seq)
     if percent:
         return round(gc * 100, digits)
     else:

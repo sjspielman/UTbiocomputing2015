@@ -246,7 +246,7 @@ divide(x, y, as_float=True, digits=3, print_sentence=False, return_remainder=Fal
 
 Let's say you have several scripts which all perform similar tasks, and therefore require the same functions. One way to do this is simply to include your functions in every script. An alternative (and dare-I-say, better?) strategy is to create a stand-alone python script which contains only functions - this is a module! You can then import this module into the scripts which use these functions. This strategy will help ensure that you don't accidentally introduce bugs from copy/pasting the function, and more importantly allows you to change the function *only one time* as opposed to individually in each script where it's used (no matter how diligent you are, the latter strategy **will** introduce bugs!). 
 
-For examples, see the script `my_math_module.py` (contains module functions).
+For examples, see the script `dna_module.py` (contains module functions).
 
 
 
