@@ -30,6 +30,47 @@ file_handle.close()
 ```
 
 
+## Looping over file contents
+
+```python
+# Read file line-by-line with .readlines() [Note that this is very slow for MASSIVE files!]
+with open("file.txt", "r") as f:
+    lines = f.readlines()
+    for line in lines:
+        print line
+    # To loop another time, you must direct the readlines iterator to start from the top!
+    f.seek(0)
+    for line in lines:
+        print line
+        
+# Read file as a whole, and then split into lines
+with open("file.txt", "r") as f:
+    contents = f.read()
+    contents_list = contents.split("\n") # Split file contents on newline character
+    for line in contents_list:
+        print line
+```
+
+## The csv module
+
+The csv module is a useful python module for parsing comma-separated files, tab-delimited files, or generally any files with delimited *fields*. The csv module provides functions for parsing a file which has already been opened using `open()`.
+```python
+import csv
+
+# Read a standard csv file.
+f = open("file.csv", "r")
+reader = csv.reader(f)
+for row in reader:
+  print row
+f.close()
+
+# Read a file with a different delimiter (e.g. tab)
+f = open("file.txt", "r")
+reader = csv.reader(f, delimiter = '\t') # Specify the delimiter if it is not a comma!!
+for row in reader:
+  print row
+f.close()
+  
 
 
 
