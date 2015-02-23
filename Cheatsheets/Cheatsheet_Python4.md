@@ -47,7 +47,7 @@ Symbol | Meaning
 ##The `with..as` command
 The command `with..as` is used to create control flow blocks, and commonly is it used when performing operations on files. By using the `with..as` command, you do not need to explicitly close the file.
 Example:
-```{python}
+```python
 with open("myfile.txt", "r") as file_handle:
   # Perform file operations
 # Once the with statement is exited, the file is automatically closed
