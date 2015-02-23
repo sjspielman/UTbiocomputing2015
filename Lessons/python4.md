@@ -70,8 +70,15 @@ reader = csv.reader(f, delimiter = '\t') # Specify the delimiter if it is not a 
 for row in reader:
   print row
 f.close()
-  
+```
 
+## File parsing
+
+Typically, we want some kind of information from a file. Example, let's get the mean of the 3rd row from this file.
+
+The file ["parsing_example.txt"](python4_files/parsing_example.txt) contains information from 
+...
+coming back to this soooooon!
 
 
 
