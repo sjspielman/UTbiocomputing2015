@@ -74,8 +74,31 @@ f.close()
 
 ## File parsing
 
-Parse one csv/tdf file (crabs)
-Parse one hideous file (hyphy output). Introduce the re module.
+Several examples of file parsing are available in [project4_files](project4_files/).
+The file [parse_delimited.py](project4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files XXX and YYY.
+The file [parse_custom.py](project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output.txt](project4_files/hyphy_output.txt')
+
+The parse_delimited example for the blastout file should grab each line and grab the ids associated with HUMAN or something.
+The parse custom should use re.sub and/or re.split to parse the Site rows.
+
+An integral aspect of this file parsing is the `re` module. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's.
+```python
+# SHOW SOME BASIC EXAMPLES for re.search, re.findall, re.split, re.sub(maybe)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

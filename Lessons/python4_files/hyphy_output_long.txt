@@ -26,7 +26,8 @@ Codon model:-84256.3971213161
 
 Phase 4: Ancestral State Reconstruction and Counting
 
-<<Significance level for Likelihood Ratio Tests (permissible range = [0,1], default value = 0.1)>>Site     1 dN/dS =      0.06687 Full Log(L) =   -156.32457 LRT =     65.09513 p-value =      0.00000 *N
+<<Significance level for Likelihood Ratio Tests (permissible range = [0,1], default value = 0.1)>>
+Site     1 dN/dS =      0.06687 Full Log(L) =   -156.32457 LRT =     65.09513 p-value =      0.00000 *N
 Site     2 dN/dS =      0.01670 Full Log(L) =    -77.20204 LRT =    104.69908 p-value =      0.00000 *N
 Site     3 dN/dS =      0.03834 Full Log(L) =   -165.45179 LRT =     83.23576 p-value =      0.00000 *N
 Site     4 dN/dS =      0.10975 Full Log(L) =   -267.33075 LRT =     34.20608 p-value =      0.00000 *N
@@ -650,23 +651,3 @@ Process time on the master node: 303543
 MPI nodes used: 0
 
 Wall-clock time per site (seconds): 2.35411e+06
-Error:
-Ran out of input in buffer during a redirected standard input read.
-
-Function call stack
-1 : Print to File PROMPT_FOR_FILE:CLEAR_FILE
-labels[0]
-
-	Standard input redirect:
-		Empty Associative List-------
-2 : ExecuteAFile from file HYPHYDIR+"QuickSelectionDetection.bf" using basepath /share/WilkeLab/work/sjs3495/dengue_ns3_omega-298670/. reading input from inputRedirect
-{"01":"Universal",
-"02":"New Analysis",
-"03":"/share/WilkeLab/work/sjs3495/dengue_ns3_omega-298670/temp.fasta",
-"04":"Default",
-"05":"/share/WilkeLab/work/sjs3495/dengue_ns3_omega-298670/temp.tre",
-"06":"/share/WilkeLab/work/sjs3495/dengue_ns3_omega-298670/nuc.fit",
-"07":"Estimate",
-"08":"One rate FEL",
-"09":"0.01"}
--------

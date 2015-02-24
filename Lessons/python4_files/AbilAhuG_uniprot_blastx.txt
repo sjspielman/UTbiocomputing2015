@@ -1,3 +1,4 @@
+qseqid	sseqid	pident	length	mismatch	gapopen	qstart	qend	sstart	send	evalue	bitscore	sscinames	stitle	sblastnames
 comp642_c0_seq1	sp|Q9GMY3|PEPC_RHIFE	79.55	44	9	0	1	132	346	389	3e-17	78.2	N/A	Gastricsin OS=Rhinolophus ferrumequinum GN=PGC PE=2 SV=1	N/A
 comp685_c0_seq1	sp|P04323|POL3_DROME	54.35	46	21	0	205	68	426	471	2e-09	57.0	N/A	Retrovirus-related Pol polyprotein from transposon 17.6 OS=Drosophila melanogaster GN=pol PE=4 SV=1	N/A
 comp5440_c0_seq1	sp|Q6NZ06|ILF2_DANRE	95.71	70	3	0	2	211	111	180	2e-36	 130	N/A	Interleukin enhancer-binding factor 2 homolog OS=Danio rerio GN=ilf2 PE=2 SV=1	N/A

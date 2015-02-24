@@ -51,7 +51,8 @@ Symbol | Meaning
 `\w`   | letter or number (case insensitive)
 `+`    | Symbol to append after a regular expression indicating "one or more of these" <br> E.g., `\d+` means match 1 or more numbers
 `*`    | Symbol to append after a regular expression indicating "zero or more of these" <br> E.g., `\d*` means match 0 or more numbers
-
+`^`    | Beginning of line character
+`$`    | End of line character
 
 ##The `with..as` command
 The command `with..as` is used to create control flow blocks, and commonly is it used when performing operations on files. By using the `with..as` command, you do not need to explicitly close the file.
