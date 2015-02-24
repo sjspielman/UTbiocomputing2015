@@ -80,9 +80,21 @@ Several examples of file parsing are available in [project4_files](project4_file
 The file [parse_delimited.py](project4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files AbilAhuG\_uniprot\_blastx.txt and AbilAhuG\_uniprot\_blastx.csv.
 The file [parse_custom.py](project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output_long.txt.txt](project4_files/hyphy_output_long.txt.txt').
 
-An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's.
+An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's. The re module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the re module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here, but the examples shown below are (in your teacher's opinion..) among the most useful.
+
+
 ```python
-# SHOW SOME BASIC EXAMPLES for re.search, re.findall, re.split, re.sub(maybe)
+import re
+# All functions shown below are executed with the general format, re.<function>(regex_pattern, string_to_look_for_regex_in)
+
+# re.search function
+
+# re.findall function
+
+# re.split function
+
+# re.sub function
+
 ```
 
 
