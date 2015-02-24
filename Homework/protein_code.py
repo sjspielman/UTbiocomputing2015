@@ -15,7 +15,7 @@ charged     = ["R", "K", "D", "E"]
 
 # Generate a random protein sequence of a user-specified length, and print the sequence to screen.
 size = raw_input("Enter the desired protein sequence length:\n")
-protein = random.sample(amino_acids, int(size))
+protein = random.sample(amino_acids*500, int(size)) # hack! enjoy :)
 protein_string = "".join(protein)
 print "The randomly generated protein sequence of length", size, "is", protein_string
 
