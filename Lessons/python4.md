@@ -76,9 +76,9 @@ f.close()
 
 ## File parsing
 
-Several examples of file parsing are available in [project4_files](project4_files/).
-The file [parse_delimited.py](project4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files [AbilAhuG\_uniprot\_blastx.txt](./project4_files/AbilAhuG_uniprot_blastx.txt) and [AbilAhuG\_uniprot\_blastx.csv](./project4_files/AbilAhuG_uniprot_blastx.csv) (note that these are the same file, except one is tab-delimited and one is comma-delimited).
-The file [parse_custom.py](./project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output_long.txt](./project4_files/hyphy_output_long.txt).
+Several examples of file parsing are available in [python4_files](python4_files/).
+The file [parse_delimited.py](python4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files [AbilAhuG\_uniprot\_blastx.txt](./python4_files/AbilAhuG_uniprot_blastx.txt) and [AbilAhuG\_uniprot\_blastx.csv](./python4_files/AbilAhuG_uniprot_blastx.csv) (note that these are the same file, except one is tab-delimited and one is comma-delimited).
+The file [parse_custom.py](./python4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output_long.txt](./python4_files/hyphy_output_long.txt).
 
 An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's. The re module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the re module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here, but the examples shown below are (in your teacher's opinion..) among the most useful.
 
