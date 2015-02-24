@@ -15,7 +15,7 @@ with open("important_file.txt", "r") as file_handle:
   contents = file_handle.read()
 ```
 
-The `open()` function takes two arguments: i) the name of the file to open, and ii) the *mode* in which the file should be read. Modes include read-only (`"r"`), write-only (`"w"`), append (`"a"`), or read+write (`"rw"` for PCs and `"r+"` for Mac/Linux). Writing and appending are similar to the bash operators `>` and `>>`; write will overwrite the file, but append will add to the bottom of an existing file.
+The `open()` function takes two arguments: i) the *name* (including full or relative path!) of the file to open, and ii) the *mode* in which the file should be read. Modes include read-only (`"r"`), write-only (`"w"`), append (`"a"`), or read+write (`"rw"` for PCs and `"r+"` for Mac/Linux). Writing and appending are similar to the bash operators `>` and `>>`; write will overwrite the file, but append will add to the bottom of an existing file. Note that if you open a file for writing (or appending), that file doesn't need to exist already, and a new file will be created with the specified name. Alternatively, if you attempt to open a file that does not exist for reading, you'll receive an error message.
 
 ```python
 # Open a file for writing, and write to it
@@ -32,13 +32,15 @@ file_handle.close()
 
 ## Looping over file contents
 
+Typically when interacting with files, we want to examine and perform computations with the file content. To do this, we need to read in the file contents after opening the file. There are two basic file methods, `.readlines()` and `.read()`, that exist in native Python for this purpose. 
+
 ```python
-# Read file line-by-line with .readlines() [Note that this is very slow for MASSIVE files!]
+# Read file line-by-line with .readlines() [Note that this is slow for *MASSIVE* files!]
 with open("file.txt", "r") as f:
     lines = f.readlines()
     for line in lines:
         print line
-    # To loop another time, you must direct the readlines iterator to start from the top!
+    # To loop another time, you must direct the readlines iterator to start from the top! The same would go for .read().
     f.seek(0)
     for line in lines:
         print line
@@ -53,7 +55,7 @@ with open("file.txt", "r") as f:
 
 ## The csv module
 
-The csv module is a useful python module for parsing comma-separated files, tab-delimited files, or generally any files with delimited *fields*. The csv module provides functions for parsing a file which has already been opened using `open()`.
+The **csv module** is a useful python module for parsing comma-separated files, tab-delimited files, or generally any files with delimited *fields*. The csv module provides functions for parsing a file which has already been opened using `open()`.
 ```python
 import csv
 
@@ -76,12 +78,9 @@ f.close()
 
 Several examples of file parsing are available in [project4_files](project4_files/).
 The file [parse_delimited.py](project4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files XXX and YYY.
-The file [parse_custom.py](project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output.txt](project4_files/hyphy_output.txt')
+The file [parse_custom.py](project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output.txt](project4_files/hyphy_output.txt').
 
-The parse_delimited example for the blastout file should grab each line and grab the ids associated with HUMAN or something.
-The parse custom should use re.sub and/or re.split to parse the Site rows.
-
-An integral aspect of this file parsing is the `re` module. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's.
+An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's.
 ```python
 # SHOW SOME BASIC EXAMPLES for re.search, re.findall, re.split, re.sub(maybe)
 ```
