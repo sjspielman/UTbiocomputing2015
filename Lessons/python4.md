@@ -77,8 +77,8 @@ f.close()
 ## File parsing
 
 Several examples of file parsing are available in [project4_files](project4_files/).
-The file [parse_delimited.py](project4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files XXX and YYY.
-The file [parse_custom.py](project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output.txt](project4_files/hyphy_output.txt').
+The file [parse_delimited.py](project4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files AbilAhuG\_uniprot\_blastx.txt and AbilAhuG\_uniprot\_blastx.csv.
+The file [parse_custom.py](project4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output_long.txt.txt](project4_files/hyphy_output_long.txt.txt').
 
 An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's.
 ```python
