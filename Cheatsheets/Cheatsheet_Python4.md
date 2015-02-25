@@ -53,6 +53,7 @@ Symbol | Meaning
 `*`    | Symbol to append after a regular expression indicating "zero or more of these" <br> E.g., `\d*` means match 0 or more numbers
 `^`    | Beginning of line character
 `$`    | End of line character
+`()`   | Use parentheses to capture matched patterns into variables 
 
 ##The `with..as` command
 The command `with..as` is used to create control flow blocks, and commonly is it used when performing operations on files. By using the `with..as` command, you do not need to explicitly close the file.
