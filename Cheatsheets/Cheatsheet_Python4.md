@@ -54,6 +54,8 @@ Symbol | Meaning
 `^`    | Beginning of line character
 `$`    | End of line character
 `()`   | Use parentheses to capture matched patterns into variables 
+`\`    | Escape regular expression characters <br> E.g. `\.` means match an actual period
+
 
 ##The `with..as` command
 The command `with..as` is used to create control flow blocks, and commonly is it used when performing operations on files. By using the `with..as` command, you do not need to explicitly close the file.
