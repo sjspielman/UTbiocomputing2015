@@ -1,5 +1,17 @@
 #CHEATSHEET PYTHON 4: File Input/Output
 
+##First, how can I download a text file from git??
+1. Click on the file name, then click 'Raw", a button on the top right of the text. 
+2. Copy the URL.
+3. In the command line, type:
+```
+curl URL > newfilename.txt
+```
+For example:
+```
+curl https://raw.githubusercontent.com/sjspielman/UTbiocomputing2015/master/Lessons/python4_files/AbilAhuG_uniprot_blastx.csv > blast_data_example.csv
+```
+
 ##Functions and Methods
 Note that all file methods should be performed on **file objects**, as defined using `open()`. 
 
