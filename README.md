@@ -17,6 +17,7 @@ Please [install the required software](https://github.com/sjspielman/UTbiocomput
 [Here](https://github.com/sjspielman/UTbiocomputing2015/blob/master/resources.md) are some recommended resources for all your computing needs. The resources are not required reading, but they are tremendously useful!
 
 A new and awesome resource: [Rosetta Code](https://rosettacode.org/wiki) !!!!!
+
 Another new and awesome resource, sponsored by UT! http://www.lynda.com/ .
 
 ## Course Schedule
