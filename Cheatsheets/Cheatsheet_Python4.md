@@ -55,6 +55,9 @@ Symbol | Meaning
 `$`    | End of line character
 `()`   | Use parentheses to capture matched patterns into variables 
 `\`    | Escape regular expression characters <br> E.g. `\.` means match an actual period
+`[]`   | Use brackets to define a custom regular expression <br> E.g. `[A-Z]` matches a capital letter only. `[123]` matches the number 1,2, or 3 only. 
+
+(Note that many, **many** more exist!!)
 
 
 ##The `with..as` command

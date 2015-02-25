@@ -82,30 +82,7 @@ The file [parse_custom.py](./python4_files/parse_custom.py) contains an example 
 
 An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's. The re module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the re module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here, but the examples shown below are (in your teacher's opinion..) among the most useful.
 
-
-```python
-import re
-# All functions shown below are executed with the general format, re.<function>(regex_pattern, string_to_look_for_regex_in)
-
-# re.search function
-
-# re.findall function
-
-# re.split function
-
-# re.sub function
-
-```
-
-
-
-
-
-
-
-
-
-
+Several examples of `re` functions used to parse the file [mammal\_dat.nex](python4_files/mammal_dat.nex) are shown in the file [parse\_mammals.py](python4_files/parse_mammals.py) .
 
 
 
