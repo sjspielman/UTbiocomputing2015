@@ -2,11 +2,11 @@
 
 ###Good coding practices:
 
-		Modular coding, i.e. make each function do one thing and do it well. It’s easier to compose and test minimal, single-purpose functions.
-	Test a function before you write another one!
-	Comment a lot and add doc strings once you have a functioning function. Future you will be so happy.
-	Use informative names for your variables. Function names should be verbs while instances should be nouns or noun phrases. In general, avoid short abbreviations.
-	Once you're a seasoned python-er, keep your style up to standard by reading 'best practices' (eg [link](https://www.memonic.com/user/pneff/folder/python/id/1bufp))
+* Modular coding, i.e. make each function do one thing and do it well. It’s easier to compose and test minimal, single-purpose functions.
+* Test a function before you write another one!
+* Comment a lot and add doc strings once you have a functioning function. Future you will be so happy.
+* Use informative names for your variables. Function names should be verbs while instances should be nouns or noun phrases. In general, avoid short abbreviations.
+* Once you're a seasoned python-er, keep your style up to standard by reading 'best practices' (eg [link](https://www.memonic.com/user/pneff/folder/python/id/1bufp))
 
 
 ###Ways to test your code:
@@ -53,13 +53,11 @@ for file in directory_list:
 	
 ```python
 import os
-from Bio.PDB.PDBParser import PDBParser
-parser = PDBParser()
 
 def make_filelist(directory, file_ending):
-
 	"""This function makes a list of files with a certain ending in a certain directory.
 	"""
+	
 	files=os.listdir(directory)
 	files_pdb=[]
 	for file in files:
@@ -118,13 +116,13 @@ sum_num(num_list)
 ```
 
 	
-#####5. Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be concatenated to the logfile. 
+#####5. Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be appended to the logfile. 
 
 ```
 python script.py > logfile
 ```
 	
-However, you will need to print directly to a logfile if running on a cluster (in this case you will submit your file to the cluster rather than running python in the shell). Either open the logfile as a global variable at the top of the file or open and close it every time you write to it.
+However, you will need to print directly to a logfile if you're running the program on a cluster (in this case you will submit your file to be run on the cluster rather than running python in your shell). Either open the logfile as a global variable at the top of the file or open and close it every time you write to it.
 	
 ```python
 import time
@@ -155,7 +153,7 @@ function_name(arguments)
 ```
 
 
-###Now we will go through what modular coding and testing should look like with an example.
+###Now we will go through what modular coding and testing should look like with an example protein-ligand binding analysis.
 See the files for [python5](python5_files.zip)
 
 
