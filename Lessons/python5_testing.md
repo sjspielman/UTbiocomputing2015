@@ -72,7 +72,7 @@ make_filelist('.', '.pdb')
 	
 If you're working with integers or floats or are getting a TypeError from python, you can use the type() function to check that the variable is in the format you expect. If you're having trouble indexing certain values, copy a subset into the python console and check your syntax.
 
-#####3. Python's assert function allows you to test a comparison and exits the script if not true. You can have it print an error message upon exiting.
+#####3. Python's assert clause allows you to test a comparison and exits the script if not true. You can have it print an error message upon exiting.
 
 ```python
 assert a == b, "Error: comparison %s == %s is false" %(value1,value2)
@@ -96,7 +96,7 @@ sum_num(num_list)
 
 ```
 
-#####4. Python's try and except allows you to trigger error messages for specific types of errors without killing the script.
+#####4. Python's try-except clauses allow you to trigger error messages for specific types of errors without killing the program.
 	
 ```python
 num_list=[3,52,6,'b',2,463,'a']
@@ -111,8 +111,6 @@ def sum_num(num_list):
 	print totalSum
 			
 sum_num(num_list)
-
-
 ```
 
 	
