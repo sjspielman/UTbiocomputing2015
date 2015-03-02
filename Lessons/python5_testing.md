@@ -33,7 +33,7 @@ Unless you're developing your own software, use other types of tests. We won't c
 
 ###Examples
 
-1. If you're working with large files, use a reduced file to test your code. 
+#####1. If you're working with large files, use a reduced file to test your code. 
 
 ```
 head -1000 largeDataFile.csv > test.csv 
@@ -49,7 +49,7 @@ for file in directory_list:
 	function_name(file)
 ```
 
-2. As you're writing functions, use print to check that your output is what you expect.
+#####2. As you're writing functions, use print to check that your output is what you expect.
 	
 ```python
 import os
@@ -74,7 +74,7 @@ make_filelist('.', '.pdb')
 	
 If you're working with integers or floats or are getting a TypeError from python, you can use the type() function to check that the variable is in the format you expect. If you're having trouble indexing certain values, copy a subset into the python console and check your syntax.
 
-3. Python's assert function allows you to test a comparison and exits the script if not true. You can have it print an error message upon exiting.
+#####3. Python's assert function allows you to test a comparison and exits the script if not true. You can have it print an error message upon exiting.
 
 ```python
 assert a == b, "Error: comparison %s == %s is false" %(value1,value2)
@@ -98,7 +98,7 @@ sum_num(num_list)
 
 ```
 
-4. python's try and except allows you to trigger error messages for specific types of errors without killing the script.
+#####4. Python's try and except allows you to trigger error messages for specific types of errors without killing the script.
 	
 ```python
 num_list=[3,52,6,'b',2,463,'a']
@@ -118,7 +118,7 @@ sum_num(num_list)
 ```
 
 	
-5. Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be concatenated to the logfile. 
+#####5. Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be concatenated to the logfile. 
 
 ```
 python script.py > logfile
