@@ -123,6 +123,7 @@ python script.py > logfile
 However, you will need to print directly to a logfile if you're running the program on a cluster (in this case you will submit your file to be run on the cluster rather than running python in your shell). Either open the logfile as a global variable at the top of the file or open and close it every time you write to it.
 	
 ```python
+#### global variable
 import time
 logfile=open('jobname.log','a') 
 
@@ -135,8 +136,7 @@ def function_name(arguments):
 
 function_name(arguments)
 
-
-
+#### open and close each time
 import time
 
 def function_name(arguments):
