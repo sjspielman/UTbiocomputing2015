@@ -153,7 +153,7 @@ function_name(arguments)
 ```
 
 
-###Now we will go through what modular coding and testing should look like with an example protein-ligand binding analysis.
+###Now we will go through what modular coding and testing should look like with example protein-ligand files.
 See the files for [python5](python5_files.zip)
 
 
