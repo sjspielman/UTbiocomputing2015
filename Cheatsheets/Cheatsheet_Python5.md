@@ -4,7 +4,7 @@
 * Test a function before you write another one!
 * Comment a lot and add doc strings once you have a functioning function. Future you will be so happy.
 * Use informative names for your variables. Function names should be verbs while instances should be nouns or noun phrases. In general, avoid short abbreviations.
-* Once you're a seasoned python-er, keep your style up to standard by reading 'best practices' (eg [link](https://www.memonic.com/user/pneff/folder/python/id/1bufp))
+* Once you're a seasoned python-er, keep your style up to standard by reading 'best practices'
 
 
 ###Ways to test your code:
