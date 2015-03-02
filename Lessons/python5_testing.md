@@ -152,7 +152,7 @@ function_name(arguments)
 
 
 ###Now we will go through what modular coding and testing should look like with example protein-ligand files.
-See the files for [python5](python5_files.zip). The find_close_atoms.py script will take pairs of files and find atoms that are in close proximity between a ligand and the protein it binds to. Let's see how it works.
+See the files for [python5](python5_files.zip). The find_close_atoms.py script will take pairs of .pdb files and find atoms that are in close proximity between a ligand and the protein it binds to.
 
 
 
