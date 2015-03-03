@@ -89,7 +89,7 @@ def function_name(arguments):
 function_name(arguments)
 ```
 
-```
+```python
 #### open and close each time
 import time
 
