@@ -87,7 +87,9 @@ def function_name(arguments):
 	print >>logfile,"%s was parsed in %fs." %(input_file,(time.clock() - start))
 
 function_name(arguments)
+```
 
+```
 #### open and close each time
 import time
 
