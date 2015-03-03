@@ -82,9 +82,8 @@ Example:
 	
 ```python
 
-num_list=[3,52,6,'b',2,463,'a']
-
 def sum_num(num_list):
+	num_list=[3,52,6,'b',2,463,'a']
 	totalSum=0
 	for item in num_list:
 		assert type(item)==int, "Uh oh, item '%s' not the right type! Exiting now." %item
@@ -125,14 +124,14 @@ However, you will need to print directly to a logfile if you're running the prog
 ```python
 #### global variable
 import time
-logfile=open('jobname.log','a') 
+LOGFILE=open('jobname.log','a') 
 
 def function_name(arguments):
 
 	start=time.clock()
 	code doing things
 	and other things
-	print >>logfile,"%s was parsed in %fs." %(input_file,(time.clock() - start))
+	print >>LOGFILE,"%s was parsed in %fs." %(input_file,(time.clock() - start))
 
 function_name(arguments)
 
