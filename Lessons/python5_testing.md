@@ -5,7 +5,7 @@
 * Modular coding, i.e. make each function do one thing and do it well. It’s easier to compose and test minimal, single-purpose functions.
 * Test a function before you write another one!
 * Comment a lot and add doc strings once you have a functioning function. Future you will be so happy.
-* Use informative names for your variables. Function names should be verbs while instances should be nouns or noun phrases. In general, avoid short abbreviations.
+* Use informative names for your variables. Function names should be verbs while instances should be nouns or noun phrases. In general, avoid short abbreviations. Single letters (i, n, ...) are typically reserved for counting variables.
 * Once you're a seasoned python-er, keep your style up to standard by reading 'best practices' (eg [link](https://www.memonic.com/user/pneff/folder/python/id/1bufp))
 
 
@@ -134,7 +134,8 @@ def function_name(arguments):
 	print >>LOGFILE,"%s was parsed in %fs." %(input_file,(time.clock() - start))
 
 function_name(arguments)
-
+```
+```python
 #### open and close each time
 import time
 
