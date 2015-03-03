@@ -31,9 +31,9 @@ WEEK 03 | Feb 11 | Python 2     | Control flow and loops (if, for, while) | Becc
 WEEK 04 | Feb 18 | Python 3     | Functions | Stephanie
 WEEK 05 | Feb 25 | Python 4     | File Input & Output | Stephanie
 WEEK 06 | Mar 04 | Python 5     | Testing             | Becca
-WEEK 07 | Mar 11 | Python 6     | Merging Python and Unix/Bash | Becca and Stephanie
+WEEK 07 | Mar 11 | Python 6     | Numpy & Biopython | Stephanie
 SPRING BREAK | Mar 18 | Spring break | WOOO! | Everybody!
-WEEK 08 | Mar 25 | Numpy & Biopython | Numbers & DNA in Python | Stephanie
+WEEK 08 | Mar 25 | PyBash | Merging Python and Unix/Bash | Stephanie and Becca
 WEEK 09 | Apr 01 | git | Collaboration and version control | Cheng Lee
 WEEK 10 | Apr 08 | R  | Statistical analyses | Nathan Pope
 WEEK 11 | Apr 15 | SQL  | Relational databases    | Ben Liebeskind
