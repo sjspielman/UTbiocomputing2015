@@ -11,11 +11,11 @@
 
 ###Ways to test your code:
 
-1. use a reduced file to test your code
-2. using print
-3. using assert with a boolean comparison
-4. try and except
-5. print a log file
+1. use a reduced file
+2. use print statements
+3. assertions
+4. try and except clauses
+5. keep a log file
 	
 	
 ###Once your code works:
