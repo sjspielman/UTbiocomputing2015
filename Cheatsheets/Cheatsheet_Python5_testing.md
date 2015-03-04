@@ -42,13 +42,13 @@ make_filelist('.', '.pdb')
 assert a == b, "Error: comparison %s == %s is false" %(value1,value2)
 
 def sum_num(num_list):
-	num_list=[3,52,6,'b',2,463,'a']
 	totalSum=0
 	for item in num_list:
 		assert type(item)==int, "Uh oh, item '%s' not the right type! Exiting now." %item
 		totalSum+=item
 	print totalSum
-			
+	
+num_list=[3,52,6,'b',2,463,'a']		
 sum_num(num_list)
 ```
 
@@ -57,7 +57,6 @@ sum_num(num_list)
 ```python
 
 def sum_num(num_list):
-	num_list=[3,52,6,'b',2,463,'a']
 	totalSum=0
 	for item in num_list:
 		try:
@@ -65,7 +64,8 @@ def sum_num(num_list):
 		except TypeError:
 			print "Warning, item '%s' not the right type! Continuing to next item" %item
 	print totalSum
-			
+	
+num_list=[3,52,6,'b',2,463,'a']		
 sum_num(num_list)
 ```
 #####5. Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be appended to the logfile. 
