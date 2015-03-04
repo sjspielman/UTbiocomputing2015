@@ -83,13 +83,13 @@ Example:
 ```python
 
 def sum_num(num_list):
-	num_list=[3,52,6,'b',2,463,'a']
 	totalSum=0
 	for item in num_list:
 		assert type(item)==int, "Uh oh, item '%s' not the right type! Exiting now." %item
 		totalSum+=item
 	print totalSum
-			
+	
+num_list=[3,52,6,'b',2,463,'a']		
 sum_num(num_list)
 
 
@@ -98,7 +98,6 @@ sum_num(num_list)
 #####4. Python's try-except clauses allow you to trigger error messages for specific types of errors without killing the program.
 	
 ```python
-num_list=[3,52,6,'b',2,463,'a']
 
 def sum_num(num_list):
 	totalSum=0
@@ -108,7 +107,8 @@ def sum_num(num_list):
 		except TypeError:
 			print "Warning, item '%s' not the right type! Continuing to next item" %item
 	print totalSum
-			
+		
+num_list=[3,52,6,'b',2,463,'a']	
 sum_num(num_list)
 ```
 
