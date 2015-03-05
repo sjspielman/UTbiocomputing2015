@@ -2,7 +2,7 @@
 
 Write a beautiful script with three functions. 
 
- 1. The first function should read in the csv file, save it as a list, remove the header, 
+ 1. The first function should read in the (csv file)[WEEK_06_python5_HW.csv], save it as a list, remove the header, 
  and return the dataset as a list.
 
  2. The second function should compute the amount of money spent per trip. Check *(not manually!!)*
