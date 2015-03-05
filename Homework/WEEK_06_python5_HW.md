@@ -1,10 +1,11 @@
 ## Homework for the Python 5 Testing module
 
 Write a beautiful script with three functions. We will be using a csv file with a list of expenses per day during a field season.
-
+```
 Trip,Date,Price,Item,Paid with
 quito,3-Sep,4.00,lunch,cash
 quito,3-Sep,1.00,bus,cash
+```
 
  1. The first function should read in the csv file [WEEK_06_python5_HW.csv](WEEK_06_python5_HW.csv), save it as a list, print the header and then remove it, and *return* the dataset as a list.
 
