@@ -86,11 +86,33 @@ AlignIO.write(temp, "newfile.phy", "phylip") #object to write, filename, format
 
 #### Biopython Entrez
 
-Biopython has excellent built-in tools for collecting from Entrez and SwissProt/ExPASy (see section "Parsing sequences from the net" in the how-to guide linked above). Examples for fetching and parsing NCBI data are available in the script [entrez.py](python6_files/entrez.py) and
+Biopython has excellent built-in tools for collecting from Entrez and SwissProt/ExPASy (see section "Parsing sequences from the net" in the how-to guide linked above). An example of fetching and parsing NCBI sequence data is available in the script [entrez.py](python6_files/entrez.py).
 
 ## NumPy
 
+The NumPy module is primarily useful for dealing with arrays and matrices. If you are familiar with MatLab, NumPy is (more or a less) a python substitute for much of MatLab's functionality. (Sidenote - there is a separate module called SciPy, often bundled with NumPy, which is also quite useful. Check out the docs!)
+
 #### Creating and manipulating arrays
+
+Unlike python lists, NumPy arrays are more similar to arrays in C/C++. All entries in an array must be of the same type, and the size of the array is predetermined (you cannot append straight-forwardly!). However, these arrays are much more powerful. They take up far less memory and are great for performing vectorized functions.
+
+```python
+>>> import numpy as np
+
+>>> # Array creation routines
+>>> z = np.zeros(10)
+>>> oh = np.ones(10)
+>>> my_array = np.array( [5, 6, 7, 8, 9.5])
+>>> my_array / 5
+array([ 1. ,  1.2,  1.4,  1.6,  1.9]) # Note how they are all treated as floats, since the 9.5 was included and all array elements are of the same type!
+
+>>> # Array masking returns a *boolean* array
+>>> z == 0
+array([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True], dtype=bool)
+
+
+
+
 
 #### Indexing and slicing
 
