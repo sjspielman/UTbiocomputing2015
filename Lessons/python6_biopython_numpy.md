@@ -1,33 +1,35 @@
 # Python VI: Biopython and NumPy
 
-Both of these are very big and very useful packages.
-Epic biopython [how-to guide](http://biopython.org/DIST/docs/tutorial/Tutorial.html). Here, ctl+F is your friend!
-
-NumPy tutorials are all over the place, and the package has really good documentation.
-
-This lesson introduces some basic usage of each of these modules. Note that there's also something called SciPy which is great for other scientific things, but we won't cover here. Just note that it's commonly packaged w/ NumPy.
-If you know anyone in MatLab, yell at them and tell them to switch to NumPy+SciPy. It's better.
-
-
+The Biopython and NumPy packages are both extremely useful libraries. An epic biopython [how-to guide](http://biopython.org/DIST/docs/tutorial/Tutorial.html) describes nearly all the capabilities (with examples!) of things to do with Biopython (ctl+F is your friend here!). The NumPy package has excellent [documentation](http://docs.scipy.org/doc/numpy/reference/), and the internet is chock-full of tutorials, so google away!
 
 
 ## Biopython
 
 #### Reading, writing, and parsing sequence files
 
+Biopython is an ideal tool for reading and writing sequence data. Biopython has two main modules for this purpose: `SeqIO` (sequence input-output) and `AlignIO` (alignment input-output). Each of these modules has two primary (although there are others!) functions: `read` and `parse`. The `read` function will read in a file with a single sequence or alignment, and the `parse` function will read in a file with multiple sequences or multiple sequence alignments. Each function takes two arguments: the file name and the sequence format (e.g. fasta, phylip, etc.)
+
 ```python
 from Bio import SeqIO, AlignIO
-# There are two functions for each: read and parse. read reads a single sequence (SeqIO) or alignment (AligIO), and parse reads multiple
 
 # Read in a file of un-aligned sequences. Turn into list with list() (otherwise remains generator, which is fine, but you can't index)
-seqs = list( SeqIO.read("sequences.fasta", "fasta") )
-align = AlignIO.read("alignment.phy", "phylip-relaxed")
-# there's also one of these: SeqIO.to_dict. I've never used it, but go crazy.
+seqs = list( SeqIO.parse("seqs.fasta", "fasta") )
 
-# useful attributes include seq, id, description. Remember though, that seq is a sequence object, so to muck with it you have to convert to string.
-
+# Read in an alignment file
+align = AlignIO.read("pb2.phy", "phylip-relaxed")
 ```
+Biopython parses sequence files into, you guessed it, Biopython objects! Each sequence has several attributes (which you can examine with `dir()`), but the most important ones are `.seq`, `.id`, and `.description`.
 
+```python
+# Biopython parses the file into a list of SeqRecord objects
+seqs = list( SeqIO.parse("seqs.fasta", "fasta") )
+print seqs 
+
+# Loop over sequences view important attributes, which can be converted to strings
+for record in seqs:
+   print "Record id:", record.id
+   print "Record sequence:", str(record.seq)
+```
 
 ```python
 # Change file formats
