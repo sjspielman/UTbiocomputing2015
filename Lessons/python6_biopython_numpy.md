@@ -84,69 +84,9 @@ AlignIO.write(temp, "newfile.phy", "phylip") #object to write, filename, format
 ```
 
 
-#### BioPython Entrez
+#### Biopython Entrez
 
-Biopython has built-in tools for collecting from Entrez and SwissProt/ExPASy ("Parsing sequences from the net")
-
-```python
-from Bio import ExPASy, SwissProt
-from Bio import Entrez
-Entrez.email = stephanie.spielman@gmail.com # But please replace with your email!
-
-
->>> accessions = ["O23729", "O23730", "O23731"]
->>> records = []
-
->>> for accession in accessions:
-...     handle = ExPASy.get_sprot_raw(accession)
-        try:...     
-            record = SwissProt.read(handle)
-...         records.append(record)
-        except ValueException:
-            print "WARNING: Accession %s not found" % accession 
-
-
-# A function I wrote a while back which is awesome
-def fetch_ncbi_record(id, db, ncbi_dir):
-    ''' Fetch an NCBI record if not already fetched and saved. '''
-    
-    if not os.path.exists(ncbi_dir + id + ".txt"):
-        # This is a useful construction for querying internet in general. Sometimes servers don't respond, and you don't want to kill your program if that happens! You just want to keep at it until you ping it successfully.
-        no_response = True
-        while no_response:
-            try:
-                fetch = Entrez.efetch(db=db, rettype="gb", retmode="text", id=id)
-                no_response = False
-            except:
-                pass
-        record = SeqIO.read(fetch, "gb")
-    else:
-        record = SeqIO.read(ncbi_dir + id + ".txt", "gb")
-    return record
-    
-# Horribly disgusting. Best strategy is to figure it out for your files.
-feat = prot_record.features
-    cds_id = ''
-    for entry in feat:
-        if entry.type=='CDS':
-            codedby = entry.qualifiers['coded_by'][0]
-            cds_id = codedby.split(":")[0]
-            assert(CDS_MATCH.match(cds_id)), "No coding sequence id was found."
-```
-
-
-#get_prodoc_entry
-#To download a Prosite documentation record in HTML format
-#get_prosite_entry
-#To download a Prosite record in HTML format
-#get_prosite_raw
-#To download a Prosite or Prosite documentation record in raw format
-#get_sprot_raw
-#To download a Swiss-Prot record in raw format
-#sprot_search_ful
-#To search for a Swiss-Prot record
-#sprot_search_de
-#To search for a Swiss-Prot record
+Biopython has excellent built-in tools for collecting from Entrez and SwissProt/ExPASy (see section "Parsing sequences from the net" in the how-to guide linked above). Examples for fetching and parsing NCBI data are available in the script [entrez.py](python6_files/entrez.py) and
 
 ## NumPy
 
