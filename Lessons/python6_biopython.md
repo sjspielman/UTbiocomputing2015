@@ -1,11 +1,8 @@
-# Python VI: Biopython and NumPy
+# Python VI: Biopython
 
-The Biopython and NumPy packages are both extremely useful libraries. An epic biopython [how-to guide](http://biopython.org/DIST/docs/tutorial/Tutorial.html) describes nearly all the capabilities (with examples!) of things to do with Biopython (ctl+F is your friend here!). The NumPy package has excellent [documentation](http://docs.scipy.org/doc/numpy/reference/), and the internet is chock-full of tutorials, so google away!
+An epic biopython [how-to guide](http://biopython.org/DIST/docs/tutorial/Tutorial.html) describes nearly all the capabilities (with examples!) of things to do with Biopython (ctl+F is your friend here!). While this library has lots of functionality, it is primarily useful for dealing with sequence data.
 
-
-## Biopython
-
-#### Reading and parsing sequence files
+## Reading and parsing sequence files
 
 Biopython is an ideal tool for reading and writing sequence data. Biopython has two main modules for this purpose: `SeqIO` (sequence input-output) and `AlignIO` (alignment input-output). Each of these modules has two primary (although there are others!) functions: `read` and `parse`. The `read` function will read in a file with a single sequence or alignment, and the `parse` function will read in a file with multiple sequences or multiple sequence alignments. Each function takes two arguments: the file name and the sequence format (e.g. fasta, phylip, etc.)
 
@@ -39,7 +36,7 @@ Record id: 3
 The sequence record: ATACGAATAGCCTATACGTAGCATGCATGGGCTATAATTTTTT
 ```
 
-#### Manipulating and Writing Biopython objects
+## Manipulating and Writing Biopython objects
 
 Working with sequence files can be a bit tricky since all sequences are really Biopython SeqRecord objects. Most sequence processing is done with the sequences converted to *strings*, but to interface with Biopython,
 
@@ -53,18 +50,37 @@ Working with sequence files can be a bit tricky since all sequences are really B
 
 >>> # Recast to Seq object. Two arguments are the sequence and the alphabet (the latter is optional!!)
 >>> my_biopython_seq = Seq(my_sequence, generic_dna)
->>> translated_seq = my_biopython_seq.translate() #You can convert this back to a string as desired
+
+>>> # Some exciting Biopython methods! All results are biopython objects which can be re-cast into strings with str()
+>>> my_biopython_seq.complement()
+Seq('TGCATGGCAAAACCTTGAAGG', DNAAlphabet())
+>>> my_biopython_seq.reverse_complement()
+Seq('GGAAGTTCCAAAACGGTACGT', DNAAlphabet())
+>>> my_biopython_seq.transcribe()
+Seq('ACGUACCGUUUUGGAACUUCC', RNAAlphabet())
+>>> my_biopython_seq.translate()
 Seq('TYRFGTS', ExtendedIUPACProtein())
+
+>>> # Like strings, biopython seq objects are *immutable*
+>>> my_biopython_seq[2] = "A"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'Seq' object does not support item assignment
+
 
 >>> # Create a SeqRecord object
 >>> my_biopython_seqrec = SeqRecord(my_biopython_seq, id = "seq1") # Can add other arguments as desired
 >>> my_biopython_seqrec
 SeqRecord(seq=Seq('ACGTACCGTTTTGGAACTTCC', DNAAlphabet()), id='seq1', name='<unknown name>', description='<unknown description>', dbxrefs=[])
 
+
+
+
 >>> # Biopython can write SeqRecord objects to files. Arguments are SeqRecord object(s), file name, sequence format
 >>> SeqIO.write(my_biopython_seqrec, "newseq.fasta", "fasta") 
 
 >>> # Write multiple sequences to file by providing SeqIO with a list of SeqRecord objects
+>>> # Note that AlignIO.write works just like this!
 >>> rec1 = SeqRecord(my_biopython_seq, id = "seq1")
 >>> rec2 = SeqRecord(my_biopython_seq, id = "seq2")
 >>> rec3 = SeqRecord(my_biopython_seq, id = "seq3")
@@ -72,56 +88,43 @@ SeqRecord(seq=Seq('ACGTACCGTTTTGGAACTTCC', DNAAlphabet()), id='seq1', name='<unk
 >>> SeqIO.write(lots_of_records, "lots_of_records.phy", "phylip")
 ```
 
-Note that `AlignIO.write()` works exactly as `SeqIO.write()`. 
 
-#### Converting file formats
-Biopython makes it very straight-forward to convert between sequence file formats - simply read in a file and write it out in the new format!
+## Converting file formats
+Biopython makes it very straight-forward to convert between sequence file formats - simply read in a file and write it out in the new format, or use the handy .convert() method. Again, these methods work with both `AlignIO()` and `SeqIO()`.
 
 ```python
 # Change file formats
 temp = AlignIO.read("file.fasta", "fasta")
 AlignIO.write(temp, "newfile.phy", "phylip") #object to write, filename, format 
+
+# Alternatively...
+AlignIO.convert("file.fasta", "fasta", "newfile.phy", "phylip")
 ```
 
-
-#### Biopython Entrez
-
-Biopython has excellent built-in tools for collecting from Entrez and SwissProt/ExPASy (see section "Parsing sequences from the net" in the how-to guide linked above). An example of fetching and parsing NCBI sequence data is available in the script [entrez.py](python6_files/entrez.py).
-
-## NumPy
-
-The NumPy module is primarily useful for dealing with arrays and matrices. If you are familiar with MatLab, NumPy is (more or a less) a python substitute for much of MatLab's functionality. (Sidenote - there is a separate module called SciPy, often bundled with NumPy, which is also quite useful. Check out the docs!)
-
-#### Creating and manipulating arrays
-
-Unlike python lists, NumPy arrays are more similar to arrays in C/C++. All entries in an array must be of the same type, and the size of the array is predetermined (you cannot append straight-forwardly!). However, these arrays are much more powerful. They take up far less memory and are great for performing vectorized functions.
+## Interacting with sequence alignments
 
 ```python
->>> import numpy as np
-
->>> # Array creation routines
->>> z = np.zeros(10)
->>> oh = np.ones(10)
->>> my_array = np.array( [5, 6, 7, 8, 9.5])
->>> my_array / 5
-array([ 1. ,  1.2,  1.4,  1.6,  1.9]) # Note how they are all treated as floats, since the 9.5 was included and all array elements are of the same type!
-
->>> # Array masking returns a *boolean* array
->>> z == 0
-array([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True], dtype=bool)
+from Bio import AlignIO
+aln = AlignIO.read("pb2.fasta", "fasta")
 
 
 
 
 
-#### Indexing and slicing
-
-#### Reading and writing data
 
 
 
 
 
+
+
+
+
+
+
+## Biopython Entrez
+
+Biopython has excellent built-in tools for collecting from Entrez and SwissProt/ExPASy (see section "Parsing sequences from the net" in the how-to guide linked above). An example of fetching and parsing NCBI sequence data is available in the script [entrez.py](python6_files/entrez.py).
 
 
 
