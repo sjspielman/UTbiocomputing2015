@@ -75,7 +75,6 @@ SeqRecord(seq=Seq('ACGTACCGTTTTGGAACTTCC', DNAAlphabet()), id='seq1', name='<unk
 
 
 
-
 >>> # Biopython can write SeqRecord objects to files. Arguments are SeqRecord object(s), file name, sequence format
 >>> SeqIO.write(my_biopython_seqrec, "newseq.fasta", "fasta") 
 
@@ -108,10 +107,10 @@ Biopython makes it very straight-forward to convert between sequence file format
 >>> aln = AlignIO.read("pb2.fasta", "fasta")
 >>> # Use len() to determine alignment size
 >>> number_sequences = len(aln)
->>> number_sequences
+>>> print number_sequences
 400
 >>> number_columns = len(aln[0])
->>> number_columns
+>>> print number_columns
 2277
 
 >>> # Extract alignment positions
