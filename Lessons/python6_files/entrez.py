@@ -26,6 +26,17 @@ def fetch_ncbi_record(id, db, savefile = None):
 # http://www.ncbi.nlm.nih.gov/protein/NP_000549.1
 hemoglobin_protein = fetch_ncbi_record("NP_000549.1", "protein", savefile = "hemo_prot.gb")
 
+# Useful attributes! [use dir() to see available methods and attributes]
+#print dir(hemoglobin_protein)
+#print hemoglobin_protein.seq
+#print hemoglobin_protein.description
+
+annotations = hemoglobin_protein.annotations
+#print annotations.keys()
+#print annotations["db_source"]
+
+
+
 # Capture the features attribute (which is a dictionary!)
 # Each feature has three attributes: type, location, and qualifiers
 # Generally, we're interested in qualifiers, which is itself also a dictionary!
