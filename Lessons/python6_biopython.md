@@ -93,32 +93,47 @@ SeqRecord(seq=Seq('ACGTACCGTTTTGGAACTTCC', DNAAlphabet()), id='seq1', name='<unk
 Biopython makes it very straight-forward to convert between sequence file formats - simply read in a file and write it out in the new format, or use the handy .convert() method. Again, these methods work with both `AlignIO()` and `SeqIO()`.
 
 ```python
-# Change file formats
-temp = AlignIO.read("file.fasta", "fasta")
-AlignIO.write(temp, "newfile.phy", "phylip") #object to write, filename, format 
+>>> # Change file formats
+>>> temp = AlignIO.read("file.fasta", "fasta")
+>>> AlignIO.write(temp, "newfile.phy", "phylip") #object to write, filename, format 
 
-# Alternatively...
-AlignIO.convert("file.fasta", "fasta", "newfile.phy", "phylip")
+>>> # Alternatively...
+>>> AlignIO.convert("file.fasta", "fasta", "newfile.phy", "phylip")
 ```
 
 ## Interacting with sequence alignments
 
 ```python
-from Bio import AlignIO
-aln = AlignIO.read("pb2.fasta", "fasta")
+>>> from Bio import AlignIO
+>>> aln = AlignIO.read("pb2.fasta", "fasta")
+>>> # Use len() to determine alignment size
+>>> number_sequences = len(aln)
+>>> number_sequences
+400
+>>> number_columns = len(aln[0])
+>>> number_columns
+2277
 
+>>> # Extract alignment positions
+>>> row5_column10_annoying = aln[5].seq[10] 
+>>> row5_column10_easier   = aln[5,10]
 
+>>> # Extract alignment columns
+>>> col4 = aln[:,4]
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
 
+>>> Extract alignment regions
+>>> aln_chunk = aln[5:10, 9:13] # row indices 5-10 and column indices 9-13
+>>> print aln_chunk
+SingleLetterAlphabet() alignment with 5 rows and 4 columns
+ATAA Av_ABC66491
+ATAA Av_CAF33010
+ATAA Av_ABI84837
+ATAA Av_ABI85028
+ATAA Av_ABB19754
+```
 
-
-
-
-
-
-
-
-
-
+Creating new sequence alignments is a bit tricky - you need to create multiple SeqRecord objects and merge them together into a MultipleSequenceAlignment object. We won't do that here, but you can look it up on the Biopython tutorial linked above.
 
 
 
