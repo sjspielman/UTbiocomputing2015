@@ -1,6 +1,6 @@
 # Python VI: Biopython
 
-An epic biopython [how-to guide](http://biopython.org/DIST/docs/tutorial/Tutorial.html) describes nearly all the capabilities (with examples!) of things to do with Biopython (ctl+F is your friend here!). While this library has lots of functionality, it is primarily useful for dealing with sequence data.
+An epic biopython [how-to guide](http://biopython.org/DIST/docs/tutorial/Tutorial.html) describes nearly all the capabilities (with examples!) of things to do with Biopython (ctrl+F is your friend here!). While this library has lots of functionality, it is primarily useful for dealing with sequence data.
 
 ## Reading and parsing sequence files
 
