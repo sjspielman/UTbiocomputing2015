@@ -41,30 +41,30 @@ annotations = hemoglobin_protein.annotations
 # Each feature has three attributes: type, location, and qualifiers
 # Generally, we're interested in qualifiers, which is itself also a dictionary!
 features = hemoglobin_protein.features
-
-# Examine all the entries
-for entry in features:
-    print entry
-
-# Examine what's inside the CDS feature (as an example)
-for entry in features:
-    if entry.type == "CDS":
-        print entry.qualifiers
-
-# Grab information from the CDS feature
-for entry in features:
-    if entry.type == "CDS":
-        for qual in entry.qualifiers:
-            print qual, entry.qualifiers[ qual ]
-        
-        # Grab the CDS id
-        codedby = entry.qualifiers['coded_by'][0]
-        cds_id = codedby.split(":")[0]
-        print "And here's the CDS id:", cds_id
-
-
-
-# Now, we can fetch down this protein record's corresponding nucleotide record and grab whatever information we like from it.
-hemoglobin_nuc = fetch_ncbi_record(cds_id, "nucleotide", savefile = "hemo_nuc.gb")
-
-    
+# 
+# # Examine all the entries
+# for entry in features:
+#     print entry
+# 
+# # Examine what's inside the CDS feature (as an example)
+# for entry in features:
+#     if entry.type == "CDS":
+#         print entry.qualifiers
+# 
+# # Grab information from the CDS feature
+# for entry in features:
+#     if entry.type == "CDS":
+#         for qual in entry.qualifiers:
+#             print qual, entry.qualifiers[ qual ]
+#         
+#         # Grab the CDS id
+#         codedby = entry.qualifiers['coded_by'][0]
+#         cds_id = codedby.split(":")[0]
+#         print "And here's the CDS id:", cds_id
+# 
+# 
+# 
+# # Now, we can fetch down this protein record's corresponding nucleotide record and grab whatever information we like from it.
+# hemoglobin_nuc = fetch_ncbi_record(cds_id, "nucleotide", savefile = "hemo_nuc.gb")
+# 
+#     
