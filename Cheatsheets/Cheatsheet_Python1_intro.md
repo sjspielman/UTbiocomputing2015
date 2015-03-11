@@ -2,7 +2,7 @@
 
 <br><br>
 
-### Operators
+## Operators
 Symbol   | What it does | Example
 ---------|--------------|---------
  +       | addition     | 5 + 5
@@ -21,7 +21,7 @@ Symbol   | What it does | Example
 
 <br><br>
 
-### Variable types
+## Variable types
 
 Variable Type   | Description | Casting | Examples
 ---------|--------------|---------|--------------
@@ -34,14 +34,14 @@ tuple | ordered, immutable container | tuple() | (4, 9) ; ("word1", "word2", "wo
 
 <br><br>
 
-### Useful functions
+## Useful functions
 Function |  Description | Example
 ---------|--------------|--------
 `len()` | Returns the length of a given variable (number of elements in a list, number of key:value pairs in a dictionary, number of characters in a string)
 
 <br><br>
 
-### Useful string methods
+## Useful string methods
 
 Method | Description | Example
 -------|-------------|---------
@@ -54,7 +54,7 @@ Method | Description | Example
 
 <br><br>
 
-### Useful list methods
+## Useful list methods
 
 Method | Description | Example
 -------|-------------|---------
@@ -65,7 +65,7 @@ Method | Description | Example
 
 <br><br>
 
-### Useful dictionary methods
+## Useful dictionary methods
 
 Method | Description | Example
 -------|-------------|---------
@@ -73,7 +73,7 @@ Method | Description | Example
 `.values()` | Return a list of all values in a dictionary | `my_dict.values()`
 `.items()` | Return a list of (key,value) tuples from a dictionary | `my_dict.items()`
 
-### Indexing Sytax
+## Indexing Sytax
 
 `container[x:y:z]` where container is a string, list or tuple. Here, `x` is the starting index, `y` is the ending index, and `z` is the step.
 If you specify only...
