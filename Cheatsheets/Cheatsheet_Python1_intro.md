@@ -17,6 +17,7 @@ Symbol   | What it does | Example
  >= | Greater than or equal to |  `5 >= 4` results in True
 < | Less than  |  `4 < 5` results in True
 <= | Less than or equal to |  `4 <= 5` results in True
+`in` | Test if entry in a list/string/... | `1 in [3,1,5]` returns True
 
 <br><br>
 
@@ -71,3 +72,8 @@ Method | Description | Example
 `.keys()` | Return a list of all keys in a dictionary| `my_dict.keys()`
 `.values()` | Return a list of all values in a dictionary | `my_dict.values()`
 `.items()` | Return a list of (key,value) tuples from a dictionary | `my_dict.items()`
+
+### Indexing Sytax
+
+`container[x:y:z]` where container is a string, list or tuple. Here, `x` is the starting index, `y` is the ending index, and `z` is the step.
+
