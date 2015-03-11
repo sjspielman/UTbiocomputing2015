@@ -30,7 +30,6 @@ Example script that makes a list of sequence names:
 
 Example script that concatenates the description of identical sequences and prints them to a new file:
 ```python
-seqlist={}
 # dictionary format will be  sequence:[description1, description2, ...]
 def sequence_cleaner(fasta_file):
   sequences={}
