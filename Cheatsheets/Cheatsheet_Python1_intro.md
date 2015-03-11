@@ -76,4 +76,8 @@ Method | Description | Example
 ### Indexing Sytax
 
 `container[x:y:z]` where container is a string, list or tuple. Here, `x` is the starting index, `y` is the ending index, and `z` is the step.
+If you specify only...
+
++ `container[x]`, then only that index will be returned.
++ `container[x:y]`, then all indices x through (y-1) will be returned. In other words, `x` is inclusive but `y` is not! 
 
