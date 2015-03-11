@@ -26,5 +26,5 @@ To download from NCBI, enter the line `from Bio import Entrez`. To avoid annoyin
 
 Command | Description | Example
 --------|-------------|---------
-`Entrez.efetch()` | Fetch a record from the NCBI database | `Entrez.efetch(id = "NP_000549.1", db = "protein", remode = "text", retype = "gb")` <br> `Entrez.efetch(id = "88758587", db = "nucleotide", remode = "text", retype = "gb")`
+`Entrez.efetch()` | Fetch a record from the NCBI database (the type of id is up to you!) | `Entrez.efetch(id = "NP_000549.1", db = "protein", remode = "text", retype = "gb")` <br> `Entrez.efetch(id = "88758587", db = "nucleotide", remode = "text", retype = "gb")`
 
