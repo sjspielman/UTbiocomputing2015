@@ -27,17 +27,19 @@ Variable Type   | Description | Casting | Examples
 ---------|--------------|---------|--------------
 integer | whole number  | int()   | 5, -11, 0    
 float   | decimal number | float() | 9.57, -0.2, 110.24, 4.
-string  | ordered, immutable character container | str() | "word", "lots of words", "words and numbers 582 29 in quotes"
-list    | ordered, mutable container | list() | [1,2,3,4] ; ["hi", "bye", 9, -22.1]
+string  | ordered, immutable character container | str() | "word" <br> "lots of words" <br> "words and numbers 582 29 in quotes"
+list    | ordered, mutable container | list() | [1,2,3,4] <br> ["hi", "bye", 9, -22.1]
 dictionary | unordered, mutable container (associative array)| dict() | {"key1":"value1", 9: "three-squared"}
-tuple | ordered, immutable container | tuple() | (4, 9) ; ("word1", "word2", "word3")
+tuple | ordered, immutable container | tuple() | (4, 9) <br> ("word1", "word2", "word3")
 
 <br><br>
 
 ## Useful functions
 Function |  Description | Example
 ---------|--------------|--------
-`len()` | Returns the length of a given variable (number of elements in a list, number of key:value pairs in a dictionary, number of characters in a string)
+`len()` | Returns the length of a given string, list, dictionary, or tuple | `len( [1,2,3] )` returns 3
+`sum()` | Returns the sum of a list or tuple of numbers | `sum( [1,2,5.5] )` returns 8.5
+`type()` | Returns the type of a given variable | `type("a")` returns str <br> `type(7.7)` returns float
 
 <br><br>
 
@@ -50,7 +52,7 @@ Method | Description | Example
 `.split()` | split a string on a value into a list | hi = "comma,separated,values,in,the,string" <br> `hi.split(",")` returns ['comma', 'separated', 'values', 'in', 'the', 'string']
 `.strip()` | removes leading/trailing whitespace/value | hi = "my string" <br> `hi.strip()` returns "my string" (there was no leading/trailing whitespace!) <br> `hi.strip("g")` returns "my strin"
 `.count()` | count instances of a character in a string | hi = "my letterful string" <br> `hi.count("t")` returns 3
-`.replace()` | replace all instances of a value | hi = "silliness" <br> `hi.replace("s", "5")` returns "5illine55"
+`.replace()` | replace /some instances of a value | hi = "silliness" <br> `hi.replace("s", "5")` returns "5illine55" <br> `hi.replace("s", "5", 1)` returns "5illiness"
 
 <br><br>
 
