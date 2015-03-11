@@ -134,7 +134,27 @@ ATAA Av_ABB19754
 
 Creating new sequence alignments is a bit tricky - you need to create multiple SeqRecord objects and merge them together into a MultipleSequenceAlignment object. We won't do that here, but you can look it up on the Biopython tutorial linked above.
 
+## Useful function!
 
+Here's a quick function that concatenates the description of identical sequences and prints them to a new file:
+```python
+# dictionary format will be  sequence:[description1, description2, ...]
+def sequence_cleaner(fasta_file):
+	sequences={}
+ 	for seq_record in SeqIO.parse(fasta_file, "fasta"):
+ 		sequence=str(seq_record.seq).upper()
+    	if sequence not in sequences:
+    		sequences[sequence]=seq_record.description 
+    	else:
+    		sequences[sequence]+="\t"+seq_record.description
+
+	output_file=open("clean_"+fasta_file,"w")
+	for sequence in sequences:
+		output_file.write(">"+sequences[sequence]+"\n"+sequence+"\n")
+	output_file.close()
+
+sequence_cleaner(infile)
+```
 
 ## Biopython Entrez
 
