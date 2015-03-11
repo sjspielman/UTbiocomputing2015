@@ -47,7 +47,18 @@ def sequence_cleaner(fasta_file):
 
 sequence_cleaner(infile)
 ```
+Example script that alters the description of a SeqRecord and prints them to a file:
+```python
+fastaList=[]
+counter=0 # this could be a dictionary that you want to pull information from
+for rec in SeqIO.parse(open(trinity_file, 'rU'),'fasta'): 
+	rec.description = seq.description+' '+counter # or pull info via dictionary[rec.id]
+	fastaList.append(rec) #copy record to a list
+	counter+=1
+with open(output_file, 'w') as f:
+	SeqIO.write(fastaList, f, "fasta") 
 
+```
 ##Collect NCBI Data
 To download from NCBI, enter the line `from Bio import Entrez`. To avoid annoying warnings, also enter the command, `Entrez.email = "myemail@email.com"` (replaced with your email) before fetching!
 
