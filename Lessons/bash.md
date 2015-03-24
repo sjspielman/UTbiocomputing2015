@@ -4,9 +4,9 @@
 
 ### `sed` is useful for quick and recursive replacements using Regex
 
-General pseudocode: sed [-E] command/regex/replacement/optionalflag filename > newfile
-My favorite pseudocode: sed -E s/OLD/NEW/
-(for Macs, need to use -E to access regular expressions)
+* General pseudocode: sed [-E] command/regex/replacement/optionalflag filename > newfile
+* My favorite pseudocode: sed -E s/OLD/NEW/
+* Mac users must include `-E` to access regular expressions
 
 ```bash
 # replace first instance of XX with YY for each line
@@ -20,19 +20,19 @@ sed s/XX/YY/g filename > newfile
 
 ```bash
 # replace all instances of XX with YY and of AA with ZZ
-# `-e` flag lets you execute multiple sed commands at once
+# - `-e` flag lets you execute multiple sed commands at once
 sed -e s/XX/YY/g -e s/AA/ZZ/g filename > newfile
 ```
 
 ```bash
 # put a tab between letters and non-letters in a file
-# need to escape all () using `\` 
-# must put whitespace in quotes, or else it is interpreted as a separate command
+# - must escape all () using `\` 
+# - must put whitespace in quotes, or else it is interpreted as a separate command
 sed s/\([a-zA-Z]\)\(.*\)/'\1	\2'/ filename > newfile
 ```
-
-To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
-For newline characters (`\n`), you have to code it directly into the line, eg:
+* `sed` does not understand `\t` and `\n`
+* To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
+* For newline characters (`\n`), you have to code it directly into the line, for example:
 
 ```bash
 sed -E s/\([0-9]\)/'\1\
