@@ -88,12 +88,12 @@ cat WEEK_06_python5_HW.csv | awk -F, '{ print ($2"\t"$3) }'
 
 ```bash
 # print columns 1 and 2, adding in a `tab` between, a new field "newline", and a new line at the end
-cat WEEK_06_python5_HW.csv | awk -F, '{print $1"\t"$2 "\tnewline\n"}'
+cat WEEK_06_python5_HW.csv | awk -F, '{print ($1"\t"$2 "\tnewline\n")}'
 ```
 
 ```bash
 # more complicated, a for loop that prints each item 
-cat WEEK_06_python5_HW.csv | awk -F, '{for (i=1;i<=4;i++) {print $i}}'
+cat WEEK_06_python5_HW.csv | awk -F, '{for (i=1;i<=4;i++) {print ($i)}}'
 # for each line, from items 1 until 4: `for (i=1;i<=4;i++)`
 # print each item: `{print $i}`
 ```
