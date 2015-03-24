@@ -34,7 +34,7 @@ sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example
 ```
 
 * To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
-* For newline characters (`\n`), you have to code it directly into the line, for example:
+* For newline characters (`\n`), you have to code it directly into the line with `\ + enter`, for example:
 
 ```bash
 sed -E s/\([0-9]\)/'\1\
