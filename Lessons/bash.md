@@ -4,8 +4,8 @@
 
 ### `sed` is useful for quick and recursive replacements using Regex
 
-* General pseudocode: sed [-E] command/regex/replacement/optionalflag filename > newfile
-* My favorite pseudocode: sed -E s/OLD/NEW/
+* General pseudocode: `sed [-E] command/regex/replacement/optionalflag filename > newfile`
+* My favorite pseudocode: `sed -E s/OLD/NEW/`
 * Mac users must include `-E` to access regular expressions
 
 ```bash
@@ -14,7 +14,8 @@ sed s/XX/YY/ filename > newfile
 ```
 
 ```bash
-# replace all instances of XX with YY (`g`='global')
+# replace all instances of XX with YY 
+# - `-g` flag means 'global' and searches for all instances of the pattern
 sed s/XX/YY/g filename > newfile
 ```
 
