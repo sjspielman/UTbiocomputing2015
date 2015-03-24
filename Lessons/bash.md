@@ -27,10 +27,10 @@ sed -e s/XX/YY/g -e s/AA/ZZ/g filename > newfile
 ```
 
 ```bash
-# put a tab between letters and non-letters in a file
-# - must escape all () using `\` 
-# - must put whitespace in quotes, or else it is interpreted as a separate command
-sed s/\([a-zA-Z]\)\(.*\)/'\1	\2'/ filename > newfile
+# use Regex to keep only the characters ([a-zA-Z' ']*) that come before a number, ie not a space or letter, in each line
+# - must escape all () using `\`, ie: \([regex]\)
+# - must put whitespace and replacement (\1\2) in quotes, or else it is interpreted as a separate command
+sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example 
 ```
 
 * To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
