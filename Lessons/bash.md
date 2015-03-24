@@ -27,9 +27,9 @@ sed -e s/XX/YY/g -e s/AA/ZZ/g filename > newfile
 ```
 
 ```bash
-# use Regex to keep only the characters ([a-zA-Z' ']*) that come before a number, ie not a space or letter, in each line
+# keep only letter and space characters ([a-zA-Z' ']*) that come before a different type of character in each line
 # - must escape all () using `\`, ie: \([regex]\)
-# - must put whitespace and replacement (\1\2) in quotes, or else it is interpreted as a separate command
+# - must put whitespace and replacement ('\1\2') in quotes, or else it is interpreted as a separate command
 sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example 
 ```
 
@@ -73,7 +73,7 @@ bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -
 ### `awk` is useful for quick subsetting of tab- or csv-delimited datasets
 * General pseudocode: `cat filename | awk '{ command }'`
 * My favorite pseudocode: `cat filename | awk -Fdelimiter '{ print($linenumber,$otherlinenumber) }'`
-* awk, unlike sed, _does_ understand `\n` and `\t`
+* `awk`, unlike `sed`, _does_ understand `\n` and `\t`
 
 ```bash
 # example using HW csv file
@@ -87,7 +87,7 @@ cat WEEK_06_python5_HW.csv | awk -F, '{ print ($2"\t"$3) }'
 ```
 
 ```bash
-# print columns 1 and 2, adding in a tab between, a new field "newline", and a new line at the end
+# print columns 1 and 2, adding in a `tab` between, a new field "newline", and a new line at the end
 cat WEEK_06_python5_HW.csv | awk -F, '{print $1"\t"$2 "\tnewline\n"}'
 ```
 
@@ -99,8 +99,7 @@ cat WEEK_06_python5_HW.csv | awk -F, '{for (i=1;i<=4;i++) {print $i}}'
 ```
 
 ```bash
-# much more complicated, a for loop that prints a 10-nucleotide sequence that overlaps \
- by 1 nucleotide along the entire sequence
+# much more complicated, a for loop that prints a 10-nucleotide sequence that overlaps by 1 nucleotide along the entire sequence
 # you should recall this first part that grabs the sequence data from an illumina output file
 bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -10000 | sort | uniq | \
 awk '{for (i=1;i<=length($1)-10;i++) {print substr($1,i,10)}}'
