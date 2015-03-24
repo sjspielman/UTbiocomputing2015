@@ -71,7 +71,7 @@ bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -
 
 
 ### `awk` is useful for quick subsetting of tab- or csv-delimited datasets
-* Genreal pseudocode: `cat filename | awk '{ command }'`
+* General pseudocode: `cat filename | awk '{ command }'`
 * My favorite pseudocode: `cat filename | awk -Fdelimiter '{ print($linenumber,$otherlinenumber) }'`
 * awk, unlike sed, _does_ understand `\n` and `\t`
 
@@ -99,8 +99,8 @@ cat WEEK_06_python5_HW.csv | awk -F, '{for (i=1;i<=4;i++) {print $i}}'
 ```
 
 ```bash
-# much more complicated, a for loop that prints a 10-nucleotide sequence that overlaps 
-# by 1 nucleotide along the entire sequence
+# much more complicated, a for loop that prints a 10-nucleotide sequence that overlaps \
+ by 1 nucleotide along the entire sequence
 # you should recall this first part that grabs the sequence data from an illumina output file
 bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -10000 | sort | uniq | \
 awk '{for (i=1;i<=length($1)-10;i++) {print substr($1,i,10)}}'
