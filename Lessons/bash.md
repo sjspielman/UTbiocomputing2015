@@ -7,6 +7,7 @@
 * General pseudocode: `sed [-E] command/regex/replacement/optionalflag filename > newfile`
 * My favorite pseudocode: `sed -E s/OLD/NEW/`
 * Mac users must include `-E` to access regular expressions
+* `sed` does not understand `\t` and `\n`, see below
 
 ```bash
 # replace first instance of XX with YY for each line
@@ -31,7 +32,7 @@ sed -e s/XX/YY/g -e s/AA/ZZ/g filename > newfile
 # - must put whitespace in quotes, or else it is interpreted as a separate command
 sed s/\([a-zA-Z]\)\(.*\)/'\1	\2'/ filename > newfile
 ```
-* `sed` does not understand `\t` and `\n`
+
 * To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
 * For newline characters (`\n`), you have to code it directly into the line, for example:
 
@@ -46,7 +47,7 @@ Command | Meaning | Example
 ----------|--------|---------
 -b | ignore leading blanks | `sort -b filename > filename.sorted`
 -r | reverse | `sort -r filename`
--k POS1 | sort by field in POS1 | sort by field 2: `sort -k 2 filename` <br> sort by second character in field 2: `sort -k 2.2 filename`
+-k POS1 | sort by field/character indicated by POS1 | sort by field 2: `sort -k 2 filename` <br> sort by second character in field 2: `sort -k 2.2 filename`
 -k POS1,POS2 | sort based on the characters from POS1 to POS2 | sort by characters in fields 2 and 3: `sort -k 2,3 filename` <br> sort starting with second character in field 2 up to and including field 3: `sort -k 2.2,3 filename`
 
 
@@ -72,6 +73,7 @@ bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -
 ### `awk` is useful for quick subsetting of tab- or csv-delimited datasets
 * Genreal pseudocode: `cat filename | awk '{ command }'`
 * My favorite pseudocode: `cat filename | awk -Fdelimiter '{ print($linenumber,$otherlinenumber) }'`
+* awk, unlike sed, _does_ understand `\n` and `\t`
 
 ```bash
 # example using HW csv file
@@ -81,7 +83,6 @@ cat WEEK_06_python5_HW.csv | awk -F, '{ print ($2,$3) }'
 
 ```bash
 # print columns 2 and 3, add a `tab` between the items
-# awk, unlike sed, does understand `\n` and `\t`
 cat WEEK_06_python5_HW.csv | awk -F, '{ print ($2"\t"$3) }'
 ```
 
