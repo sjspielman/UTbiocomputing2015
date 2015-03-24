@@ -15,7 +15,7 @@ sed s/XX/YY/ filename > newfile
 
 ```bash
 # replace all instances of XX with YY 
-# - `-g` flag means 'global' and searches for all instances of the pattern
+# - `g` flag means 'global' and searches for all instances of the pattern
 sed s/XX/YY/g filename > newfile
 ```
 
@@ -43,11 +43,11 @@ sed -E s/\([0-9]\)/'\1\
 
 ### `sort` sorts the lines in a file by numbers then lowercase letters then uppercase letters
 Command | Meaning | Example
--------|--------|---------
+----------|--------|---------
 -b | ignore leading blanks | `sort -b filename > filename.sorted`
 -r | reverse | `sort -r filename`
 -k POS1 | sort by field in POS1 | sort by field 2: `sort -k 2 filename` <br> sort by second character in field 2: `sort -k 2.2 filename`
--k POS1,POS2 | sort based on the characters <br> in POS1 and POS2 | sort by fields 2 and 3: `sort -k 2,3 filename` <br> sort starting with second character in field 2 up to field 3: `sort -k 2.2,3 filename`
+-k POS1,POS2 | sort based on the characters from POS1 to POS2 | sort by characters in fields 2 and 3: `sort -k 2,3 filename` <br> sort starting with second character in field 2 up to and including field 3: `sort -k 2.2,3 filename`
 
 
 ### `uniq` counts the number of unique ADJACENT lines in a file; use `sort` beforehand to ready the file for `uniq`
@@ -70,8 +70,8 @@ bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -
 
 
 ### `awk` is useful for quick subsetting of tab- or csv-delimited datasets
-Genreal pseudocode: cat filename | awk '{ command }'
-My favorite pseudocode: cat filename | awk -Fdelimiter '{ print($linenumber,$otherlinenumber) }'
+* Genreal pseudocode: `cat filename | awk '{ command }'`
+* My favorite pseudocode: `cat filename | awk -Fdelimiter '{ print($linenumber,$otherlinenumber) }'`
 
 ```bash
 # example using HW csv file
