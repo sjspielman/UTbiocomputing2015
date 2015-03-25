@@ -133,6 +133,8 @@ assert(aligned_properly == 0), "MAFFT didn't work!"
 
 # Part 2: useful UNIX/Bash one-liners: `sed`, `sort`, `uniq` and `awk`
 
+Bash is great for getting a quick look at your data and for simple regex replacements
+
 <br><br>
 ### `sed` is useful for quick and recursive replacements using Regex
 
