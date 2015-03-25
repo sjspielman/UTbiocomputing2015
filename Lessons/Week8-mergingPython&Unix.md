@@ -173,7 +173,6 @@ sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example
 ```
 sed -E s/\([0-9]\)/'\1\
 '/ examplefile.txt
-
 ```
 
 ### `sort` sorts the lines in a file by numbers then lowercase letters then uppercase letters
