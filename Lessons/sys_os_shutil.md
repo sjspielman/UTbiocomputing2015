@@ -131,7 +131,7 @@ aligned_properly = os.system(command)
 assert(aligned_properly == 0), "MAFFT didn't work!"
 ```
 
-# Part 2: UNIX/Bash
+# Part 2: useful UNIX/Bash one-liners: `sed`, `sort`, `uniq` and `awk`
 
 <br><br>
 ### `sed` is useful for quick and recursive replacements using Regex
@@ -168,9 +168,9 @@ sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example
 * To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
 * For newline characters (`\n`), you have to code it directly into the line with `\ + enter`, for example:
 
-```bash
+```
 sed -E s/\([0-9]\)/'\1\
-'/ example 
+'/ examplefile.txt
 
 ```
 
@@ -178,7 +178,7 @@ sed -E s/\([0-9]\)/'\1\
 Command | Meaning | Example
 ----------|--------|---------
 -b | ignore leading blanks | `sort -b filename > filename.sorted`
--r | reverse | `sort -r filename`
+-r | reverse | `sort -r filename > filename.sortedr`
 -k POS1 | sort by field/character indicated by POS1 | sort by field 2: `sort -k 2 filename` <br> sort by second character in field 2: `sort -k 2.2 filename`
 -k POS1,POS2 | sort based on the characters from POS1 to POS2 | sort by characters in fields 2 and 3: `sort -k 2,3 filename` <br> sort starting with second character in field 2 up to and including field 3: `sort -k 2.2,3 filename`
 
