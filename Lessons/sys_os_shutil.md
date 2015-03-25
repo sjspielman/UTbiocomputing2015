@@ -65,6 +65,15 @@ number = int( sys.argv[2] ) # remember to convert from string to int, as needed!
 ```
 
 
+### Editting the path with `sys.path`
+
+You can view everything in python's path by printing the contents of the list `sys.path`. This variable will you tell which directories on your computer that the current python interpretter is able to access. To edit this path in place, for instance by adding a directory to the path, simply use `.append()`:
+```python
+import sys
+sys.path.append("/path/to/directory/that/python/should/know/about/")
+```
+
+
 ## `os` module
 
 ## `shutil` module
