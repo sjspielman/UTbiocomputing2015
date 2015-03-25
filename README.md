@@ -20,6 +20,8 @@ A new and awesome resource: [Rosetta Code](https://rosettacode.org/wiki) !!!!!
 
 Another new and awesome resource, sponsored by UT! http://www.lynda.com/ .
 
+To download files (pdf, csv, or text), try viewing in Raw format.
+
 ## Course Schedule
 
 Week    |  Calendar Date        | Topic        | Description | Teacher
