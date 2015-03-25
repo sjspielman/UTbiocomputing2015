@@ -27,7 +27,7 @@ Module | Command  |  Description | Unix equivalent | Example
 
 # MOAR BASH
 
-## `sort` and `uniq`
+## Bash `sort` and `uniq`
 Command | Meaning | Example
 ----------|--------|---------
 sort -b | ignore leading blanks | `sort -b filename > filename.sorted`
@@ -39,7 +39,7 @@ uniq -d | prints only repeated lines | `uniq -d filename`
 uniq -u | prints only unique lines | `uniq -u filename > filename.unique`
 uniq -f N | skips N number of lines | `uniq -f 30 filename`
 
-## useful oneish-liners:
+## useful bash oneish-liners:
 
 ```
 # replace XX and YY with AA and ZZ for every instance in the file
