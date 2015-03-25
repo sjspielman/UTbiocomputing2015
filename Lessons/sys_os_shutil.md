@@ -43,7 +43,7 @@ Assume the following code is included in the script calc_dna.py.
 import sys
 print sys.argv
 ```
-From the command line you run `python calc_dna.py inputfile.fasta` and get back:
+From the command line you run `python calc_dna.py inputfile.fasta` and get back: <br>
 `['calc_dna.py', 'inputfile.fasta']`
 
 
