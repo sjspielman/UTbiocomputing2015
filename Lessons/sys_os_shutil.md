@@ -1,0 +1,144 @@
+# Merging python and unix, part I
+
+## Automating file renaming
+
+First, a quick trick for renaming lots of files! Let's imagine you have a bunch of files named, 
++ env1.csv
++ env2.csv
++ env3.csv
++ env4.csv
++ env5.csv
+etc... 
+
+But, perhaps you're not satisfied with them being called "env", and you'd prefer them to be called environment1.csv, etc. Now, let's say there are hundreds of these files. Renaming these files individually would be hugely time-consuming, so.. regular expressions to the rescue!
+
+A simple solution to this problem is to follow these steps:
+1. From the command line, type `ls env*` to list all files named as env1.csv, env2.csv ...
+2. Copy/paste this list of files into a text editor which can accomodate regular expressions (e.g. TextWrangler or Sublime Text)
+3. First, clean up whitespace with the following two regular expression search/replace pairs (in order):
+
+Search | Replace | What it does
+-------|---------|-------------
+`\s*`  | `\n`    | Replace all whitespace with a newline character
+`\n+`  | `\n`    | Replace all "double newlines" with a single newline (no empty space between lines)
+
+4. Finally, perform a search/replace with the following regular expressions:
+Search: `^env(\d+\.csv)`
+Replace: `mv env\1 environment\1`
+
+5. Copy and paste the new search/replaced text file contents back to the command line, and viola! All files will have been named to "environment1.csv", etc.
+
+
+
+## `sys` module
+
+## `os` module
+
+## `shutil` module
+
+
+
+### `sed` is useful for quick and recursive replacements using Regex
+
+* General pseudocode: `sed [-E] command/regex/replacement/optionalflag filename > newfile`
+* My favorite pseudocode: `sed -E s/OLD/NEW/`
+* Mac users must include `-E` to access regular expressions
+* `sed` does not understand `\t` and `\n`, see below
+
+```bash
+# replace first instance of XX with YY for each line
+sed s/XX/YY/ filename > newfile
+```
+
+```bash
+# replace all instances of XX with YY 
+# - `g` flag means 'global' and searches for all instances of the pattern
+sed s/XX/YY/g filename > newfile
+```
+
+```bash
+# replace all instances of XX with YY and of AA with ZZ
+# - `-e` flag lets you execute multiple sed commands at once
+sed -e s/XX/YY/g -e s/AA/ZZ/g filename > newfile
+```
+
+```bash
+# keep only letter and space characters ([a-zA-Z' ']*) that come before a different type of character in each line
+# - must escape all () using `\`, ie: \([regex]\)
+# - must put whitespace and replacement ('\1\2') in quotes, or else it is interpreted as a separate command
+sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example 
+```
+
+* To insert tabs (`\t`) you'll have to hit `ctrl + v`, then `Tab` while in the terminal environment
+* For newline characters (`\n`), you have to code it directly into the line with `\ + enter`, for example:
+
+```bash
+sed -E s/\([0-9]\)/'\1\
+'/ example 
+
+```
+
+### `sort` sorts the lines in a file by numbers then lowercase letters then uppercase letters
+Command | Meaning | Example
+----------|--------|---------
+-b | ignore leading blanks | `sort -b filename > filename.sorted`
+-r | reverse | `sort -r filename`
+-k POS1 | sort by field/character indicated by POS1 | sort by field 2: `sort -k 2 filename` <br> sort by second character in field 2: `sort -k 2.2 filename`
+-k POS1,POS2 | sort based on the characters from POS1 to POS2 | sort by characters in fields 2 and 3: `sort -k 2,3 filename` <br> sort starting with second character in field 2 up to and including field 3: `sort -k 2.2,3 filename`
+
+
+### `uniq` counts the number of unique ADJACENT lines in a file; use `sort` beforehand to ready the file for `uniq`
+Command | Meaning | Example
+-------|--------|---------
+-c | prefixes lines with the number of times they occur | `uniq -c filename`
+-d | prints only repeated lines | `uniq -d filename`
+-u | prints only unique lines | `uniq -u filename > filename.unique`
+-f N | skips N number of lines | `uniq -f 30 filename`
+
+A combination of grep, sort, and uniq is great for looking at raw sequence reads
+
+```bash
+# unzip file (`bunzip2`) and print contents to stdout rather than to a new file (`-c`)
+# select any lines that start with A, C, T, or G (`grep ^[ACTG]`)
+# keep lines that do not contain F, H, J, or B (`grep -v [FHJB]`)
+# print the first 10000 lines, sort them alphabetically, show unique lines with counts (`head -10000 | sort | uniq -c`)
+bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -10000 | sort | uniq -c
+```
+
+
+### `awk` is useful for quick subsetting of tab- or csv-delimited datasets
+* General pseudocode: `cat filename | awk '{ command }'`
+* My favorite pseudocode: `cat filename | awk -Fdelimiter '{ print($linenumber,$otherlinenumber) }'`
+* `awk`, unlike `sed`, _does_ understand `\n` and `\t`
+
+```bash
+# example using HW csv file
+# print columns 2 and 3
+cat WEEK_06_python5_HW.csv | awk -F, '{ print ($2,$3) }'
+```
+
+```bash
+# print columns 2 and 3, add a `tab` between the items
+cat WEEK_06_python5_HW.csv | awk -F, '{ print ($2"\t"$3) }'
+```
+
+```bash
+# print columns 1 and 2, adding in a `tab` between, a new field "newline", and a new line at the end
+cat WEEK_06_python5_HW.csv | awk -F, '{print ($1"\t"$2 "\tnewline\n")}'
+```
+
+```bash
+# more complicated, a for loop that prints each item 
+cat WEEK_06_python5_HW.csv | awk -F, '{for (i=1;i<=4;i++) {print ($i)}}'
+# for each line, from items 1 until 4: `for (i=1;i<=4;i++)`
+# print each item: `{print $i}`
+```
+
+```bash
+# much more complicated, a for loop that prints a 10-nucleotide sequence that overlaps by 1 nucleotide along the entire sequence
+# you should recall this first part that grabs the sequence data from an illumina output file
+bunzip2 -c AzetekiG_SRR957179.fastq.bz2 | grep ^[ACTG] | grep -v [FHJB] | head -10000 | sort | uniq | \
+awk '{for (i=1;i<=length($1)-10;i++) {print substr($1,i,10)}}'
+# for 1 to the length of the line until 10 before the end: `for (i=1;i<=length($1)-10;i++)`
+# print from the entire line (`$1`) a substring from i to 10: `{print substr($1,i,10)}`
+```
