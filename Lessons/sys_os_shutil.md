@@ -10,9 +10,8 @@ First, a quick trick for renaming lots of files! Let's imagine you have a bunch 
 + env5.csv
 + ... 
 
-But, perhaps you're not satisfied with them being called "env", and you'd prefer them to be called environment1.csv, etc. Now, let's say there are hundreds of these files. Renaming these files individually would be hugely time-consuming, so.. regular expressions to the rescue! All you'll need is a text editor which can search/replace using regular expressions (good options are TextWrangler or Sublime Text).
+But, perhaps you're not satisfied with them being called "env", and you'd prefer them to be called environment1.csv, etc. Now, let's say there are hundreds of these files. Renaming these files individually would be hugely time-consuming, so.. regular expressions to the rescue! All you'll need is a text editor which can search/replace using regular expressions (good options are TextWrangler or Sublime Text). Follow these steps (or similar, depending on your specific data files):
 
-A simple solution to this problem is to follow these steps:
 **1.** From the command line, type `ls env*` to list all files named as env1.csv, env2.csv ...
 
 **2.** Copy/paste this list of files into a text editor which can accomodate regular expressions.
