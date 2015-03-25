@@ -38,11 +38,12 @@ The `sys` module interacts with the python interpreter. This module primarily co
 ### Passing command-line arguments `sys.argv`
 Often, you'll want to pass input arguments to a script. All input arguments are stored in the variable `sys.argv` (note that you must import the `sys` module!). For example, you might have a script called `calc_dna.py` which performs certain calculations on a sequence data file, but each time you run the script, you might want to process a different file. One option to pass the file name as an input argument: `python calc_dna.py inputfile.fasta`, where `inputfile.fasta` is the single command-line argument. If you've loaded the `sys` module, all command line arguments will be stored in `sys.argv`:
 
-Assume the following code was run with the command `python calc_dna.py inputfile.fasta`
+Assume the following code is included in the script calc_dna.py. 
 ```python
 import sys
 print sys.argv
 ```
+From the command line you run `python calc_dna.py inputfile.fasta` and get back: <br>
 `['calc_dna.py', 'inputfile.fasta']`
 
 
