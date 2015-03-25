@@ -79,6 +79,7 @@ sys.path.append("/path/to/directory/that/python/should/know/about/")
 
 The `os` and `shutil` modules are useful for interacting with your computer's operating system (typically UNIX). With these modules, you can run commands from your python script which are analogous to UNIX commands like `cd` and `pwd`. 
 <br>Some examples:
+
 Module | Command  |  Description | Unix equivalent | Example
 -------|----------|--------------|-----------------|--------
 `os` | `os.listdir`| List all items in a given directory | `ls` | `os.system("/directory/of/interest/")`
