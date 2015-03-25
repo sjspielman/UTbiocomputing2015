@@ -30,8 +30,8 @@ Search | Replace | What it does
 **5.** Copy and paste the new search/replaced text file contents back to the command line, and viola! All files will have been renamed to environment1.csv, etc.
 
 
-
-## The Python `sys` module
+<br><br>
+## The python `sys` module
 
 The `sys` module interacts with the python interpreter. This module primarily comes with certain **variables** (rather than functions) which are particularly useful, two of which are described below.
 
@@ -73,10 +73,60 @@ import sys
 sys.path.append("/path/to/directory/that/python/should/know/about/")
 ```
 
+<br><br>
+## The python `os` and `shutil` modules
 
-## `os` module
+The `os` and `shutil` modules are useful for interacting with your computer's operating system (typically UNIX). With these modules, you can run commands from your python script which are analogous to UNIX commands like `cd` and `pwd`. Some examples:
 
-## `shutil` module
+Module | Command  |  Description | Unix equivalent | Example
+-------|----------|--------------|-----------------|--------
+`os` | `os.listdir`| List all items in a given directory | `ls` | `os.system("/directory/of/interest/")`
+`os` | `os.remove` | Remove a file | `rm` | `os.remove("i_hate_this_file.txt")`
+`os` | `os.rmdir` | Remove a directory | `rm -r`| `os.rmdir("/i/hate/this/directory/")`
+`os` | `os.mkdir`  | Create a new directory | `mkdir` |`os.mkdir("/path/to/brand/new/directory/")`
+`os` | `os.mkdirs`  | Create many new directories | `mkdir`|`os.mkdir("/path/to/a/brand/new/directory/", "/path/to/another/brand/new/directory/")`
+`os` | `os.chdir`  | Change directory where python is running | `cd` | `os.chdir("/another/directory/where/i/want/to/be/")`
+`shutil` | `shutil.copy` | Copy a file | `cp` | `shutil.copy("old_file.txt", "new_file.txt")`
+`shutil` | `shutil.move` | Move a file | `mv` | `shutil.move("old_file.txt", "new_file.txt")`
+
+
+### Running external commands with `os`
+
+You will often want to use Python scripting to automate analyses which use external programs or softwares. You can actually call these programs directly from your python script using the function `os.system()`. This function takes a single argument: the command you want to run (as a string). Anything that you could type into the command line can be given to `os.system`!
+
+```python
+# Create a multiple sequence alignment in MAFFT from python
+import os
+# Define input, output files
+infile = "unaligned.fasta"
+outfile = "aligned.fasta"
+command = "mafft " + infile + " > " + outfile
+os.system(command)
+```
+
+We can also incorporate `sys` to provide the input/output file names as arguments!
+```python
+# Create a multiple sequence alignment in MAFFT from python
+import os
+import sys
+
+# Check and save input arguments
+assert( len(sys.argv) == 3 ), "Usage: python align.py <inputfile> <outputfile>"
+infile = sys.argv[1]
+outfile = sys.argv[2]
+
+# Run the alignment
+command = "mafft " + infile + " > " + outfile
+os.system(command)
+```
+
+Finally, you can check that the command has run properly by saving the output of `os.system()` (basically, save it to a variable). In UNIX, a returned value of 1 means an error occurred, but a returned value of 0 means everything went fine. Therefore, we want to make sure that `os.system()` returns a value of 0, by editting the last few lines:
+
+```python
+command = "mafft " + infile + " > " + outfile
+aligned_properly = os.system(command)
+assert(aligned_properly == 0), "MAFFT didn't work!"
+```
 
 
 
