@@ -83,7 +83,7 @@ The `os` and `shutil` modules are useful for interacting with your computer's op
 
 Module | Command  |  Description | Unix equivalent | Example
 -------|----------|--------------|-----------------|--------
-`os` | `os.listdir`| List all items in a given directory | `ls` | `os.system("/directory/of/interest/")`
+`os` | `os.listdir`| List all items in a given directory | `ls` | `os.listdir("/directory/of/interest/")`
 `os` | `os.remove` | Remove a file | `rm` | `os.remove("i_hate_this_file.txt")`
 `os` | `os.rmdir` | Remove a directory | `rm -r`| `os.rmdir("/i/hate/this/directory/")`
 `os` | `os.mkdir`  | Create a new directory | `mkdir` |`os.mkdir("/path/to/brand/new/directory/")`
