@@ -18,7 +18,7 @@ Module | Command  |  Description | Unix equivalent | Example
 `os` | `os.remove` | Remove a file | `rm` | `os.remove("i_hate_this_file.txt")`
 `os` | `os.rmdir` | Remove a directory | `rm -r`| `os.rmdir("/i/hate/this/directory/")`
 `os` | `os.mkdir`  | Create a new directory | `mkdir` |`os.mkdir("/path/to/brand/new/directory/")`
-`os` | `os.mkdirs`  | Create many new directories | `mkdir`|`os.mkdir("/path/to/a/brand/new/directory/", "/path/to/another/brand/new/directory/")`
+`os` | `os.mkdirs`  | Create many new directories | `mkdir`|`os.mkdirs("/path/to/a/brand/new/directory/", "/path/to/another/brand/new/directory/")`
 `os` | `os.chdir`  | Change directory where python is running | `cd` | `os.chdir("/another/directory/where/i/want/to/be/")`
 `shutil` | `shutil.copy` | Copy a file | `cp` | `shutil.copy("old_file.txt", "new_file.txt")`
 `shutil` | `shutil.move` | Move a file | `mv` | `shutil.move("old_file.txt", "new_file.txt")`
