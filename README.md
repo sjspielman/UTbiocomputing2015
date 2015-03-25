@@ -41,4 +41,4 @@ WEEK 10 | Apr 08 | R  | Statistical analyses | Nathan Pope
 WEEK 11 | Apr 15 | SQL  | Relational databases    | Ben Liebeskind
 WEEK 12 | Apr 22 | TACC | Using high-performance computing systems | Benni Goetz
 WEEK 13 | Apr 29 | RNAseq | Computational platforms and pipeline| Dariya Sydykova
-WEEK 14 | May 06 | STACKS/pyRAD  | analyzing NextGen SNP data | April Wright
+WEEK 14 | May 06 | pyRAD  | pipeline for analyzing NextGen SNP data | April Wright
