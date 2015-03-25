@@ -25,5 +25,38 @@ Module | Command  |  Description | Unix equivalent | Example
 
 
 
-# BASH section
+# MOAR BASH
+
+## `sort` and `uniq`
+Command | Meaning | Example
+----------|--------|---------
+sort -b | ignore leading blanks | `sort -b filename > filename.sorted`
+sort -r | reverse | `sort -r filename > filename.sortedr`
+sort -k POS1 | sort by field/character indicated by POS1 | sort by field 2: `sort -k 2 filename` <br> sort by second character sort in field 2: `sort -k 2.2 filename`
+sort -k POS1,POS2 | sort based on the characters from POS1 to POS2 | sort by characters in fields 2 and 3: `sort -k 2,3 filename` <br> sort starting with second character in field 2 up to and including field 3: `sort -k 2.2,3 filename`
+uniq -c | prefixes lines with the number of times they occur | `uniq -c filename`
+uniq -d | prints only repeated lines | `uniq -d filename`
+uniq -u | prints only unique lines | `uniq -u filename > filename.unique`
+uniq -f N | skips N number of lines | `uniq -f 30 filename`
+
+## useful oneish-liners:
+
+```
+# replace XX and YY with AA and ZZ for every instance in the file
+sed -e s/XX/AA/g -e/YY/ZZ/g filename > newfile
+
+# sort and count sequences starting with barcodeY by size and alphabetically
+gunzip -c yourzippedfastqfile.fastq.gz | grep ^[barcodeY] | sort -r | uniq -c
+
+# print columns 2 and 3 from a .csv file
+`cat yourfile.csv | awk -F, '{ print ($2,$3) }'
+
+# move all files that end in .txt to .text
+ls *.txt > list 
+sed s/"\(.*\).txt"/"mv \1.txt \1.text"/g list > command
+bash command
+```
+
+
+
 
