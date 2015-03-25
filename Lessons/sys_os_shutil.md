@@ -54,7 +54,8 @@ import sys
 infile = sys.argv[1]
 ```
 
-Error checking is often very useful here; you might have a script which **requires** two command line arguments. For instance, let's say you have a script (which does something..) which takes a file name and a number as its two arguments. To ensure that this always happens, help yourself out with assertion statements!
+Error checking is often very useful here; you might have a script which **requires** two command line arguments. For instance, let's say you have a script (which does something..) which takes a file name and a number as its two arguments. To ensure that this always happens, help yourself out with assertion statements:
+
 ```python
 import sys
 # sys.argv must be of length 3 (script name, inputfile, number)
@@ -76,8 +77,8 @@ sys.path.append("/path/to/directory/that/python/should/know/about/")
 <br><br>
 ## The python `os` and `shutil` modules
 
-The `os` and `shutil` modules are useful for interacting with your computer's operating system (typically UNIX). With these modules, you can run commands from your python script which are analogous to UNIX commands like `cd` and `pwd`. Some examples:
-
+The `os` and `shutil` modules are useful for interacting with your computer's operating system (typically UNIX). With these modules, you can run commands from your python script which are analogous to UNIX commands like `cd` and `pwd`. 
+<br>Some examples:
 Module | Command  |  Description | Unix equivalent | Example
 -------|----------|--------------|-----------------|--------
 `os` | `os.listdir`| List all items in a given directory | `ls` | `os.system("/directory/of/interest/")`
@@ -128,8 +129,9 @@ aligned_properly = os.system(command)
 assert(aligned_properly == 0), "MAFFT didn't work!"
 ```
 
+# Part 2: UNIX/Bash
 
-
+<br><br>
 ### `sed` is useful for quick and recursive replacements using Regex
 
 * General pseudocode: `sed [-E] command/regex/replacement/optionalflag filename > newfile`
