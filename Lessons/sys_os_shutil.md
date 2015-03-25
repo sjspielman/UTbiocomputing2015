@@ -1,4 +1,4 @@
-# Merging python and unix, part I
+# Merging Python and UNIX
 
 ## Automating file renaming
 
@@ -31,7 +31,39 @@ Search | Replace | What it does
 
 
 
-## `sys` module
+## The Python `sys` module
+
+The `sys` module interacts with the python interpreter. This module primarily comes with certain **variables** (rather than functions) which are particularly useful, two of which are described below.
+
+### Passing command-line arguments `sys.argv`
+Often, you'll want to pass input arguments to a script. All input arguments are stored in the variable `sys.argv` (note that you must import the `sys` module!). For example, you might have a script called `calc_dna.py` which performs certain calculations on a sequence data file, but each time you run the script, you might want to process a different file. One option to pass the file name as an input argument: `python calc_dna.py inputfile.fasta`, where `inputfile.fasta` is the single command-line argument. If you've loaded the `sys` module, all command line arguments will be stored in `sys.argv`:
+
+Assume the following code was run with the command `python calc_dna.py inputfile.fasta`
+```python
+import sys
+print sys.argv
+```
+['calc_dna.py', 'inputfile.fasta']
+
+
+Notice that the first entry in `sys.argv` is the name of the script. After this come all command line arguments! In addition, all `sys.argv` entries will be **strings**. So remember that if you want to use an input argument as a number, you must convert it to a float or integer.
+
+Generally, you should save the input arguments to a new variable inside the script:
+```python
+import sys
+infile = sys.argv[1]
+```
+
+Error checking is often very useful here; you might have a script which **requires** two command line arguments. For instance, let's say you have a script (which does something..) which takes a file name and a number as its two arguments. To ensure that this always happens, help yourself out with assertion statements!
+```python
+import sys
+# sys.argv must be of length 3 (script name, inputfile, number)
+# print a usage statement if arguments not provided or provided incorrectly
+assert( len(sys.argv) == 3 ), "Usage: python my_script.py <inputfile> <number>"
+infile = sys.argv[1]
+number = int( sys.argv[2] ) # remember to convert from string to int, as needed!
+```
+
 
 ## `os` module
 
