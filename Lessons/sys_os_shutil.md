@@ -43,7 +43,7 @@ Assume the following code was run with the command `python calc_dna.py inputfile
 import sys
 print sys.argv
 ```
-['calc_dna.py', 'inputfile.fasta']
+`['calc_dna.py', 'inputfile.fasta']`
 
 
 Notice that the first entry in `sys.argv` is the name of the script. After this come all command line arguments! In addition, all `sys.argv` entries will be **strings**. So remember that if you want to use an input argument as a number, you must convert it to a float or integer.
