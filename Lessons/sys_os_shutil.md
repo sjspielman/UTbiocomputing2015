@@ -8,25 +8,27 @@ First, a quick trick for renaming lots of files! Let's imagine you have a bunch 
 + env3.csv
 + env4.csv
 + env5.csv
-etc... 
++ ... 
 
-But, perhaps you're not satisfied with them being called "env", and you'd prefer them to be called environment1.csv, etc. Now, let's say there are hundreds of these files. Renaming these files individually would be hugely time-consuming, so.. regular expressions to the rescue!
+But, perhaps you're not satisfied with them being called "env", and you'd prefer them to be called environment1.csv, etc. Now, let's say there are hundreds of these files. Renaming these files individually would be hugely time-consuming, so.. regular expressions to the rescue! All you'll need is a text editor which can search/replace using regular expressions (good options are TextWrangler or Sublime Text).
 
 A simple solution to this problem is to follow these steps:
-1. From the command line, type `ls env*` to list all files named as env1.csv, env2.csv ...
-2. Copy/paste this list of files into a text editor which can accomodate regular expressions (e.g. TextWrangler or Sublime Text)
-3. First, clean up whitespace with the following two regular expression search/replace pairs (in order):
+**1.** From the command line, type `ls env*` to list all files named as env1.csv, env2.csv ...
+
+**2.** Copy/paste this list of files into a text editor which can accomodate regular expressions.
+
+**3.** You'll want each file name to have its own line, with no empty lines in between. You can clean up whitespace with the following two regular expression search/replace pairs (in order):
 
 Search | Replace | What it does
 -------|---------|-------------
 `\s*`  | `\n`    | Replace all whitespace with a newline character
 `\n+`  | `\n`    | Replace all "double newlines" with a single newline (no empty space between lines)
 
-4. Finally, perform a search/replace with the following regular expressions:
-Search: `^env(\d+\.csv)`
-Replace: `mv env\1 environment\1`
+**4.** Finally, perform a search/replace with the following regular expressions:
+<br>Search: `^env(\d+\.csv)`
+<br>Replace: `mv env\1 environment\1`
 
-5. Copy and paste the new search/replaced text file contents back to the command line, and viola! All files will have been named to "environment1.csv", etc.
+**5.** Copy and paste the new search/replaced text file contents back to the command line, and viola! All files will have been renamed to environment1.csv, etc.
 
 
 
