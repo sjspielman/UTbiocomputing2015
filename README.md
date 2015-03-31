@@ -38,7 +38,7 @@ SPRING BREAK | Mar 18 | Spring break | WOOO! | Everybody!
 WEEK 08 | Mar 25 | PyBash | Merging Python and Unix/Bash | Stephanie and Becca
 WEEK 09 | Apr 01 | git | Collaboration and version control | Cheng Lee
 WEEK 10 | Apr 08 | R  | Statistical analyses | Nathan Pope
-WEEK 11 | Apr 15 | SQL  | Relational databases    | Ben Liebeskind
+WEEK 11 | Apr 15 | pandas  | Relational databases    | Ben Liebeskind
 WEEK 12 | Apr 22 | TACC | Using high-performance computing systems | Benni Goetz
 WEEK 13 | Apr 29 | RNAseq | Computational platforms and pipeline| Dariya Sydykova
 WEEK 14 | May 06 | pyRAD  | pipeline for analyzing NextGen SNP data | April Wright
