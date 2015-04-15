@@ -36,7 +36,7 @@ WEEK 06 | Mar 04 | Python 5     | Testing             | Becca
 WEEK 07 | Mar 11 | Python 6     | Numpy & Biopython | Stephanie
 SPRING BREAK | Mar 18 | Spring break | WOOO! | Everybody!
 WEEK 08 | Mar 25 | PyBash | Merging Python and Unix/Bash | Stephanie and Becca
-WEEK 09 | Apr 01 | git | Collaboration and version control | Cheng Lee
+WEEK 09 | Apr 01 | git | Collaboration and version control [slides](http://www.slideshare.net/chenghlee/intro-to-git-ut-biocomputing-2015) | Cheng Lee
 WEEK 10 | Apr 08 | R  | Statistical analyses | Nathan Pope
 WEEK 11 | Apr 15 | pandas  | data analysis in python    | Ben Liebeskind
 WEEK 12 | Apr 22 | TACC | Using high-performance computing systems | Benni Goetz
