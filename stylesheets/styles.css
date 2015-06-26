@@ -28,7 +28,7 @@ time, mark, audio, video {
 body {
   padding:10px 50px 0 0;
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	color: #232323;
 	background-color: #FBFAF7;
 	margin: 0;
@@ -182,29 +182,37 @@ pre {
 /* Tables */
 
 table {
-  width:100%;
+  width:170%;
 }
 
 table {
   border: 1px solid #ccc;
   margin-bottom: 32px;
   text-align: left;
+  font-size: 18px;
  }
+ 
+
 
 th {
   font-family: 'Arvo', Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	font-weight: normal;
+	font-size: 24px;
+	font-weight: bold;
   padding: 10px;
-  background: #232323;
-  color: #FDFEFB;
+  background: #7e7e7e;
  }
 
 td {
   padding: 10px;
-	background: #ccc;
  }
 
+ tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+ tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
 
 /* Wrapper */
 .wrapper {
@@ -217,7 +225,7 @@ td {
 header {
 	background-color: #171717;
 	color: #FDFDFB;
-  width:170px;
+  width:225px;
   float:left;
   position:fixed;
 	border: 1px solid #000;
@@ -238,7 +246,7 @@ p.header {
 
 h1.header {
 	font-family: Arvo, sans-serif;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 300;
 	line-height: 1.3em;
 	border-bottom: none;
@@ -301,6 +309,7 @@ a.buttons {
 	-webkit-font-smoothing: antialiased;
 	background: url(../images/arrow-down.png) no-repeat;
 	font-weight: normal;
+	font-size: 14px;
 	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 	padding: 2px 2px 2px 22px;
 	height: 30px;
@@ -319,7 +328,7 @@ a.buttons:hover {
 /* Section - for main page content */
 
 section {
-  width:650px;
+  width:600px;
   float:right;
   padding-bottom:50px;
 }
