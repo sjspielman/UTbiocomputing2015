@@ -7,6 +7,7 @@ Rebecca Tarvin (PAT 123) rdtarvin@utexas.edu
 Open Coding Hour: Tuesdays 5-6pm in CCBB conference room (GDC 7.514)
 <br>Class: 4-5pm on Wednesdays in FNT 1.104
 
+New class website: http://sjspielman.org/UTbiocomputing2015/
 Class website: https://github.com/sjspielman/UTbiocomputing2015
 <br>Resources: https://github.com/sjspielman/UTbiocomputing2015/blob/master/resources.md
 
